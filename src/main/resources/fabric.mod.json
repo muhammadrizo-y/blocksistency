@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "blocksistency",
+	"version": "${version}",
+	"name": "Blocksistency",
+	"description": "Missing blocks in block sets finally added!",
+	"authors": [
+		"Muhammadrizo"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/blocksistency",
+		"sources": "https://github.com/muhammadrizo-y/blocksistency"
+	},
+	"license": "MIT",
+	"icon": "assets/blocksistency/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.muhammadrizo.blocksistency.Blocksistency"
+		],
+		"fabric-datagen": [
+			"net.muhammadrizo.blocksistency.BlocksistencyDataGenerator"
+		],
+        "client": [
+          "net.muhammadrizo.blocksistency.BlocksistencyClient"
+        ]
+	},
+	"mixins": [
+		"blocksistency.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

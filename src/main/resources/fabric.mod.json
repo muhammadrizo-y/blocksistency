@@ -3,7 +3,7 @@
 	"id": "blocksistency",
 	"version": "${version}",
 	"name": "Blocksistency",
-	"description": "Missing blocks in block sets finally added!",
+	"description": "A vanilla-friendly mod that completes Minecraft’s block sets by adding missing, logical variants for builders",
 	"authors": [
 		"Muhammadrizo"
 	],

@@ -2,6 +2,8 @@ package net.muhammadrizo.blocksistency;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.muhammadrizo.blocksistency.block.ModBlocks;
+import net.muhammadrizo.blocksistency.item.ModItemGroups;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +13,8 @@ public class Blocksistency implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        ModItemGroups.registerItemGroups();
 
+        ModBlocks.registerModBlocks();
 	}
 }

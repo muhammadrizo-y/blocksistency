@@ -1,4 +1,4 @@
-<p>
+<p align="center">
     <img src="src/main/resources/assets/blocksistency/icon.png" width="64" alt="">
     <h1 align="center">Blocksistency</h1>
 </p>

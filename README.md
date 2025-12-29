@@ -3,4 +3,4 @@
     <h1 align="center">Blocksistency</h1>
 </p>
 
-A vanilla-friendly mod that completes Minecraft’s stone blocks by adding missing, logical variants for builders and world designers
+A vanilla-friendly mod that completes Minecraft’s block sets by adding missing, logical variants for builders

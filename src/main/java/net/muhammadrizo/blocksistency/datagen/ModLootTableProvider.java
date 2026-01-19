@@ -3,7 +3,7 @@ package net.muhammadrizo.blocksistency.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.registry.RegistryWrapper;
-import net.muhammadrizo.blocksistency.block.ModBlocks;
+import net.muhammadrizo.blocksistency.block.ModStoneBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -16,43 +16,43 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         // ============== STONE ==============
 
-        addDrop(ModBlocks.STONE_WALL);
-        addDrop(ModBlocks.CHISELED_STONE);
-        addDrop(ModBlocks.MOSSY_CHISELED_STONE);
-        addDrop(ModBlocks.CRACKED_CHISELED_STONE);
+        addDrop(ModStoneBlocks.STONE_WALL);
+        addDrop(ModStoneBlocks.CHISELED_STONE);
+        addDrop(ModStoneBlocks.MOSSY_CHISELED_STONE);
+        addDrop(ModStoneBlocks.CRACKED_CHISELED_STONE);
 
-        addDrop(ModBlocks.SMOOTH_STONE_STAIRS);
-        addDrop(ModBlocks.SMOOTH_STONE_WALL);
+        addDrop(ModStoneBlocks.SMOOTH_STONE_STAIRS);
+        addDrop(ModStoneBlocks.SMOOTH_STONE_WALL);
 
-        addDrop(ModBlocks.POLISHED_STONE);
-        addDrop(ModBlocks.POLISHED_STONE_STAIRS);
-        addDrop(ModBlocks.POLISHED_STONE_SLAB);
-        addDrop(ModBlocks.POLISHED_STONE_WALL);
+        addDrop(ModStoneBlocks.POLISHED_STONE);
+        addDrop(ModStoneBlocks.POLISHED_STONE_STAIRS);
+        addDrop(ModStoneBlocks.POLISHED_STONE_SLAB);
+        addDrop(ModStoneBlocks.POLISHED_STONE_WALL);
 
-        addDrop(ModBlocks.MOSSY_CHISELED_STONE_BRICKS);
+        addDrop(ModStoneBlocks.MOSSY_CHISELED_STONE_BRICKS);
 
-        addDrop(ModBlocks.CRACKED_STONE_BRICK_STAIRS);
-        addDrop(ModBlocks.CRACKED_STONE_BRICK_SLAB);
-        addDrop(ModBlocks.CRACKED_STONE_BRICK_WALL);
-        addDrop(ModBlocks.CRACKED_CHISELED_STONE_BRICKS);
+        addDrop(ModStoneBlocks.CRACKED_STONE_BRICK_STAIRS);
+        addDrop(ModStoneBlocks.CRACKED_STONE_BRICK_SLAB);
+        addDrop(ModStoneBlocks.CRACKED_STONE_BRICK_WALL);
+        addDrop(ModStoneBlocks.CRACKED_CHISELED_STONE_BRICKS);
 
-        addDrop(ModBlocks.STONE_TILES);
-        addDrop(ModBlocks.STONE_TILE_STAIRS);
-        addDrop(ModBlocks.STONE_TILE_SLAB);
-        addDrop(ModBlocks.STONE_TILE_WALL);
+        addDrop(ModStoneBlocks.STONE_TILES);
+        addDrop(ModStoneBlocks.STONE_TILE_STAIRS);
+        addDrop(ModStoneBlocks.STONE_TILE_SLAB);
+        addDrop(ModStoneBlocks.STONE_TILE_WALL);
 
-        addDrop(ModBlocks.MOSSY_STONE_TILES);
-        addDrop(ModBlocks.MOSSY_STONE_TILE_STAIRS);
-        addDrop(ModBlocks.MOSSY_STONE_TILE_SLAB);
-        addDrop(ModBlocks.MOSSY_STONE_TILE_WALL);
+        addDrop(ModStoneBlocks.MOSSY_STONE_TILES);
+        addDrop(ModStoneBlocks.MOSSY_STONE_TILE_STAIRS);
+        addDrop(ModStoneBlocks.MOSSY_STONE_TILE_SLAB);
+        addDrop(ModStoneBlocks.MOSSY_STONE_TILE_WALL);
 
-        addDrop(ModBlocks.CRACKED_STONE_TILES);
-        addDrop(ModBlocks.CRACKED_STONE_TILE_STAIRS);
-        addDrop(ModBlocks.CRACKED_STONE_TILE_SLAB);
-        addDrop(ModBlocks.CRACKED_STONE_TILE_WALL);
+        addDrop(ModStoneBlocks.CRACKED_STONE_TILES);
+        addDrop(ModStoneBlocks.CRACKED_STONE_TILE_STAIRS);
+        addDrop(ModStoneBlocks.CRACKED_STONE_TILE_SLAB);
+        addDrop(ModStoneBlocks.CRACKED_STONE_TILE_WALL);
 
-        addDrop(ModBlocks.STONE_PILLAR);
-        addDrop(ModBlocks.MOSSY_STONE_PILLAR);
-        addDrop(ModBlocks.CRACKED_STONE_PILLAR);
+        addDrop(ModStoneBlocks.STONE_PILLAR);
+        addDrop(ModStoneBlocks.MOSSY_STONE_PILLAR);
+        addDrop(ModStoneBlocks.CRACKED_STONE_PILLAR);
     }
 }

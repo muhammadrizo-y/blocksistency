@@ -14,15 +14,20 @@ import net.muhammadrizo.blocksistency.block.ModBlocks;
 
 public class ModItemGroups {
 
-    public static final ItemGroup STONE = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup BLOCKSISTENCY = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Blocksistency.MOD_ID, "stone"),
             FabricItemGroup.builder().icon(() -> new ItemStack(Items.STONE))
-                    .displayName(Text.translatable("itemgroup.blocksistency.stone"))
+                    .displayName(Text.translatable("itemgroup.blocksistency.blocksistency"))
                     .entries((displayContext, entries) -> {
+                        // ============== STONE ==============
+
                         entries.add(Blocks.STONE);
                         entries.add(Blocks.STONE_STAIRS);
                         entries.add(Blocks.STONE_SLAB);
                         entries.add(ModBlocks.STONE_WALL);
+                        entries.add(ModBlocks.CHISELED_STONE);
+                        entries.add(ModBlocks.MOSSY_CHISELED_STONE);
+                        entries.add(ModBlocks.CRACKED_CHISELED_STONE);
 
                         entries.add(Blocks.COBBLESTONE);
                         entries.add(Blocks.COBBLESTONE_STAIRS);
@@ -48,16 +53,19 @@ public class ModItemGroups {
                         entries.add(Blocks.STONE_BRICK_STAIRS);
                         entries.add(Blocks.STONE_BRICK_SLAB);
                         entries.add(Blocks.STONE_BRICK_WALL);
+                        entries.add(Blocks.CHISELED_STONE_BRICKS);
 
                         entries.add(Blocks.MOSSY_STONE_BRICKS);
                         entries.add(Blocks.MOSSY_STONE_BRICK_STAIRS);
                         entries.add(Blocks.MOSSY_STONE_BRICK_SLAB);
                         entries.add(Blocks.MOSSY_STONE_BRICK_WALL);
+                        entries.add(ModBlocks.MOSSY_CHISELED_STONE_BRICKS);
 
                         entries.add(Blocks.CRACKED_STONE_BRICKS);
                         entries.add(ModBlocks.CRACKED_STONE_BRICK_STAIRS);
                         entries.add(ModBlocks.CRACKED_STONE_BRICK_SLAB);
                         entries.add(ModBlocks.CRACKED_STONE_BRICK_WALL);
+                        entries.add(ModBlocks.CRACKED_CHISELED_STONE_BRICKS);
 
                         entries.add(ModBlocks.STONE_TILES);
                         entries.add(ModBlocks.STONE_TILE_STAIRS);
@@ -73,14 +81,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CRACKED_STONE_TILE_STAIRS);
                         entries.add(ModBlocks.CRACKED_STONE_TILE_SLAB);
                         entries.add(ModBlocks.CRACKED_STONE_TILE_WALL);
-
-                        entries.add(ModBlocks.CHISELED_STONE);
-                        entries.add(ModBlocks.MOSSY_CHISELED_STONE);
-                        entries.add(ModBlocks.CRACKED_CHISELED_STONE);
-
-                        entries.add(Blocks.CHISELED_STONE_BRICKS);
-                        entries.add(ModBlocks.MOSSY_CHISELED_STONE_BRICKS);
-                        entries.add(ModBlocks.CRACKED_CHISELED_STONE_BRICKS);
 
                         entries.add(ModBlocks.STONE_PILLAR);
                         entries.add(ModBlocks.MOSSY_STONE_PILLAR);

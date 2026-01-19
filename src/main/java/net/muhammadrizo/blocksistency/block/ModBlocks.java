@@ -24,6 +24,27 @@ public class ModBlocks {
             true
     );
 
+    public static final Block CHISELED_STONE = register(
+            "chiseled_stone",
+            Block::new,
+            AbstractBlock.Settings.copy(Blocks.STONE),
+            true
+    );
+
+    public static final Block MOSSY_CHISELED_STONE = register(
+            "mossy_chiseled_stone",
+            Block::new,
+            AbstractBlock.Settings.copy(ModBlocks.CHISELED_STONE),
+            true
+    );
+
+    public static final Block CRACKED_CHISELED_STONE = register(
+            "cracked_chiseled_stone",
+            Block::new,
+            AbstractBlock.Settings.copy(ModBlocks.CHISELED_STONE),
+            true
+    );
+
     public static final Block SMOOTH_STONE_STAIRS = register(
             "smooth_stone_stairs",
             settings -> new ModStairsBlock(
@@ -72,6 +93,13 @@ public class ModBlocks {
             true
     );
 
+    public static final Block MOSSY_CHISELED_STONE_BRICKS = register(
+            "mossy_chiseled_stone_bricks",
+            Block::new,
+            AbstractBlock.Settings.copy(Blocks.CHISELED_STONE_BRICKS),
+            true
+    );
+
     public static final Block CRACKED_STONE_BRICK_STAIRS = register(
             "cracked_stone_brick_stairs",
             settings -> new ModStairsBlock(
@@ -93,6 +121,13 @@ public class ModBlocks {
             "cracked_stone_brick_wall",
             WallBlock::new,
             AbstractBlock.Settings.copy(Blocks.CRACKED_STONE_BRICKS),
+            true
+    );
+
+    public static final Block CRACKED_CHISELED_STONE_BRICKS = register(
+            "cracked_chiseled_stone_bricks",
+            Block::new,
+            AbstractBlock.Settings.copy(Blocks.CHISELED_STONE_BRICKS),
             true
     );
 
@@ -189,41 +224,6 @@ public class ModBlocks {
             true
     );
 
-    public static final Block CHISELED_STONE = register(
-            "chiseled_stone",
-            Block::new,
-            AbstractBlock.Settings.copy(Blocks.STONE),
-            true
-    );
-
-    public static final Block MOSSY_CHISELED_STONE = register(
-            "mossy_chiseled_stone",
-            Block::new,
-            AbstractBlock.Settings.copy(ModBlocks.CHISELED_STONE),
-            true
-    );
-
-    public static final Block CRACKED_CHISELED_STONE = register(
-            "cracked_chiseled_stone",
-            Block::new,
-            AbstractBlock.Settings.copy(ModBlocks.CHISELED_STONE),
-            true
-    );
-
-    public static final Block MOSSY_CHISELED_STONE_BRICKS = register(
-            "mossy_chiseled_stone_bricks",
-            Block::new,
-            AbstractBlock.Settings.copy(Blocks.CHISELED_STONE_BRICKS),
-            true
-    );
-
-    public static final Block CRACKED_CHISELED_STONE_BRICKS = register(
-            "cracked_chiseled_stone_bricks",
-            Block::new,
-            AbstractBlock.Settings.copy(Blocks.CHISELED_STONE_BRICKS),
-            true
-    );
-
     public static final Block STONE_PILLAR = register(
             "stone_pillar",
             PillarBlock::new,
@@ -245,7 +245,7 @@ public class ModBlocks {
             true
     );
 
-    private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
+    public static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
         RegistryKey<Block> blockKey = keyOfBlock(name);
 
         Block block = blockFactory.apply(settings.registryKey(blockKey));
@@ -260,11 +260,11 @@ public class ModBlocks {
         return Registry.register(Registries.BLOCK, blockKey, block);
     }
 
-    private static RegistryKey<Block> keyOfBlock(String name) {
+    public static RegistryKey<Block> keyOfBlock(String name) {
         return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Blocksistency.MOD_ID, name));
     }
 
-    private static RegistryKey<Item> keyOfItem(String name) {
+    public static RegistryKey<Item> keyOfItem(String name) {
         return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Blocksistency.MOD_ID, name));
     }
 

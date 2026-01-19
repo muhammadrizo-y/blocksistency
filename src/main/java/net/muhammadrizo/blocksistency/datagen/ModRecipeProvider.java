@@ -33,6 +33,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // Stone forms
                 wallRecipe(ModBlocks.STONE_WALL, Blocks.STONE);
+                // Chiseled Stone + variants
+                chiseledBlockRecipe(ModBlocks.CHISELED_STONE, Blocks.STONE_SLAB, Blocks.STONE);
+                mossyRecipe(ModBlocks.MOSSY_CHISELED_STONE, ModBlocks.CHISELED_STONE);
+                crackedBlockRecipe(ModBlocks.CRACKED_CHISELED_STONE, ModBlocks.CHISELED_STONE);
 
                 // Smooth Stone forms
                 stairsRecipe(ModBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
@@ -45,10 +49,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('#', Blocks.STONE)
                         .criterion(hasItem(Blocks.STONE), conditionsFromItem(Blocks.STONE))
                         .offerTo(exporter, "stone_bricks");
-
                 // Polished Stone + forms
                 craftPolishedBlocks(ModBlocks.POLISHED_STONE, ModBlocks.POLISHED_STONE_STAIRS, ModBlocks.POLISHED_STONE_SLAB, ModBlocks.POLISHED_STONE_WALL, Blocks.STONE);
-
                 // Polished Stone >> Stone Bricks
                 createShaped(RC, Blocks.STONE_BRICKS, 4)
                         .pattern("##")
@@ -56,15 +58,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('#', ModBlocks.POLISHED_STONE)
                         .criterion(hasItem(ModBlocks.POLISHED_STONE), conditionsFromItem(ModBlocks.POLISHED_STONE))
                         .offerTo(exporter, "polished_stone_to_stone_bricks");
-                offerStonecuttingRecipe(RC, Blocks.STONE_BRICKS, ModBlocks.POLISHED_STONE);
-
+                stonecutterRecipe(Blocks.STONE_BRICKS, ModBlocks.POLISHED_STONE);
                 // Polished Stone >> Stone Brick forms
-                offerStonecuttingRecipe(RC, Blocks.STONE_BRICK_STAIRS, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RC, Blocks.STONE_BRICK_SLAB, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RC, Blocks.STONE_BRICK_WALL, ModBlocks.POLISHED_STONE);
+                stonecutterRecipe(Blocks.STONE_BRICK_STAIRS, ModBlocks.POLISHED_STONE);
+                stonecutterRecipe(Blocks.STONE_BRICK_SLAB, ModBlocks.POLISHED_STONE);
+                stonecutterRecipe(Blocks.STONE_BRICK_WALL, ModBlocks.POLISHED_STONE);
+
+                // Mossy Chiseled Stone Bricks
+                mossyRecipe(ModBlocks.MOSSY_CHISELED_STONE_BRICKS, Blocks.CHISELED_STONE_BRICKS);
 
                 // Cracked Stone Brick forms
                 craftBlockForms(ModBlocks.CRACKED_STONE_BRICK_STAIRS, ModBlocks.CRACKED_STONE_BRICK_SLAB, ModBlocks.CRACKED_STONE_BRICK_WALL, Blocks.CRACKED_STONE_BRICKS);
+                // Cracked Chiseled Stone Bricks
+                crackedBlockRecipe(ModBlocks.CRACKED_CHISELED_STONE_BRICKS, Blocks.CHISELED_STONE_BRICKS);
 
                 // Stone Tiles + forms
                 craftTilesBlocks(ModBlocks.STONE_TILES, ModBlocks.STONE_TILE_STAIRS, ModBlocks.STONE_TILE_SLAB, ModBlocks.STONE_TILE_WALL, Blocks.STONE_BRICKS, ModBlocks.POLISHED_STONE, Blocks.STONE);
@@ -72,22 +78,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 mossyRecipe(ModBlocks.MOSSY_STONE_TILES, ModBlocks.STONE_TILES);
                 craftBlockForms(ModBlocks.MOSSY_STONE_TILE_STAIRS, ModBlocks.MOSSY_STONE_TILE_SLAB, ModBlocks.MOSSY_STONE_TILE_WALL, ModBlocks.MOSSY_STONE_TILES);
                 // Cracked Stone Tiles + forms
-                offerCrackingRecipe(ModBlocks.CRACKED_STONE_TILES, ModBlocks.STONE_TILES);
+                crackedBlockRecipe(ModBlocks.CRACKED_STONE_TILES, ModBlocks.STONE_TILES);
                 craftBlockForms(ModBlocks.CRACKED_STONE_TILE_STAIRS, ModBlocks.CRACKED_STONE_TILE_SLAB, ModBlocks.CRACKED_STONE_TILE_WALL, ModBlocks.CRACKED_STONE_TILES);
-
-                // Chiseled Stone + variants
-                chiseledBlockRecipe(ModBlocks.CHISELED_STONE, Blocks.STONE_SLAB, Blocks.STONE);
-                mossyRecipe(ModBlocks.MOSSY_CHISELED_STONE, ModBlocks.CHISELED_STONE);
-                offerCrackingRecipe(ModBlocks.CRACKED_CHISELED_STONE, ModBlocks.CHISELED_STONE);
-
-                // Mossy Chiseled Stone Bricks, Cracked Chiseled Stone Bricks
-                mossyRecipe(ModBlocks.MOSSY_CHISELED_STONE_BRICKS, Blocks.CHISELED_STONE_BRICKS);
-                offerCrackingRecipe(ModBlocks.CRACKED_CHISELED_STONE_BRICKS, Blocks.CHISELED_STONE_BRICKS);
 
                 // Stone Pillar + variants
                 pillarRecipe(ModBlocks.STONE_PILLAR, Blocks.STONE);
                 mossyRecipe(ModBlocks.MOSSY_STONE_PILLAR, ModBlocks.STONE_PILLAR);
-                offerCrackingRecipe(ModBlocks.CRACKED_STONE_PILLAR, ModBlocks.STONE_PILLAR);
+                crackedBlockRecipe(ModBlocks.CRACKED_STONE_PILLAR, ModBlocks.STONE_PILLAR);
             }
 
             public void craftBlockForms(ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible input) {

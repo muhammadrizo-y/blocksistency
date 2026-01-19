@@ -13,7 +13,12 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
+        // ============== STONE ==============
+
         translationBuilder.add("block.blocksistency.stone_wall", "Stone Wall");
+        translationBuilder.add("block.blocksistency.chiseled_stone", "Chiseled Stone");
+        translationBuilder.add("block.blocksistency.mossy_chiseled_stone", "Mossy Chiseled Stone");
+        translationBuilder.add("block.blocksistency.cracked_chiseled_stone", "Cracked Chiseled Stone");
 
         translationBuilder.add("block.blocksistency.smooth_stone_stairs", "Smooth Stone Stairs");
         translationBuilder.add("block.blocksistency.smooth_stone_wall", "Smooth Stone Wall");
@@ -23,9 +28,12 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("block.blocksistency.polished_stone_slab", "Polished Stone Slab");
         translationBuilder.add("block.blocksistency.polished_stone_wall", "Polished Stone Wall");
 
+        translationBuilder.add("block.blocksistency.mossy_chiseled_stone_bricks", "Mossy Chiseled Stone Bricks");
+
         translationBuilder.add("block.blocksistency.cracked_stone_brick_stairs", "Cracked Stone Brick Stairs");
         translationBuilder.add("block.blocksistency.cracked_stone_brick_slab", "Cracked Stone Brick Slab");
         translationBuilder.add("block.blocksistency.cracked_stone_brick_wall", "Cracked Stone Brick Wall");
+        translationBuilder.add("block.blocksistency.cracked_chiseled_stone_bricks", "Cracked Chiseled Stone Bricks");
 
         translationBuilder.add("block.blocksistency.stone_tiles", "Stone Tiles");
         translationBuilder.add("block.blocksistency.stone_tile_stairs", "Stone Tile Stairs");
@@ -42,17 +50,10 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("block.blocksistency.cracked_stone_tile_slab", "Cracked Stone Tile Slab");
         translationBuilder.add("block.blocksistency.cracked_stone_tile_wall", "Cracked Stone Tile Wall");
 
-        translationBuilder.add("block.blocksistency.chiseled_stone", "Chiseled Stone");
-        translationBuilder.add("block.blocksistency.mossy_chiseled_stone", "Mossy Chiseled Stone");
-        translationBuilder.add("block.blocksistency.cracked_chiseled_stone", "Cracked Chiseled Stone");
-
-        translationBuilder.add("block.blocksistency.mossy_chiseled_stone_bricks", "Mossy Chiseled Stone Bricks");
-        translationBuilder.add("block.blocksistency.cracked_chiseled_stone_bricks", "Cracked Chiseled Stone Bricks");
-
         translationBuilder.add("block.blocksistency.stone_pillar", "Stone Pillar");
         translationBuilder.add("block.blocksistency.mossy_stone_pillar", "Mossy Stone Pillar");
         translationBuilder.add("block.blocksistency.cracked_stone_pillar", "Cracked Stone Pillar");
 
-        translationBuilder.add("itemgroup.blocksistency.stone", "Blocksistency: Stone");
+        translationBuilder.add("itemgroup.blocksistency.blocksistency", "Blocksistency");
     }
 }

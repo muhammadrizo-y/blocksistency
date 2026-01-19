@@ -19,6 +19,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.STONE)
                 .wall(ModBlocks.STONE_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_CHISELED_STONE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_CHISELED_STONE);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.SMOOTH_STONE)
                 .stairs(ModBlocks.SMOOTH_STONE_STAIRS)
@@ -29,10 +32,13 @@ public class ModModelProvider extends FabricModelProvider {
                 .slab(ModBlocks.POLISHED_STONE_SLAB)
                 .wall(ModBlocks.POLISHED_STONE_WALL);
 
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_CHISELED_STONE_BRICKS);
+
         blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.CRACKED_STONE_BRICKS)
                 .stairs(ModBlocks.CRACKED_STONE_BRICK_STAIRS)
                 .slab(ModBlocks.CRACKED_STONE_BRICK_SLAB)
                 .wall(ModBlocks.CRACKED_STONE_BRICK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_CHISELED_STONE_BRICKS);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.STONE_TILES)
                 .stairs(ModBlocks.STONE_TILE_STAIRS)
@@ -48,13 +54,6 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(ModBlocks.CRACKED_STONE_TILE_STAIRS)
                 .slab(ModBlocks.CRACKED_STONE_TILE_SLAB)
                 .wall(ModBlocks.CRACKED_STONE_TILE_WALL);
-
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_STONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_CHISELED_STONE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_CHISELED_STONE);
-
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MOSSY_CHISELED_STONE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_CHISELED_STONE_BRICKS);
 
         blockStateModelGenerator.registerAxisRotated(ModBlocks.STONE_PILLAR, TexturedModel.CUBE_COLUMN);
         blockStateModelGenerator.registerAxisRotated(ModBlocks.MOSSY_STONE_PILLAR, TexturedModel.CUBE_COLUMN);

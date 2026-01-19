@@ -19,6 +19,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 // ============== STONE ==============
 
                 .add(ModBlocks.STONE_WALL)
+                .add(ModBlocks.CHISELED_STONE)
+                .add(ModBlocks.MOSSY_CHISELED_STONE)
+                .add(ModBlocks.CRACKED_CHISELED_STONE)
 
                 .add(ModBlocks.SMOOTH_STONE_STAIRS)
                 .add(ModBlocks.SMOOTH_STONE_WALL)
@@ -28,9 +31,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.POLISHED_STONE_SLAB)
                 .add(ModBlocks.POLISHED_STONE_WALL)
 
+                .add(ModBlocks.MOSSY_CHISELED_STONE_BRICKS)
+
                 .add(ModBlocks.CRACKED_STONE_BRICK_STAIRS)
                 .add(ModBlocks.CRACKED_STONE_BRICK_SLAB)
                 .add(ModBlocks.CRACKED_STONE_BRICK_WALL)
+                .add(ModBlocks.CRACKED_CHISELED_STONE_BRICKS)
 
                 .add(ModBlocks.STONE_TILES)
                 .add(ModBlocks.STONE_TILE_STAIRS)
@@ -46,13 +52,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CRACKED_STONE_TILE_STAIRS)
                 .add(ModBlocks.CRACKED_STONE_TILE_SLAB)
                 .add(ModBlocks.CRACKED_STONE_TILE_WALL)
-
-                .add(ModBlocks.CHISELED_STONE)
-                .add(ModBlocks.MOSSY_CHISELED_STONE)
-                .add(ModBlocks.CRACKED_CHISELED_STONE)
-
-                .add(ModBlocks.MOSSY_CHISELED_STONE_BRICKS)
-                .add(ModBlocks.CRACKED_CHISELED_STONE_BRICKS)
 
                 .add(ModBlocks.STONE_PILLAR)
                 .add(ModBlocks.MOSSY_STONE_PILLAR)

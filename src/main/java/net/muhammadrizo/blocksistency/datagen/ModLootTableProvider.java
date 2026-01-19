@@ -14,6 +14,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        // ============== STONE ==============
+
         addDrop(ModBlocks.STONE_WALL);
 
         addDrop(ModBlocks.SMOOTH_STONE_STAIRS);

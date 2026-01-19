@@ -22,6 +22,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         super(output, registriesFuture);
     }
 
+    final RecipeCategory RC = RecipeCategory.BUILDING_BLOCKS;
+
     @Override
     protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter recipeExporter) {
         return new RecipeGenerator(wrapperLookup, recipeExporter) {
@@ -29,118 +31,167 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             public void generate() {
                 // ============== STONE ==============
 
-                // Stone >> Stone forms
+                // Stone forms
                 wallRecipe(ModBlocks.STONE_WALL, Blocks.STONE);
 
-                // Smooth Stone >> Smooth Stone forms
+                // Smooth Stone forms
                 stairsRecipe(ModBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
                 wallRecipe(ModBlocks.SMOOTH_STONE_WALL, Blocks.SMOOTH_STONE);
 
                 // Replace 'Stone >> Stone Bricks' with 'Stone >> Polished Stone'
-                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_STONE, 4)
+                createShaped(RC, ModBlocks.POLISHED_STONE, 4)
                         .pattern("##")
                         .pattern("##")
                         .input('#', Blocks.STONE)
                         .criterion(hasItem(Blocks.STONE), conditionsFromItem(Blocks.STONE))
                         .offerTo(exporter, "stone_bricks");
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_STONE, Blocks.STONE);
+
+                // Polished Stone + forms
+                craftPolishedBlocks(ModBlocks.POLISHED_STONE, ModBlocks.POLISHED_STONE_STAIRS, ModBlocks.POLISHED_STONE_SLAB, ModBlocks.POLISHED_STONE_WALL, Blocks.STONE);
 
                 // Polished Stone >> Stone Bricks
-                createShaped(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICKS, 4)
+                createShaped(RC, Blocks.STONE_BRICKS, 4)
                         .pattern("##")
                         .pattern("##")
                         .input('#', ModBlocks.POLISHED_STONE)
                         .criterion(hasItem(ModBlocks.POLISHED_STONE), conditionsFromItem(ModBlocks.POLISHED_STONE))
                         .offerTo(exporter, "polished_stone_to_stone_bricks");
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICKS, ModBlocks.POLISHED_STONE);
-
-                // Polished Stone / Stone >> Polished Stone forms
-                stairsRecipe(ModBlocks.POLISHED_STONE_STAIRS, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_STONE_STAIRS, Blocks.STONE);
-                slabRecipe(ModBlocks.POLISHED_STONE_SLAB, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_STONE_SLAB, Blocks.STONE, 2);
-                wallRecipe(ModBlocks.POLISHED_STONE_WALL, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_STONE_WALL, Blocks.STONE);
+                offerStonecuttingRecipe(RC, Blocks.STONE_BRICKS, ModBlocks.POLISHED_STONE);
 
                 // Polished Stone >> Stone Brick forms
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_STAIRS, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_SLAB, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.STONE_BRICK_WALL, ModBlocks.POLISHED_STONE);
+                offerStonecuttingRecipe(RC, Blocks.STONE_BRICK_STAIRS, ModBlocks.POLISHED_STONE);
+                offerStonecuttingRecipe(RC, Blocks.STONE_BRICK_SLAB, ModBlocks.POLISHED_STONE);
+                offerStonecuttingRecipe(RC, Blocks.STONE_BRICK_WALL, ModBlocks.POLISHED_STONE);
 
-                // Cracked Stone Bricks >> Cracked Stone Brick forms
-                stairsRecipe(ModBlocks.CRACKED_STONE_BRICK_STAIRS, Blocks.CRACKED_STONE_BRICKS);
-                slabRecipe(ModBlocks.CRACKED_STONE_BRICK_SLAB, Blocks.CRACKED_STONE_BRICKS);
-                wallRecipe(ModBlocks.CRACKED_STONE_BRICK_WALL, Blocks.CRACKED_STONE_BRICKS);
+                // Cracked Stone Brick forms
+                craftBlockForms(ModBlocks.CRACKED_STONE_BRICK_STAIRS, ModBlocks.CRACKED_STONE_BRICK_SLAB, ModBlocks.CRACKED_STONE_BRICK_WALL, Blocks.CRACKED_STONE_BRICKS);
 
-                // Stone Bricks / Polished Stone / Stone >> Stone Tiles
-                craft2x2Recipe(ModBlocks.STONE_TILES, Blocks.STONE_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILES, Blocks.STONE_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILES, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILES, Blocks.STONE);
-
-                // Stone Tiles / Stone Bricks / Polished Stone / Stone >> Stone Tile forms
-                stairsRecipe(ModBlocks.STONE_TILE_STAIRS, ModBlocks.STONE_TILES);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILE_STAIRS, Blocks.STONE_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILE_STAIRS, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILE_STAIRS, Blocks.STONE);
-                slabRecipe(ModBlocks.STONE_TILE_SLAB, ModBlocks.STONE_TILES);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILE_SLAB, Blocks.STONE_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILE_SLAB, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILE_SLAB, Blocks.STONE);
-                wallRecipe(ModBlocks.STONE_TILE_WALL, ModBlocks.STONE_TILES);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILE_WALL, Blocks.STONE_BRICKS);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILE_WALL, ModBlocks.POLISHED_STONE);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_TILE_WALL, Blocks.STONE);
-
-                // Stone Tiles >> Mossy Stone Tiles
+                // Stone Tiles + forms
+                craftTilesBlocks(ModBlocks.STONE_TILES, ModBlocks.STONE_TILE_STAIRS, ModBlocks.STONE_TILE_SLAB, ModBlocks.STONE_TILE_WALL, Blocks.STONE_BRICKS, ModBlocks.POLISHED_STONE, Blocks.STONE);
+                // Mossy Stone Tiles + forms
                 mossyRecipe(ModBlocks.MOSSY_STONE_TILES, ModBlocks.STONE_TILES);
-
-                // Mossy Stone Tiles >> Mossy Stone Tile forms
-                stairsRecipe(ModBlocks.MOSSY_STONE_TILE_STAIRS, ModBlocks.MOSSY_STONE_TILES);
-                slabRecipe(ModBlocks.MOSSY_STONE_TILE_SLAB, ModBlocks.MOSSY_STONE_TILES);
-                wallRecipe(ModBlocks.MOSSY_STONE_TILE_WALL, ModBlocks.MOSSY_STONE_TILES);
-
-                // Stone Tiles >> Cracked Stone Tiles
+                craftBlockForms(ModBlocks.MOSSY_STONE_TILE_STAIRS, ModBlocks.MOSSY_STONE_TILE_SLAB, ModBlocks.MOSSY_STONE_TILE_WALL, ModBlocks.MOSSY_STONE_TILES);
+                // Cracked Stone Tiles + forms
                 offerCrackingRecipe(ModBlocks.CRACKED_STONE_TILES, ModBlocks.STONE_TILES);
+                craftBlockForms(ModBlocks.CRACKED_STONE_TILE_STAIRS, ModBlocks.CRACKED_STONE_TILE_SLAB, ModBlocks.CRACKED_STONE_TILE_WALL, ModBlocks.CRACKED_STONE_TILES);
 
-                // Cracked Stone Tiles >> Cracked Stone Tile forms
-                stairsRecipe(ModBlocks.CRACKED_STONE_TILE_STAIRS, ModBlocks.CRACKED_STONE_TILES);
-                slabRecipe(ModBlocks.CRACKED_STONE_TILE_SLAB, ModBlocks.CRACKED_STONE_TILES);
-                wallRecipe(ModBlocks.CRACKED_STONE_TILE_WALL, ModBlocks.CRACKED_STONE_TILES);
-
-                // 2 Stone Slab >> Chiseled Stone
-                offerChiseledBlockRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_STONE, Blocks.STONE_SLAB);
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_STONE, Blocks.STONE);
-
-                // Chiseled Stone >> Mossy Chiseled Stone
+                // Chiseled Stone + variants
+                chiseledBlockRecipe(ModBlocks.CHISELED_STONE, Blocks.STONE_SLAB, Blocks.STONE);
                 mossyRecipe(ModBlocks.MOSSY_CHISELED_STONE, ModBlocks.CHISELED_STONE);
-
-                // Chiseled Stone >> Cracked Chiseled Stone
                 offerCrackingRecipe(ModBlocks.CRACKED_CHISELED_STONE, ModBlocks.CHISELED_STONE);
 
-                // Chiseled Stone Bricks >> Mossy Chiseled Stone Bricks
+                // Mossy Chiseled Stone Bricks, Cracked Chiseled Stone Bricks
                 mossyRecipe(ModBlocks.MOSSY_CHISELED_STONE_BRICKS, Blocks.CHISELED_STONE_BRICKS);
-
-                // Chiseled Stone Bricks >> Cracked Chiseled Stone Bricks
                 offerCrackingRecipe(ModBlocks.CRACKED_CHISELED_STONE_BRICKS, Blocks.CHISELED_STONE_BRICKS);
 
-                // Stone >> Stone Pillar
+                // Stone Pillar + variants
                 pillarRecipe(ModBlocks.STONE_PILLAR, Blocks.STONE);
-
-                // Stone Pillar >> Mossy Stone Pillar
                 mossyRecipe(ModBlocks.MOSSY_STONE_PILLAR, ModBlocks.STONE_PILLAR);
-
-                // Stone Pillar >> Cracked Stone Pillar
                 offerCrackingRecipe(ModBlocks.CRACKED_STONE_PILLAR, ModBlocks.STONE_PILLAR);
             }
 
-            public void craft2x2Recipe(ItemConvertible output, ItemConvertible input) {
-                createShaped(RecipeCategory.BUILDING_BLOCKS, output, 4)
+            public void craftBlockForms(ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible input) {
+                stairsRecipe(stairs, input);
+
+                slabRecipe(slab, input);
+
+                wallRecipe(wall, input);
+            }
+
+            public void polishedBlockRecipe(ItemConvertible output, ItemConvertible input) {
+                createShaped(RC, output, 4)
                         .pattern("##")
                         .pattern("##")
                         .input('#', input)
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .offerTo(exporter);
+
+                offerStonecuttingRecipe(RC, output, input);
+            }
+
+            public void craftPolishedBlocks(ItemConvertible block, ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible baseBlock) {
+                polishedBlockRecipe(block, baseBlock);
+
+                stairsRecipe(stairs, block);
+                offerStonecuttingRecipe(RC, stairs, baseBlock);
+
+                slabRecipe(slab, block);
+                offerStonecuttingRecipe(RC, slab, baseBlock, 2);
+
+                wallRecipe(wall, block);
+                offerStonecuttingRecipe(RC, wall, baseBlock);
+            }
+
+            public void bricksBlockRecipe(ItemConvertible output, ItemConvertible input, ItemConvertible baseBlock) {
+                createShaped(RC, output, 4)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', input)
+                        .criterion(hasItem(input), conditionsFromItem(input))
+                        .offerTo(exporter);
+
+                offerStonecuttingRecipe(RC, output, input);
+                offerStonecuttingRecipe(RC, output, baseBlock);
+            }
+
+            public void craftBricksBlocks(ItemConvertible block, ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible polishedBlock, ItemConvertible baseBlock) {
+                bricksBlockRecipe(block, polishedBlock, baseBlock);
+
+                stairsRecipe(stairs, block);
+                offerStonecuttingRecipe(RC, stairs, polishedBlock);
+                offerStonecuttingRecipe(RC, stairs, baseBlock);
+
+                slabRecipe(slab, block);
+                offerStonecuttingRecipe(RC, slab, polishedBlock, 2);
+                offerStonecuttingRecipe(RC, slab, baseBlock, 2);
+
+                wallRecipe(wall, block);
+                offerStonecuttingRecipe(RC, wall, polishedBlock);
+                offerStonecuttingRecipe(RC, wall, baseBlock);
+            }
+
+            public void tilesBlockRecipe(ItemConvertible output, ItemConvertible input, ItemConvertible polishedBlock, ItemConvertible baseBlock) {
+                createShaped(RC, output, 4)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', input)
+                        .criterion(hasItem(input), conditionsFromItem(input))
+                        .offerTo(exporter);
+
+                offerStonecuttingRecipe(RC, output, input);
+                offerStonecuttingRecipe(RC, output, polishedBlock);
+                offerStonecuttingRecipe(RC, output, baseBlock);
+            }
+
+            public void craftTilesBlocks(ItemConvertible block, ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible bricksBlock, ItemConvertible polishedBlock, ItemConvertible baseBlock) {
+                tilesBlockRecipe(block, bricksBlock, polishedBlock, baseBlock);
+
+                stairsRecipe(stairs, block);
+                stonecutterRecipe(stairs, bricksBlock);
+                stonecutterRecipe(stairs, polishedBlock);
+                stonecutterRecipe(stairs, baseBlock);
+
+                slabRecipe(slab, block);
+                stonecutterRecipe(slab, bricksBlock, 2);
+                stonecutterRecipe(slab, polishedBlock, 2);
+                stonecutterRecipe(slab, baseBlock, 2);
+
+                wallRecipe(wall, block);
+                stonecutterRecipe(wall, bricksBlock);
+                stonecutterRecipe(wall, polishedBlock);
+                stonecutterRecipe(wall, baseBlock);
+            }
+
+            public void stonecutterRecipe(ItemConvertible output, ItemConvertible input) {
+                offerStonecuttingRecipe(RC, output, input);
+            }
+
+            public void stonecutterRecipe(ItemConvertible output, ItemConvertible input, int count) {
+                offerStonecuttingRecipe(RC, output, input, count);
+            }
+
+            public void smoothBlockRecipe(ItemConvertible output, ItemConvertible input) {
+                offerCrackingRecipe(output, input);
             }
 
             public void mossyRecipe(ItemConvertible output, ItemConvertible input) {
@@ -149,28 +200,37 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 Identifier outputId = Registries.ITEM.getId(outputItem);
                 String basePath = outputId.getPath();
 
-                createShapeless(RecipeCategory.BUILDING_BLOCKS, output)
+                createShapeless(RC, output)
                         .input(input)
                         .input(Items.VINE)
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .offerTo(exporter, basePath + "_from_vine");
 
-                createShapeless(RecipeCategory.BUILDING_BLOCKS, output)
+                createShapeless(RC, output)
                         .input(input)
                         .input(Blocks.MOSS_BLOCK)
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .offerTo(exporter, basePath + "from_moss_block");
             }
 
+            public void crackedBlockRecipe(ItemConvertible output, ItemConvertible input) {
+                offerCrackingRecipe(output, input);
+            }
+
+            public void chiseledBlockRecipe(ItemConvertible output, ItemConvertible input, ItemConvertible inputBlock) {
+                offerChiseledBlockRecipe(RC, output, input);
+                stonecutterRecipe(output, inputBlock, 1);
+            }
+
             public void pillarRecipe(ItemConvertible output, ItemConvertible input) {
-                createShaped(RecipeCategory.BUILDING_BLOCKS, output, 2)
+                createShaped(RC, output, 2)
                         .pattern("#")
                         .pattern("#")
                         .input('#', input)
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .offerTo(exporter);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, output, input);
+                stonecutterRecipe(output, input, 1);
             }
 
             public void stairsRecipe(ItemConvertible output, ItemConvertible input) {
@@ -178,15 +238,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .offerTo(exporter);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, output, input);
+                stonecutterRecipe(output, input, 1);
             }
 
             public void slabRecipe(ItemConvertible output, ItemConvertible input) {
-                createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, output, Ingredient.ofItem(input))
+                createSlabRecipe(RC, output, Ingredient.ofItem(input))
                     .criterion(hasItem(input), conditionsFromItem(input))
                     .offerTo(exporter);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, output, input, 2);
+                stonecutterRecipe(output, input, 2);
             }
 
             public void wallRecipe(ItemConvertible output, ItemConvertible input) {
@@ -197,7 +257,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .offerTo(exporter);
 
-                offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, output, input);
+                stonecutterRecipe(output, input, 1);
             }
         };
     }

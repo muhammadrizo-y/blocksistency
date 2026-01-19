@@ -53,6 +53,6 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("block.blocksistency.mossy_stone_pillar", "Mossy Stone Pillar");
         translationBuilder.add("block.blocksistency.cracked_stone_pillar", "Cracked Stone Pillar");
 
-        translationBuilder.add("itemgroup.blocksistency.blocksistency", "Blocksistency: Stone");
+        translationBuilder.add("itemgroup.blocksistency.stone", "Blocksistency: Stone");
     }
 }

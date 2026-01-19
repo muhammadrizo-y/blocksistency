@@ -16,6 +16,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
+                // ============== STONE ==============
+
                 .add(ModBlocks.STONE_WALL)
 
                 .add(ModBlocks.SMOOTH_STONE_STAIRS)
@@ -57,6 +59,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CRACKED_STONE_PILLAR);
 
         valueLookupBuilder(BlockTags.WALLS)
+                // ============== STONE ==============
+
                 .add(ModBlocks.STONE_WALL)
                 .add(ModBlocks.SMOOTH_STONE_WALL)
                 .add(ModBlocks.POLISHED_STONE_WALL)

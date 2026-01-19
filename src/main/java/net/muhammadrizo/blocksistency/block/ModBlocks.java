@@ -15,6 +15,7 @@ import net.muhammadrizo.blocksistency.Blocksistency;
 import java.util.function.Function;
 
 public class ModBlocks {
+    // ============== STONE ==============
 
     public static final Block STONE_WALL = register(
             "stone_wall",
@@ -271,45 +272,54 @@ public class ModBlocks {
         Blocksistency.LOGGER.info("Registering mod blocks for " + Blocksistency.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.STONE_WALL);
+            // ============== STONE ==============
 
-            entries.add(ModBlocks.SMOOTH_STONE_STAIRS);
-            entries.add(ModBlocks.SMOOTH_STONE_WALL);
+            entries.addAfter(Blocks.STONE_SLAB,
+                    ModBlocks.STONE_WALL,
+                    ModBlocks.CHISELED_STONE,
+                    ModBlocks.MOSSY_CHISELED_STONE,
+                    ModBlocks.CRACKED_CHISELED_STONE
+            );
 
-            entries.add(ModBlocks.POLISHED_STONE);
-            entries.add(ModBlocks.POLISHED_STONE_STAIRS);
-            entries.add(ModBlocks.POLISHED_STONE_SLAB);
-            entries.add(ModBlocks.POLISHED_STONE_WALL);
+            entries.addAfter(Blocks.SMOOTH_STONE,
+                    ModBlocks.SMOOTH_STONE_STAIRS);
 
-            entries.add(ModBlocks.CRACKED_STONE_BRICK_STAIRS);
-            entries.add(ModBlocks.CRACKED_STONE_BRICK_SLAB);
-            entries.add(ModBlocks.CRACKED_STONE_BRICK_WALL);
+            entries.addAfter(Blocks.SMOOTH_STONE_SLAB,
+                    ModBlocks.SMOOTH_STONE_WALL,
+                    ModBlocks.POLISHED_STONE,
+                    ModBlocks.POLISHED_STONE_STAIRS,
+                    ModBlocks.POLISHED_STONE_SLAB,
+                    ModBlocks.POLISHED_STONE_WALL);
 
-            entries.add(ModBlocks.STONE_TILES);
-            entries.add(ModBlocks.STONE_TILE_STAIRS);
-            entries.add(ModBlocks.STONE_TILE_SLAB);
-            entries.add(ModBlocks.STONE_TILE_WALL);
+            entries.addAfter(Blocks.MOSSY_STONE_BRICK_WALL,
+                    ModBlocks.MOSSY_CHISELED_STONE_BRICKS);
 
-            entries.add(ModBlocks.MOSSY_STONE_TILES);
-            entries.add(ModBlocks.MOSSY_STONE_TILE_STAIRS);
-            entries.add(ModBlocks.MOSSY_STONE_TILE_SLAB);
-            entries.add(ModBlocks.MOSSY_STONE_TILE_WALL);
+            entries.getDisplayStacks().removeIf(stack ->
+                    stack.getItem().equals(Blocks.CRACKED_STONE_BRICKS.asItem()));
+            entries.getSearchTabStacks().removeIf(stack ->
+                    stack.getItem().equals(Blocks.CRACKED_STONE_BRICKS.asItem()));
 
-            entries.add(ModBlocks.CRACKED_STONE_TILES);
-            entries.add(ModBlocks.CRACKED_STONE_TILE_STAIRS);
-            entries.add(ModBlocks.CRACKED_STONE_TILE_SLAB);
-            entries.add(ModBlocks.CRACKED_STONE_TILE_WALL);
-
-            entries.add(ModBlocks.CHISELED_STONE);
-            entries.add(ModBlocks.MOSSY_CHISELED_STONE);
-            entries.add(ModBlocks.CRACKED_CHISELED_STONE);
-
-            entries.add(ModBlocks.MOSSY_CHISELED_STONE_BRICKS);
-            entries.add(ModBlocks.CRACKED_CHISELED_STONE_BRICKS);
-
-            entries.add(ModBlocks.STONE_PILLAR);
-            entries.add(ModBlocks.MOSSY_STONE_PILLAR);
-            entries.add(ModBlocks.CRACKED_STONE_PILLAR);
+            entries.addAfter(ModBlocks.MOSSY_CHISELED_STONE_BRICKS,
+                    Blocks.CRACKED_STONE_BRICKS,
+                    ModBlocks.CRACKED_STONE_BRICK_STAIRS,
+                    ModBlocks.CRACKED_STONE_BRICK_SLAB,
+                    ModBlocks.CRACKED_STONE_BRICK_WALL,
+                    ModBlocks.CRACKED_CHISELED_STONE_BRICKS,
+                    ModBlocks.STONE_TILES,
+                    ModBlocks.STONE_TILE_STAIRS,
+                    ModBlocks.STONE_TILE_SLAB,
+                    ModBlocks.STONE_TILE_WALL,
+                    ModBlocks.MOSSY_STONE_TILES,
+                    ModBlocks.MOSSY_STONE_TILE_STAIRS,
+                    ModBlocks.MOSSY_STONE_TILE_SLAB,
+                    ModBlocks.MOSSY_STONE_TILE_WALL,
+                    ModBlocks.CRACKED_STONE_TILES,
+                    ModBlocks.CRACKED_STONE_TILE_STAIRS,
+                    ModBlocks.CRACKED_STONE_TILE_SLAB,
+                    ModBlocks.CRACKED_STONE_TILE_WALL,
+                    ModBlocks.STONE_PILLAR,
+                    ModBlocks.MOSSY_STONE_PILLAR,
+                    ModBlocks.CRACKED_STONE_PILLAR);
         });
     }
 }

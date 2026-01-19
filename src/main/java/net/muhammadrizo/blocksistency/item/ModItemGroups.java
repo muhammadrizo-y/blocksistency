@@ -14,10 +14,10 @@ import net.muhammadrizo.blocksistency.block.ModBlocks;
 
 public class ModItemGroups {
 
-    public static final ItemGroup BLOCKSISTENCY = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Blocksistency.MOD_ID, "blocksistency"),
+    public static final ItemGroup STONE = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(Blocksistency.MOD_ID, "stone"),
             FabricItemGroup.builder().icon(() -> new ItemStack(Items.STONE))
-                    .displayName(Text.translatable("itemgroup.blocksistency.blocksistency"))
+                    .displayName(Text.translatable("itemgroup.blocksistency.stone"))
                     .entries((displayContext, entries) -> {
                         entries.add(Blocks.STONE);
                         entries.add(Blocks.STONE_STAIRS);

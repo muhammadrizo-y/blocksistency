@@ -42,15 +42,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stairsRecipe(ModStoneBlocks.SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
                 wallRecipe(ModStoneBlocks.SMOOTH_STONE_WALL, Blocks.SMOOTH_STONE);
 
-                // Replace 'Stone >> Stone Bricks' with 'Stone >> Polished Stone'
-                createShaped(RC, ModStoneBlocks.POLISHED_STONE, 4)
-                        .pattern("##")
-                        .pattern("##")
-                        .input('#', Blocks.STONE)
-                        .criterion(hasItem(Blocks.STONE), conditionsFromItem(Blocks.STONE))
-                        .offerTo(exporter, "stone_bricks");
-                // Polished Stone + forms
-                craftPolishedBlocks(ModStoneBlocks.POLISHED_STONE, ModStoneBlocks.POLISHED_STONE_STAIRS, ModStoneBlocks.POLISHED_STONE_SLAB, ModStoneBlocks.POLISHED_STONE_WALL, Blocks.STONE);
+                // Replacing 'Stone >> Stone Bricks' with 'Stone >> Polished Stone'
+                // is done in the resources/data/minecraft/recipe, in "stone_bricks.json"
+                // Polished Stone forms
+                craftBlockForms(
+                        ModStoneBlocks.POLISHED_STONE_STAIRS, ModStoneBlocks.POLISHED_STONE_SLAB, ModStoneBlocks.POLISHED_STONE_WALL,
+                        ModStoneBlocks.POLISHED_STONE);
+                stonecutterRecipe(ModStoneBlocks.POLISHED_STONE_STAIRS, Blocks.STONE);
+                stonecutterRecipe(ModStoneBlocks.POLISHED_STONE_SLAB, Blocks.STONE);
+                stonecutterRecipe(ModStoneBlocks.POLISHED_STONE_WALL, Blocks.STONE);
                 // Polished Stone >> Stone Bricks
                 createShaped(RC, Blocks.STONE_BRICKS, 4)
                         .pattern("##")
@@ -207,7 +207,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(input)
                         .input(Blocks.MOSS_BLOCK)
                         .criterion(hasItem(input), conditionsFromItem(input))
-                        .offerTo(exporter, basePath + "from_moss_block");
+                        .offerTo(exporter, basePath + "_from_moss_block");
             }
 
             public void crackedBlockRecipe(ItemConvertible output, ItemConvertible input) {

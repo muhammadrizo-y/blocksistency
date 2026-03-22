@@ -1,0 +1,9 @@
+{
+  "parent": "blocksistency:block/template_bottom_top_wall_side",
+  "textures": {
+    "wall": "minecraft:block/blackstone",
+    "top": "minecraft:block/blackstone_top",
+    "bottom": "minecraft:block/blackstone_top",
+    "side": "minecraft:block/blackstone"
+  }
+}

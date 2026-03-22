@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "minecraft:stone"
+    "#": "blocksistency:polished_stone"
   },
   "pattern": [
     "##",
@@ -10,6 +10,6 @@
   ],
   "result": {
     "count": 4,
-    "id": "blocksistency:polished_stone"
+    "id": "minecraft:stone_bricks"
   }
 }

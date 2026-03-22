@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    "minecraft:polished_diorite"
+  ],
+  "result": {
+    "count": 4,
+    "id": "blocksistency:polished_diorite_button"
+  }
+}

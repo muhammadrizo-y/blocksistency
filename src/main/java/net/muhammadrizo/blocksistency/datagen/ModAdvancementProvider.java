@@ -160,16 +160,19 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 ModGraniteBlocks.GRANITE_BRICK_STAIRS,
                 ModGraniteBlocks.GRANITE_BRICK_SLAB,
                 ModGraniteBlocks.GRANITE_BRICK_WALL,
+                ModGraniteBlocks.CHISELED_GRANITE_BRICKS,
 
                 ModGraniteBlocks.MOSSY_GRANITE_BRICKS,
                 ModGraniteBlocks.MOSSY_GRANITE_BRICK_STAIRS,
                 ModGraniteBlocks.MOSSY_GRANITE_BRICK_SLAB,
                 ModGraniteBlocks.MOSSY_GRANITE_BRICK_WALL,
+                ModGraniteBlocks.MOSSY_CHISELED_GRANITE_BRICKS,
 
                 ModGraniteBlocks.CRACKED_GRANITE_BRICKS,
                 ModGraniteBlocks.CRACKED_GRANITE_BRICK_STAIRS,
                 ModGraniteBlocks.CRACKED_GRANITE_BRICK_SLAB,
                 ModGraniteBlocks.CRACKED_GRANITE_BRICK_WALL,
+                ModGraniteBlocks.CRACKED_CHISELED_GRANITE_BRICKS,
 
                 ModGraniteBlocks.GRANITE_PLATES,
                 ModGraniteBlocks.GRANITE_PLATE_STAIRS,
@@ -247,16 +250,19 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 ModDioriteBlocks.DIORITE_BRICK_STAIRS,
                 ModDioriteBlocks.DIORITE_BRICK_SLAB,
                 ModDioriteBlocks.DIORITE_BRICK_WALL,
+                ModDioriteBlocks.CHISELED_DIORITE_BRICKS,
 
                 ModDioriteBlocks.MOSSY_DIORITE_BRICKS,
                 ModDioriteBlocks.MOSSY_DIORITE_BRICK_STAIRS,
                 ModDioriteBlocks.MOSSY_DIORITE_BRICK_SLAB,
                 ModDioriteBlocks.MOSSY_DIORITE_BRICK_WALL,
+                ModDioriteBlocks.MOSSY_CHISELED_DIORITE_BRICKS,
 
                 ModDioriteBlocks.CRACKED_DIORITE_BRICKS,
                 ModDioriteBlocks.CRACKED_DIORITE_BRICK_STAIRS,
                 ModDioriteBlocks.CRACKED_DIORITE_BRICK_SLAB,
                 ModDioriteBlocks.CRACKED_DIORITE_BRICK_WALL,
+                ModDioriteBlocks.CRACKED_CHISELED_DIORITE_BRICKS,
 
                 ModDioriteBlocks.DIORITE_PLATES,
                 ModDioriteBlocks.DIORITE_PLATE_STAIRS,
@@ -334,16 +340,19 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 ModAndesiteBlocks.ANDESITE_BRICK_STAIRS,
                 ModAndesiteBlocks.ANDESITE_BRICK_SLAB,
                 ModAndesiteBlocks.ANDESITE_BRICK_WALL,
+                ModAndesiteBlocks.CHISELED_ANDESITE_BRICKS,
 
                 ModAndesiteBlocks.MOSSY_ANDESITE_BRICKS,
                 ModAndesiteBlocks.MOSSY_ANDESITE_BRICK_STAIRS,
                 ModAndesiteBlocks.MOSSY_ANDESITE_BRICK_SLAB,
                 ModAndesiteBlocks.MOSSY_ANDESITE_BRICK_WALL,
+                ModAndesiteBlocks.MOSSY_CHISELED_ANDESITE_BRICKS,
 
                 ModAndesiteBlocks.CRACKED_ANDESITE_BRICKS,
                 ModAndesiteBlocks.CRACKED_ANDESITE_BRICK_STAIRS,
                 ModAndesiteBlocks.CRACKED_ANDESITE_BRICK_SLAB,
                 ModAndesiteBlocks.CRACKED_ANDESITE_BRICK_WALL,
+                ModAndesiteBlocks.CRACKED_CHISELED_ANDESITE_BRICKS,
 
                 ModAndesiteBlocks.ANDESITE_PLATES,
                 ModAndesiteBlocks.ANDESITE_PLATE_STAIRS,
@@ -429,6 +438,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 ModDeepslateBlocks.MOSSY_DEEPSLATE_BRICK_WALL,
                 ModDeepslateBlocks.MOSSY_CHISELED_DEEPSLATE_BRICKS,
 
+                Blocks.CRACKED_DEEPSLATE_BRICKS,
                 ModDeepslateBlocks.CRACKED_DEEPSLATE_BRICK_STAIRS,
                 ModDeepslateBlocks.CRACKED_DEEPSLATE_BRICK_SLAB,
                 ModDeepslateBlocks.CRACKED_DEEPSLATE_BRICK_WALL,

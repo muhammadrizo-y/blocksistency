@@ -342,7 +342,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModDeepslateBlocks.DEEPSLATE_PLATES);
         addDrop(ModDeepslateBlocks.DEEPSLATE_PLATE_STAIRS);
-        addDrop(ModDeepslateBlocks.DEEPSLATE_PLATE_SLAB);
+        addSlabDrop(ModDeepslateBlocks.DEEPSLATE_PLATE_SLAB);
         addDrop(ModDeepslateBlocks.DEEPSLATE_PLATE_WALL);
 
         addDrop(ModDeepslateBlocks.MOSSY_DEEPSLATE_PLATES);

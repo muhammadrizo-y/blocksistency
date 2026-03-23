@@ -10,19 +10,6 @@ base {
 	archivesName = project.archives_base_name
 }
 
-repositories {
-	mavenCentral()
-	maven {
-		name = "FzzyMaven"
-		url = "https://maven.fzzyhmstrs.me/"
-	}
-
-	maven {
-		name = "Terraformers"
-		url = "https://maven.terraformersmc.com/"
-	}
-}
-
 fabricApi {
 	configureDataGeneration {
 		client = true
@@ -37,10 +24,6 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-	modImplementation "me.fzzyhmstrs:fzzy_config:${project.fzzy_config_version}"
-
-	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
 processResources {

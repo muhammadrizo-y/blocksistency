@@ -255,6 +255,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModDioriteBlocks.CRACKED_DIORITE_BRICKS);
                 crackedBlockRecipe(ModDioriteBlocks.CRACKED_CHISELED_DIORITE_BRICKS, ModDioriteBlocks.CHISELED_DIORITE_BRICKS);
 
+                // Diorite Plates + forms
+                craftPlatesBlocks(ModDioriteBlocks.DIORITE_PLATES,
+                        ModDioriteBlocks.DIORITE_PLATE_STAIRS, ModDioriteBlocks.DIORITE_PLATE_SLAB, ModDioriteBlocks.DIORITE_PLATE_WALL,
+                        ModDioriteBlocks.DIORITE_BRICKS, Blocks.POLISHED_DIORITE, Blocks.DIORITE);
+                // Mossy Diorite Plates + forms
+                mossyBlockRecipe(ModDioriteBlocks.MOSSY_DIORITE_PLATES, ModDioriteBlocks.DIORITE_PLATES);
+                craftBlockForms(
+                        ModDioriteBlocks.MOSSY_DIORITE_PLATE_STAIRS, ModDioriteBlocks.MOSSY_DIORITE_PLATE_SLAB, ModDioriteBlocks.MOSSY_DIORITE_PLATE_WALL,
+                        ModDioriteBlocks.MOSSY_DIORITE_PLATES);
+                // Cracked Diorite Plates + forms
+                crackedBlockRecipe(ModDioriteBlocks.CRACKED_DIORITE_PLATES, ModDioriteBlocks.DIORITE_PLATES);
+                craftBlockForms(
+                        ModDioriteBlocks.CRACKED_DIORITE_PLATE_STAIRS, ModDioriteBlocks.CRACKED_DIORITE_PLATE_SLAB, ModDioriteBlocks.CRACKED_DIORITE_PLATE_WALL,
+                        ModDioriteBlocks.CRACKED_DIORITE_PLATES);
+
                 // Diorite Tiles + forms
                 craftTilesBlocks(ModDioriteBlocks.DIORITE_TILES,
                         ModDioriteBlocks.DIORITE_TILE_STAIRS, ModDioriteBlocks.DIORITE_TILE_SLAB, ModDioriteBlocks.DIORITE_TILE_WALL,
@@ -327,6 +342,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModAndesiteBlocks.CRACKED_ANDESITE_BRICK_STAIRS, ModAndesiteBlocks.CRACKED_ANDESITE_BRICK_SLAB, ModAndesiteBlocks.CRACKED_ANDESITE_BRICK_WALL,
                         ModAndesiteBlocks.CRACKED_ANDESITE_BRICKS);
                 crackedBlockRecipe(ModAndesiteBlocks.CRACKED_CHISELED_ANDESITE_BRICKS, ModAndesiteBlocks.CHISELED_ANDESITE_BRICKS);
+
+                // Andesite Plates + forms
+                craftPlatesBlocks(ModAndesiteBlocks.ANDESITE_PLATES,
+                        ModAndesiteBlocks.ANDESITE_PLATE_STAIRS, ModAndesiteBlocks.ANDESITE_PLATE_SLAB, ModAndesiteBlocks.ANDESITE_PLATE_WALL,
+                        ModAndesiteBlocks.ANDESITE_BRICKS, Blocks.POLISHED_ANDESITE, Blocks.ANDESITE);
+                // Mossy Andesite Plates + forms
+                mossyBlockRecipe(ModAndesiteBlocks.MOSSY_ANDESITE_PLATES, ModAndesiteBlocks.ANDESITE_PLATES);
+                craftBlockForms(
+                        ModAndesiteBlocks.MOSSY_ANDESITE_PLATE_STAIRS, ModAndesiteBlocks.MOSSY_ANDESITE_PLATE_SLAB, ModAndesiteBlocks.MOSSY_ANDESITE_PLATE_WALL,
+                        ModAndesiteBlocks.MOSSY_ANDESITE_PLATES);
+                // Cracked Andesite Plates + forms
+                crackedBlockRecipe(ModAndesiteBlocks.CRACKED_ANDESITE_PLATES, ModAndesiteBlocks.ANDESITE_PLATES);
+                craftBlockForms(
+                        ModAndesiteBlocks.CRACKED_ANDESITE_PLATE_STAIRS, ModAndesiteBlocks.CRACKED_ANDESITE_PLATE_SLAB, ModAndesiteBlocks.CRACKED_ANDESITE_PLATE_WALL,
+                        ModAndesiteBlocks.CRACKED_ANDESITE_PLATES);
 
                 // Andesite Tiles + forms
                 craftTilesBlocks(ModAndesiteBlocks.ANDESITE_TILES,

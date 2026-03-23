@@ -262,8 +262,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         // ============== DEEPSLATE ==============
 
-        stairsModel(gen, ModDeepslateBlocks.DEEPSLATE_STAIRS, Blocks.DEEPSLATE);
-        slabModel(gen, ModDeepslateBlocks.DEEPSLATE_SLAB, Blocks.DEEPSLATE);
+        bottomTopStairsModel(gen, ModDeepslateBlocks.DEEPSLATE_STAIRS, Blocks.DEEPSLATE, false);
+        bottomTopSlabModel(gen, ModDeepslateBlocks.DEEPSLATE_SLAB, Blocks.DEEPSLATE, false);
         bottomTopWallModel(gen, ModDeepslateBlocks.DEEPSLATE_WALL, Blocks.DEEPSLATE, false);
 
         simpleCubeModel(gen, ModDeepslateBlocks.MOSSY_CHISELED_DEEPSLATE);
@@ -332,6 +332,10 @@ public class ModModelProvider extends FabricModelProvider {
     public void stairsModel(BlockStateModelGenerator gen, Block block, Block baseBlock) {
         TextureMap texture = TextureMap.all(baseBlock);
 
+        customTextureStairsModel(gen, block, texture);
+    }
+
+    public void customTextureStairsModel(BlockStateModelGenerator gen, Block block, TextureMap texture) {
         Identifier stairsModelId = Models.STAIRS.upload(
                 block, texture, gen.modelCollector);
 
@@ -354,9 +358,56 @@ public class ModModelProvider extends FabricModelProvider {
                 block, stairsModelId);
     }
 
+    public void customTextureBottomTopStairsModel(BlockStateModelGenerator gen, Block block, TextureMap texture) {
+        Identifier stairsId = Models.STAIRS.upload(
+                block, texture, gen.modelCollector);
+        Identifier stairsInnerId = Models.INNER_STAIRS.upload(
+                block, texture, gen.modelCollector);
+        Identifier stairsOuterId = Models.OUTER_STAIRS.upload(
+                block, texture, gen.modelCollector);
+
+        gen.blockStateCollector.accept(
+                BlockStateModelGenerator.createStairsBlockState(
+                        block,
+                        BlockStateModelGenerator.createWeightedVariant(stairsInnerId),
+                        BlockStateModelGenerator.createWeightedVariant(stairsId),
+                        BlockStateModelGenerator.createWeightedVariant(stairsOuterId)
+                ));
+
+        gen.registerParentedItemModel(block, stairsId);
+    }
+
+    public void bottomTopStairsModel(BlockStateModelGenerator gen, Block block, Block baseBlock, boolean cubeBottomTop) {
+        TextureMap texture = cubeBottomTop ? TextureMap.wallSideTopBottom(baseBlock) : TextureMap.wallSideEnd(baseBlock);
+
+        Identifier stairsModelId = Models.STAIRS.upload(
+                block, texture, gen.modelCollector);
+
+        Identifier innerStairsModelId = Models.INNER_STAIRS.upload(
+                block, texture, gen.modelCollector);
+
+        Identifier outerStairsModelId = Models.OUTER_STAIRS.upload(
+                block, texture, gen.modelCollector);
+
+        gen.blockStateCollector.accept(
+                BlockStateModelGenerator.createStairsBlockState(
+                        block,
+                        BlockStateModelGenerator.createWeightedVariant(innerStairsModelId),
+                        BlockStateModelGenerator.createWeightedVariant(stairsModelId),
+                        BlockStateModelGenerator.createWeightedVariant(outerStairsModelId)
+                )
+        );
+
+        gen.registerParentedItemModel(block, stairsModelId);
+    }
+
     public void slabModel(BlockStateModelGenerator gen, Block block, Block baseBlock) {
         TextureMap texture = TextureMap.all(baseBlock);
 
+        customTextureSlabModel(gen, block, baseBlock, texture);
+    }
+
+    public void customTextureSlabModel(BlockStateModelGenerator gen, Block block, Block baseBlock, TextureMap texture) {
         Identifier bottomSlabId = Models.SLAB.upload(
                 block, texture, gen.modelCollector);
 
@@ -377,9 +428,36 @@ public class ModModelProvider extends FabricModelProvider {
         gen.registerParentedItemModel(block, bottomSlabId);
     }
 
+    public void bottomTopSlabModel(BlockStateModelGenerator gen, Block block, Block baseBlock, boolean cubeBottomTop) {
+        TextureMap texture = cubeBottomTop ? TextureMap.wallSideTopBottom(baseBlock) : TextureMap.wallSideEnd(baseBlock);
+
+        Identifier slabModelId = Models.SLAB.upload(
+                block, texture, gen.modelCollector);
+
+        Identifier slabTopModelId = Models.SLAB_TOP.upload(
+                block, texture, gen.modelCollector);
+
+        Identifier fullBlockId = Models.CUBE_ALL.getBlockSubModelId(baseBlock);
+
+        gen.blockStateCollector.accept(
+                BlockStateModelGenerator.createSlabBlockState(
+                        block,
+                        BlockStateModelGenerator.createWeightedVariant(slabModelId),
+                        BlockStateModelGenerator.createWeightedVariant(slabTopModelId),
+                        BlockStateModelGenerator.createWeightedVariant(fullBlockId)
+                )
+        );
+
+        gen.registerParentedItemModel(block, slabModelId);
+    }
+
     public void wallModel(BlockStateModelGenerator gen, Block block, Block baseBlock) {
         TextureMap texture = TextureMap.all(baseBlock);
 
+        customTextureWallModel(gen, block, texture);
+    }
+
+    public void customTextureWallModel(BlockStateModelGenerator gen, Block block, TextureMap texture) {
         Identifier postId = Models.TEMPLATE_WALL_POST.upload(
                 block, texture, gen.modelCollector);
 
@@ -398,10 +476,31 @@ public class ModModelProvider extends FabricModelProvider {
                 )
         );
 
-        Identifier inventroyId = Models.WALL_INVENTORY.upload(
+        Identifier inventoryId = Models.WALL_INVENTORY.upload(
                 block, texture, gen.modelCollector);
 
-        gen.registerParentedItemModel(block, inventroyId);
+        gen.registerParentedItemModel(block, inventoryId);
+    }
+
+    public void customTextureBottomTopWallModel(BlockStateModelGenerator gen, Block block, TextureMap texture) {
+        Identifier wallPostId = ModModels.TEMPLATE_BOTTOM_TOP_WALL_POST.upload(
+                block, texture, gen.modelCollector);
+        Identifier wallSideId = ModModels.TEMPLATE_BOTTOM_TOP_WALL_SIDE.upload(
+                block, texture, gen.modelCollector);
+        Identifier wallSideTallId = ModModels.TEMPLATE_BOTTOM_TOP_WALL_SIDE_TALL.upload(
+                block, texture, gen.modelCollector);
+
+        gen.blockStateCollector.accept(
+                BlockStateModelGenerator.createWallBlockState(
+                        block,
+                        BlockStateModelGenerator.createWeightedVariant(wallPostId),
+                        BlockStateModelGenerator.createWeightedVariant(wallSideId),
+                        BlockStateModelGenerator.createWeightedVariant(wallSideTallId)
+                ));
+
+        Identifier wallInventoryId = ModModels.BOTTOM_TOP_WALL_INVENTORY.upload(
+                block, texture, gen.modelCollector);
+        gen.registerParentedItemModel(block, wallInventoryId);
     }
 
     public void bottomTopWallModel(BlockStateModelGenerator gen, Block block, Block baseBlock, boolean cubeBottomTop) {
@@ -425,10 +524,10 @@ public class ModModelProvider extends FabricModelProvider {
                 )
         );
 
-        Identifier inventroyId = ModModels.BOTTOM_TOP_WALL_INVENTORY.upload(
+        Identifier inventoryId = ModModels.BOTTOM_TOP_WALL_INVENTORY.upload(
                 block, texture, gen.modelCollector);
 
-        gen.registerParentedItemModel(block, inventroyId);
+        gen.registerParentedItemModel(block, inventoryId);
     }
 
     public void pressurePlateModel(BlockStateModelGenerator gen, Block block, Block baseBlock) {

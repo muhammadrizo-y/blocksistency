@@ -69,6 +69,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecuttingRecipe(Blocks.STONE_BRICK_STAIRS, ModStoneBlocks.POLISHED_STONE);
                 stonecuttingRecipe(Blocks.STONE_BRICK_SLAB, ModStoneBlocks.POLISHED_STONE);
                 stonecuttingRecipe(Blocks.STONE_BRICK_WALL, ModStoneBlocks.POLISHED_STONE);
+                stonecuttingRecipe(Blocks.CHISELED_STONE_BRICKS,  ModStoneBlocks.POLISHED_STONE);
 
                 // Mossy Chiseled Stone Bricks
                 mossyBlockRecipe(ModStoneBlocks.MOSSY_CHISELED_STONE_BRICKS, Blocks.CHISELED_STONE_BRICKS);
@@ -426,7 +427,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecuttingSlabRecipe(Blocks.DEEPSLATE_BRICK_SLAB, Blocks.DEEPSLATE);
                 stonecuttingRecipe(Blocks.DEEPSLATE_BRICK_WALL, Blocks.DEEPSLATE);
                 // Chiseled Deepslate Bricks
-                chiseledBlockRecipe(ModDeepslateBlocks.CHISELED_DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICK_SLAB, Blocks.DEEPSLATE_BRICKS);
+                chiseledBricksBlockRecipe(ModDeepslateBlocks.CHISELED_DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICK_SLAB,
+                        Blocks.DEEPSLATE_BRICKS, Blocks.POLISHED_DEEPSLATE, Blocks.DEEPSLATE);
                 // Mossy Deepslate Bricks + forms
                 mossyBlockRecipe(ModDeepslateBlocks.MOSSY_DEEPSLATE_BRICKS, Blocks.DEEPSLATE_BRICKS);
                 craftBlockForms(

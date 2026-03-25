@@ -267,6 +267,10 @@ public class ModDeepslateBlocks {
                 SMOOTH_DEEPSLATE_SLAB,
                 SMOOTH_DEEPSLATE_WALL);
 
+        entries.addAfter(Blocks.POLISHED_DEEPSLATE_WALL,
+                POLISHED_DEEPSLATE_PRESSURE_PLATE,
+                POLISHED_DEEPSLATE_BUTTON);
+
         entries.getDisplayStacks().removeIf(stack ->
                 stack.getItem().equals(Blocks.CRACKED_DEEPSLATE_BRICKS.asItem()));
         entries.getSearchTabStacks().removeIf(stack ->

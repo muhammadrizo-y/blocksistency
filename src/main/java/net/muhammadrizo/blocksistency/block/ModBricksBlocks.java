@@ -16,10 +16,12 @@ public class ModBricksBlocks {
     public static final Block MOSSY_BRICKS = register(
             "mossy_bricks", Block::new,
             copySettings(Blocks.BRICKS));
+
     public static final Block MOSSY_BRICK_STAIRS = register(
             "mossy_brick_stairs",
             stairsOf(MOSSY_BRICKS),
             copySettings(MOSSY_BRICKS));
+
     public static final Block MOSSY_BRICK_SLAB = register(
             "mossy_brick_slab", SlabBlock::new,
             copySettings(MOSSY_BRICKS));
@@ -35,10 +37,12 @@ public class ModBricksBlocks {
     public static final Block CRACKED_BRICKS = register(
             "cracked_bricks", Block::new,
             copySettings(Blocks.BRICKS));
+
     public static final Block CRACKED_BRICK_STAIRS = register(
             "cracked_brick_stairs",
             stairsOf(CRACKED_BRICKS),
             copySettings(CRACKED_BRICKS));
+
     public static final Block CRACKED_BRICK_SLAB = register(
             "cracked_brick_slab", SlabBlock::new,
             copySettings(CRACKED_BRICKS));

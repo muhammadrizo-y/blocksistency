@@ -12,6 +12,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.muhammadrizo.blocksistency.Blocksistency;
+import net.muhammadrizo.blocksistency.block.custom.ModStairsBlock;
 import net.muhammadrizo.blocksistency.mixin.AbstractBlockStateAccessor;
 import net.muhammadrizo.blocksistency.mixin.AbstractBlockAccessor;
 import net.muhammadrizo.blocksistency.mixin.AbstractBlockSettingsAccessor;
@@ -78,6 +79,10 @@ public class ModBlocks {
     public static AbstractBlock.Settings createWallSettings(Block base) {
         return AbstractBlock.Settings.copy(base)
                 .solid();
+    }
+
+    public static AbstractBlock.Settings createFenceGateSettings(Block base) {
+        return createWallSettings(base);
     }
 
     public static AbstractBlock.Settings createPressurePlateSettings(Block base) {

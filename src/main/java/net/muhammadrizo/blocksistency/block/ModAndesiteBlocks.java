@@ -24,8 +24,7 @@ public class ModAndesiteBlocks {
 
     public static final Block COBBLED_ANDESITE_STAIRS = register(
             "cobbled_andesite_stairs",
-            settings -> new ModStairsBlock(
-                    COBBLED_ANDESITE.getDefaultState(), settings),
+            stairsOf(COBBLED_ANDESITE),
             copySettings(COBBLED_ANDESITE));
 
     public static final Block COBBLED_ANDESITE_SLAB = register(
@@ -34,7 +33,7 @@ public class ModAndesiteBlocks {
 
     public static final Block COBBLED_ANDESITE_WALL = register(
             "cobbled_andesite_wall", WallBlock::new,
-            copySettings(COBBLED_ANDESITE));
+            createWallSettings(COBBLED_ANDESITE));
 
     public static final Block MOSSY_COBBLED_ANDESITE = register(
             "mossy_cobbled_andesite", Block::new,
@@ -42,8 +41,7 @@ public class ModAndesiteBlocks {
 
     public static final Block MOSSY_COBBLED_ANDESITE_STAIRS = register(
             "mossy_cobbled_andesite_stairs",
-            settings -> new ModStairsBlock(
-                    MOSSY_COBBLED_ANDESITE.getDefaultState(), settings),
+            stairsOf(MOSSY_COBBLED_ANDESITE),
             copySettings(MOSSY_COBBLED_ANDESITE));
 
     public static final Block MOSSY_COBBLED_ANDESITE_SLAB = register(
@@ -52,7 +50,7 @@ public class ModAndesiteBlocks {
 
     public static final Block MOSSY_COBBLED_ANDESITE_WALL = register(
             "mossy_cobbled_andesite_wall", WallBlock::new,
-            copySettings(MOSSY_COBBLED_ANDESITE));
+            createWallSettings(MOSSY_COBBLED_ANDESITE));
 
     public static final Block SMOOTH_ANDESITE = register(
             "smooth_andesite", Block::new,

@@ -1,4 +1,4 @@
-package net.muhammadrizo.blocksistency.block;
+package net.muhammadrizo.blocksistency.block.custom;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;

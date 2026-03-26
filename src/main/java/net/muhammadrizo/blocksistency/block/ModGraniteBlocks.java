@@ -20,52 +20,37 @@ public class ModGraniteBlocks {
 
     public static final Block COBBLED_GRANITE = register(
             "cobbled_granite", Block::new,
-            copySettings(Blocks.GRANITE).strength(2.0F, 6.0F)
-    );
+            copySettings(Blocks.GRANITE).strength(2.0F, 6.0F));
 
     public static final Block COBBLED_GRANITE_STAIRS = register(
             "cobbled_granite_stairs",
-            settings -> new ModStairsBlock(
-                    COBBLED_GRANITE.getDefaultState(), settings),
-            copySettings(COBBLED_GRANITE)
-    );
+            stairsOf(COBBLED_GRANITE),
+            copySettings(COBBLED_GRANITE));
 
     public static final Block COBBLED_GRANITE_SLAB = register(
-            "cobbled_granite_slab",
-            SlabBlock::new,
-            copySettings(COBBLED_GRANITE)
-    );
+            "cobbled_granite_slab", SlabBlock::new,
+            copySettings(COBBLED_GRANITE));
 
     public static final Block COBBLED_GRANITE_WALL = register(
-            "cobbled_granite_wall",
-            WallBlock::new,
-            copySettings(COBBLED_GRANITE)
-    );
+            "cobbled_granite_wall", WallBlock::new,
+            createWallSettings(COBBLED_GRANITE));
 
     public static final Block MOSSY_COBBLED_GRANITE = register(
-            "mossy_cobbled_granite",
-            Block::new,
-            copySettings(COBBLED_GRANITE)
-    );
+            "mossy_cobbled_granite", Block::new,
+            copySettings(COBBLED_GRANITE));
 
     public static final Block MOSSY_COBBLED_GRANITE_STAIRS = register(
             "mossy_cobbled_granite_stairs",
-            settings -> new ModStairsBlock(
-                    MOSSY_COBBLED_GRANITE.getDefaultState(), settings),
-            copySettings(MOSSY_COBBLED_GRANITE)
-    );
+            stairsOf(MOSSY_COBBLED_GRANITE),
+            copySettings(MOSSY_COBBLED_GRANITE));
 
     public static final Block MOSSY_COBBLED_GRANITE_SLAB = register(
-            "mossy_cobbled_granite_slab",
-            SlabBlock::new,
-            copySettings(MOSSY_COBBLED_GRANITE)
-    );
+            "mossy_cobbled_granite_slab", SlabBlock::new,
+            copySettings(MOSSY_COBBLED_GRANITE));
 
     public static final Block MOSSY_COBBLED_GRANITE_WALL = register(
-            "mossy_cobbled_granite_wall",
-            WallBlock::new,
-            copySettings(MOSSY_COBBLED_GRANITE)
-    );
+            "mossy_cobbled_granite_wall", WallBlock::new,
+            createWallSettings(MOSSY_COBBLED_GRANITE));
 
     public static final Block SMOOTH_GRANITE = register(
             "smooth_granite", Block::new,

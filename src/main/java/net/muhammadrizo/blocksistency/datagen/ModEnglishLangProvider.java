@@ -515,13 +515,13 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("advancement.blocksistency.get_all_deepslate_blocks.description", "Obtain all Deepslate blocks");
 
         translationBuilder.add("advancement.blocksistency.get_all_bricks_blocks.title", "Brick by Brick");
-        translationBuilder.add("advancement.blocksistency.get_all_bricks_blocks.description", "Obtain all Bricks blocks");
+        translationBuilder.add("advancement.blocksistency.get_all_bricks_blocks.description", "Obtain all Brick blocks");
 
-        translationBuilder.add("advancement.blocksistency.get_all_sandstone_blocks.title", "Sandstone Title");
-        translationBuilder.add("advancement.blocksistency.get_all_sandstone_blocks.description", "Sandstone Description");
+        translationBuilder.add("advancement.blocksistency.get_all_sandstone_blocks.title", "Pyramidal Pieces");
+        translationBuilder.add("advancement.blocksistency.get_all_sandstone_blocks.description", "Obtain all Sandstone blocks");
 
-        translationBuilder.add("advancement.blocksistency.get_all_red_sandstone_blocks.title", "Red Sandstone Title");
-        translationBuilder.add("advancement.blocksistency.get_all_red_sandstone_blocks.description", "Red Sandstone Description");
+        translationBuilder.add("advancement.blocksistency.get_all_red_sandstone_blocks.title", "Crimson Collection");
+        translationBuilder.add("advancement.blocksistency.get_all_red_sandstone_blocks.description", "Obtain all Red Sandstone blocks");
 
         // Built-in Datapacks
         translationBuilder.add("datapack.blocksistency.better_recipes.name", "Better Recipes");

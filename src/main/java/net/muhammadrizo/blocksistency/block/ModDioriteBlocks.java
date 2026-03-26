@@ -24,8 +24,7 @@ public class ModDioriteBlocks {
 
     public static final Block COBBLED_DIORITE_STAIRS = register(
             "cobbled_diorite_stairs",
-            settings -> new ModStairsBlock(
-                    COBBLED_DIORITE.getDefaultState(), settings),
+            stairsOf(COBBLED_DIORITE),
             copySettings(COBBLED_DIORITE));
 
     public static final Block COBBLED_DIORITE_SLAB = register(
@@ -34,7 +33,7 @@ public class ModDioriteBlocks {
 
     public static final Block COBBLED_DIORITE_WALL = register(
             "cobbled_diorite_wall", WallBlock::new,
-            copySettings(COBBLED_DIORITE));
+            createWallSettings(COBBLED_DIORITE));
 
     public static final Block MOSSY_COBBLED_DIORITE = register(
             "mossy_cobbled_diorite", Block::new,
@@ -42,8 +41,7 @@ public class ModDioriteBlocks {
 
     public static final Block MOSSY_COBBLED_DIORITE_STAIRS = register(
             "mossy_cobbled_diorite_stairs",
-            settings -> new ModStairsBlock(
-                    MOSSY_COBBLED_DIORITE.getDefaultState(), settings),
+            stairsOf(MOSSY_COBBLED_DIORITE),
             copySettings(MOSSY_COBBLED_DIORITE));
 
     public static final Block MOSSY_COBBLED_DIORITE_SLAB = register(
@@ -52,7 +50,7 @@ public class ModDioriteBlocks {
 
     public static final Block MOSSY_COBBLED_DIORITE_WALL = register(
             "mossy_cobbled_diorite_wall", WallBlock::new,
-            copySettings(MOSSY_COBBLED_DIORITE));
+            createWallSettings(MOSSY_COBBLED_DIORITE));
 
     public static final Block SMOOTH_DIORITE = register(
             "smooth_diorite", Block::new,

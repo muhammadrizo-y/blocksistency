@@ -2,7 +2,6 @@ package net.muhammadrizo.blocksistency.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
@@ -10,7 +9,6 @@ import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.muhammadrizo.blocksistency.block.*;
-import net.muhammadrizo.blocksistency.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -42,49 +40,15 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(COBBLESTONES_NORMAL)
                 .add(ModGraniteBlocks.COBBLED_GRANITE.asItem())
                 .add(ModDioriteBlocks.COBBLED_DIORITE.asItem())
-                .add(ModAndesiteBlocks.COBBLED_ANDESITE.asItem());
+                .add(ModAndesiteBlocks.COBBLED_ANDESITE.asItem())
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE.asItem())
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE.asItem());
 
         valueLookupBuilder(COBBLESTONES_MOSSY)
                 .add(ModGraniteBlocks.MOSSY_COBBLED_GRANITE.asItem())
                 .add(ModDioriteBlocks.MOSSY_COBBLED_DIORITE.asItem())
                 .add(ModAndesiteBlocks.MOSSY_COBBLED_ANDESITE.asItem())
                 .add(ModDeepslateBlocks.MOSSY_COBBLED_DEEPSLATE.asItem());
-
-        valueLookupBuilder(ItemTags.STONE_BRICKS)
-                .add(ModStoneBlocks.MOSSY_CHISELED_STONE_BRICKS.asItem())
-                .add(ModStoneBlocks.CRACKED_CHISELED_STONE_BRICKS.asItem());
-
-        valueLookupBuilder(ModTags.Items.GRANITE_BRICKS)
-                .add(ModGraniteBlocks.GRANITE_BRICKS.asItem())
-                .add(ModGraniteBlocks.MOSSY_GRANITE_BRICKS.asItem())
-                .add(ModGraniteBlocks.CRACKED_GRANITE_BRICKS.asItem())
-                .add(ModGraniteBlocks.CHISELED_GRANITE_BRICKS.asItem())
-                .add(ModGraniteBlocks.MOSSY_CHISELED_GRANITE_BRICKS.asItem())
-                .add(ModGraniteBlocks.CRACKED_CHISELED_GRANITE_BRICKS.asItem());
-
-        valueLookupBuilder(ModTags.Items.DIORITE_BRICKS)
-                .add(ModDioriteBlocks.DIORITE_BRICKS.asItem())
-                .add(ModDioriteBlocks.MOSSY_DIORITE_BRICKS.asItem())
-                .add(ModDioriteBlocks.CRACKED_DIORITE_BRICKS.asItem())
-                .add(ModDioriteBlocks.CHISELED_DIORITE_BRICKS.asItem())
-                .add(ModDioriteBlocks.MOSSY_CHISELED_DIORITE_BRICKS.asItem())
-                .add(ModDioriteBlocks.CRACKED_CHISELED_DIORITE_BRICKS.asItem());
-
-        valueLookupBuilder(ModTags.Items.ANDESITE_BRICKS)
-                .add(ModAndesiteBlocks.ANDESITE_BRICKS.asItem())
-                .add(ModAndesiteBlocks.MOSSY_ANDESITE_BRICKS.asItem())
-                .add(ModAndesiteBlocks.CRACKED_ANDESITE_BRICKS.asItem())
-                .add(ModAndesiteBlocks.CHISELED_ANDESITE_BRICKS.asItem())
-                .add(ModAndesiteBlocks.MOSSY_CHISELED_ANDESITE_BRICKS.asItem())
-                .add(ModAndesiteBlocks.CRACKED_CHISELED_ANDESITE_BRICKS.asItem());
-
-        valueLookupBuilder(ModTags.Items.DEEPSLATE_BRICKS)
-                .add(Blocks.DEEPSLATE_BRICKS.asItem())
-                .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_BRICKS.asItem())
-                .add(Blocks.CRACKED_DEEPSLATE_BRICKS.asItem())
-                .add(ModDeepslateBlocks.CHISELED_DEEPSLATE_BRICKS.asItem())
-                .add(ModDeepslateBlocks.MOSSY_CHISELED_DEEPSLATE_BRICKS.asItem())
-                .add(ModDeepslateBlocks.CRACKED_CHISELED_DEEPSLATE_BRICKS.asItem());
 
         valueLookupBuilder(ItemTags.STAIRS)
                 // ============== STONE ==============
@@ -150,7 +114,33 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_PLATE_STAIRS.asItem())
                 .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_PLATE_STAIRS.asItem())
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_TILE_STAIRS.asItem())
-                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_STAIRS.asItem());
+                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_STAIRS.asItem())
+
+                // ============== BRICKS ==============
+                .add(ModBricksBlocks.MOSSY_BRICK_STAIRS.asItem())
+                .add(ModBricksBlocks.CRACKED_BRICK_STAIRS.asItem())
+
+                // ============== SANDSTONE ==============
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE_STAIRS.asItem())
+                .add(ModSandstoneBlocks.CUT_SANDSTONE_STAIRS.asItem())
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_STAIRS.asItem())
+                .add(ModSandstoneBlocks.SANDSTONE_BRICK_STAIRS.asItem())
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_STAIRS.asItem())
+                .add(ModSandstoneBlocks.SANDSTONE_PLATE_STAIRS.asItem())
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_STAIRS.asItem())
+                .add(ModSandstoneBlocks.SANDSTONE_TILE_STAIRS.asItem())
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_STAIRS.asItem())
+
+                // ============== RED SANDSTONE ==============
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_STAIRS.asItem())
+                .add(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS.asItem())
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_STAIRS.asItem())
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_STAIRS.asItem())
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_STAIRS.asItem())
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS.asItem())
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS.asItem())
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS.asItem())
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS.asItem());
 
         valueLookupBuilder(ItemTags.SLABS)
                 // ============== STONE ==============
@@ -215,7 +205,31 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_PLATE_SLAB.asItem())
                 .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_PLATE_SLAB.asItem())
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_TILE_SLAB.asItem())
-                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_SLAB.asItem());
+                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_SLAB.asItem())
+
+                // ============== BRICKS ==============
+                .add(ModBricksBlocks.MOSSY_BRICK_SLAB.asItem())
+                .add(ModBricksBlocks.CRACKED_BRICK_SLAB.asItem())
+
+                // ============== SANDSTONE ==============
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE_SLAB.asItem())
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_SLAB.asItem())
+                .add(ModSandstoneBlocks.SANDSTONE_BRICK_SLAB.asItem())
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_SLAB.asItem())
+                .add(ModSandstoneBlocks.SANDSTONE_PLATE_SLAB.asItem())
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_SLAB.asItem())
+                .add(ModSandstoneBlocks.SANDSTONE_TILE_SLAB.asItem())
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_SLAB.asItem())
+
+                // ============== RED SANDSTONE ==============
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_SLAB.asItem())
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_SLAB.asItem())
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_SLAB.asItem())
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_SLAB.asItem())
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB.asItem())
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB.asItem())
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB.asItem())
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB.asItem());
 
         valueLookupBuilder(ItemTags.WALLS)
                 // ============== STONE ==============
@@ -285,12 +299,42 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_PLATE_WALL.asItem())
                 .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_PLATE_WALL.asItem())
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_TILE_WALL.asItem())
-                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_WALL.asItem());
+                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_WALL.asItem())
+
+                // ============== BRICKS ==============
+                .add(ModBricksBlocks.MOSSY_BRICK_WALL.asItem())
+                .add(ModBricksBlocks.CRACKED_BRICK_WALL.asItem())
+
+                // ============== SANDSTONE ==============
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE_WALL.asItem())
+                .add(ModSandstoneBlocks.SMOOTH_SANDSTONE_WALL.asItem())
+                .add(ModSandstoneBlocks.CUT_SANDSTONE_WALL.asItem())
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_WALL.asItem())
+                .add(ModSandstoneBlocks.SANDSTONE_BRICK_WALL.asItem())
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_WALL.asItem())
+                .add(ModSandstoneBlocks.SANDSTONE_PLATE_WALL.asItem())
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_WALL.asItem())
+                .add(ModSandstoneBlocks.SANDSTONE_TILE_WALL.asItem())
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_WALL.asItem())
+
+                // ============== RED SANDSTONE ==============
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_WALL.asItem())
+                .add(ModRedSandstoneBlocks.SMOOTH_RED_SANDSTONE_WALL.asItem())
+                .add(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL.asItem())
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_WALL.asItem())
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_WALL.asItem())
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_WALL.asItem())
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL.asItem())
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL.asItem())
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL.asItem())
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL.asItem());
 
         valueLookupBuilder(ItemTags.STONE_BUTTONS)
                 .add(ModGraniteBlocks.POLISHED_GRANITE_BUTTON.asItem())
                 .add(ModDioriteBlocks.POLISHED_DIORITE_BUTTON.asItem())
                 .add(ModAndesiteBlocks.POLISHED_ANDESITE_BUTTON.asItem())
-                .add(ModDeepslateBlocks.POLISHED_DEEPSLATE_BUTTON.asItem());
+                .add(ModDeepslateBlocks.POLISHED_DEEPSLATE_BUTTON.asItem())
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_BUTTON.asItem())
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_BUTTON.asItem());
     }
 }

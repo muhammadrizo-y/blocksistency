@@ -27,14 +27,14 @@ public class Blocksistency implements ModInitializer {
 		ResourceManagerHelper.registerBuiltinResourcePack(
 				Identifier.of(MOD_ID, "better_recipes"),
 				FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
-				Text.literal("Better Recipes"),
+				Text.translatable("datapack.blocksistency.better_recipes.name"),
 				ResourcePackActivationType.DEFAULT_ENABLED
 		);
 
 		ResourceManagerHelper.registerBuiltinResourcePack(
 				Identifier.of(MOD_ID, "cobbled_drops"),
 				FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(),
-				Text.literal("Cobbled Drops"),
+				Text.translatable("datapack.blocksistency.cobbled_drops.name"),
 				ResourcePackActivationType.DEFAULT_ENABLED
 		);
 	}

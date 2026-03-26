@@ -27,6 +27,16 @@ public class ModBlockSetTypes {
             .soundGroup(BlockSoundGroup.POLISHED_DEEPSLATE)
             .register(Identifier.of(Blocksistency.MOD_ID, "polished_deepslate"));
 
+    public static final BlockSetType POLISHED_SANDSTONE = BlockSetTypeBuilder
+            .copyOf(BlockSetType.STONE)
+            .soundGroup(BlockSoundGroup.STONE)
+            .register(Identifier.of(Blocksistency.MOD_ID, "polished_sandstone"));
+
+    public static final BlockSetType POLISHED_RED_SANDSTONE = BlockSetTypeBuilder
+            .copyOf(BlockSetType.STONE)
+            .soundGroup(BlockSoundGroup.STONE)
+            .register(Identifier.of(Blocksistency.MOD_ID, "polished_red_sandstone"));
+
     public static void init() {
         Blocksistency.LOGGER.info("Registering block set types for " + Blocksistency.MOD_ID);
     }

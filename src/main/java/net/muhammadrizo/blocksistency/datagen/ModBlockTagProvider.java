@@ -3,14 +3,12 @@ package net.muhammadrizo.blocksistency.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.muhammadrizo.blocksistency.block.*;
-import net.muhammadrizo.blocksistency.util.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -367,7 +365,136 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 .add(ModDeepslateBlocks.DEEPSLATE_PILLAR)
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_PILLAR)
-                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_PILLAR);
+                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_PILLAR)
+
+                // ============== BRICKS ==============
+
+                .add(ModBricksBlocks.CHISELED_BRICKS)
+
+                .add(ModBricksBlocks.MOSSY_BRICKS)
+                .add(ModBricksBlocks.MOSSY_BRICK_STAIRS)
+                .add(ModBricksBlocks.MOSSY_BRICK_SLAB)
+                .add(ModBricksBlocks.MOSSY_BRICK_WALL)
+                .add(ModBricksBlocks.MOSSY_CHISELED_BRICKS)
+
+                .add(ModBricksBlocks.CRACKED_BRICKS)
+                .add(ModBricksBlocks.CRACKED_BRICK_STAIRS)
+                .add(ModBricksBlocks.CRACKED_BRICK_SLAB)
+                .add(ModBricksBlocks.CRACKED_BRICK_WALL)
+                .add(ModBricksBlocks.CRACKED_CHISELED_BRICKS)
+
+                // ============== SANDSTONE ==============
+
+                .add(ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE)
+
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE)
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE_STAIRS)
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE_SLAB)
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE_WALL)
+
+                .add(ModSandstoneBlocks.SMOOTH_SANDSTONE_WALL)
+
+                .add(ModSandstoneBlocks.CUT_SANDSTONE_STAIRS)
+                .add(ModSandstoneBlocks.CUT_SANDSTONE_WALL)
+
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE)
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_STAIRS)
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_SLAB)
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_WALL)
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_PRESSURE_PLATE)
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_BUTTON)
+
+                .add(ModSandstoneBlocks.SANDSTONE_BRICKS)
+                .add(ModSandstoneBlocks.SANDSTONE_BRICK_STAIRS)
+                .add(ModSandstoneBlocks.SANDSTONE_BRICK_SLAB)
+                .add(ModSandstoneBlocks.SANDSTONE_BRICK_WALL)
+                .add(ModSandstoneBlocks.CHISELED_SANDSTONE_BRICKS)
+
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICKS)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_STAIRS)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_SLAB)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_WALL)
+                .add(ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE_BRICKS)
+
+                .add(ModSandstoneBlocks.SANDSTONE_PLATES)
+                .add(ModSandstoneBlocks.SANDSTONE_PLATE_STAIRS)
+                .add(ModSandstoneBlocks.SANDSTONE_PLATE_SLAB)
+                .add(ModSandstoneBlocks.SANDSTONE_PLATE_WALL)
+
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATES)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_STAIRS)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_SLAB)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_WALL)
+
+                .add(ModSandstoneBlocks.SANDSTONE_TILES)
+                .add(ModSandstoneBlocks.SANDSTONE_TILE_STAIRS)
+                .add(ModSandstoneBlocks.SANDSTONE_TILE_SLAB)
+                .add(ModSandstoneBlocks.SANDSTONE_TILE_WALL)
+
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILES)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_STAIRS)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_SLAB)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_WALL)
+
+                .add(ModSandstoneBlocks.SANDSTONE_PILLAR)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PILLAR)
+
+                // ============== RED SANDSTONE ==============
+
+                .add(ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE)
+
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE)
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_STAIRS)
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_SLAB)
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_WALL)
+
+                .add(ModRedSandstoneBlocks.SMOOTH_RED_SANDSTONE_WALL)
+
+                .add(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS)
+                .add(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL)
+
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE)
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_STAIRS)
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_SLAB)
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_WALL)
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_PRESSURE_PLATE)
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_BUTTON)
+
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_STAIRS)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_SLAB)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_WALL)
+                .add(ModRedSandstoneBlocks.CHISELED_RED_SANDSTONE_BRICKS)
+
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICKS)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_STAIRS)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_SLAB)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_WALL)
+                .add(ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE_BRICKS)
+
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATES)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL)
+
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATES)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL)
+
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILES)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL)
+
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILES)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL)
+
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR);
+
 
         TagKey<Block> COBBLESTONES_NORMAL = TagKey.of(
                 RegistryKeys.BLOCK,
@@ -380,49 +507,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(COBBLESTONES_NORMAL)
                 .add(ModGraniteBlocks.COBBLED_GRANITE)
                 .add(ModDioriteBlocks.COBBLED_DIORITE)
-                .add(ModAndesiteBlocks.COBBLED_ANDESITE);
+                .add(ModAndesiteBlocks.COBBLED_ANDESITE)
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE)
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE);
 
         valueLookupBuilder(COBBLESTONES_MOSSY)
                 .add(ModGraniteBlocks.MOSSY_COBBLED_GRANITE)
                 .add(ModDioriteBlocks.MOSSY_COBBLED_DIORITE)
                 .add(ModAndesiteBlocks.MOSSY_COBBLED_ANDESITE)
                 .add(ModDeepslateBlocks.MOSSY_COBBLED_DEEPSLATE);
-
-        valueLookupBuilder(BlockTags.STONE_BRICKS)
-                .add(ModStoneBlocks.MOSSY_CHISELED_STONE_BRICKS)
-                .add(ModStoneBlocks.CRACKED_CHISELED_STONE_BRICKS);
-
-        valueLookupBuilder(ModTags.Blocks.GRANITE_BRICKS)
-                .add(ModGraniteBlocks.GRANITE_BRICKS)
-                .add(ModGraniteBlocks.MOSSY_GRANITE_BRICKS)
-                .add(ModGraniteBlocks.CRACKED_GRANITE_BRICKS)
-                .add(ModGraniteBlocks.CHISELED_GRANITE_BRICKS)
-                .add(ModGraniteBlocks.MOSSY_CHISELED_GRANITE_BRICKS)
-                .add(ModGraniteBlocks.CRACKED_CHISELED_GRANITE_BRICKS);
-
-        valueLookupBuilder(ModTags.Blocks.DIORITE_BRICKS)
-                .add(ModDioriteBlocks.DIORITE_BRICKS)
-                .add(ModDioriteBlocks.MOSSY_DIORITE_BRICKS)
-                .add(ModDioriteBlocks.CRACKED_DIORITE_BRICKS)
-                .add(ModDioriteBlocks.CHISELED_DIORITE_BRICKS)
-                .add(ModDioriteBlocks.MOSSY_CHISELED_DIORITE_BRICKS)
-                .add(ModDioriteBlocks.CRACKED_CHISELED_DIORITE_BRICKS);
-
-        valueLookupBuilder(ModTags.Blocks.ANDESITE_BRICKS)
-                .add(ModAndesiteBlocks.ANDESITE_BRICKS)
-                .add(ModAndesiteBlocks.MOSSY_ANDESITE_BRICKS)
-                .add(ModAndesiteBlocks.CRACKED_ANDESITE_BRICKS)
-                .add(ModAndesiteBlocks.CHISELED_ANDESITE_BRICKS)
-                .add(ModAndesiteBlocks.MOSSY_CHISELED_ANDESITE_BRICKS)
-                .add(ModAndesiteBlocks.CRACKED_CHISELED_ANDESITE_BRICKS);
-
-        valueLookupBuilder(ModTags.Blocks.DEEPSLATE_BRICKS)
-                .add(Blocks.DEEPSLATE_BRICKS)
-                .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_BRICKS)
-                .add(Blocks.CRACKED_DEEPSLATE_BRICKS)
-                .add(ModDeepslateBlocks.CHISELED_DEEPSLATE_BRICKS)
-                .add(ModDeepslateBlocks.MOSSY_CHISELED_DEEPSLATE_BRICKS)
-                .add(ModDeepslateBlocks.CRACKED_CHISELED_DEEPSLATE_BRICKS);
 
         valueLookupBuilder(BlockTags.STAIRS)
                 // ============== STONE ==============
@@ -488,7 +581,33 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_PLATE_STAIRS)
                 .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_PLATE_STAIRS)
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_TILE_STAIRS)
-                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_STAIRS);
+                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_STAIRS)
+
+                // ============== BRICKS ==============
+                .add(ModBricksBlocks.MOSSY_BRICK_STAIRS)
+                .add(ModBricksBlocks.CRACKED_BRICK_STAIRS)
+
+                // ============== SANDSTONE ==============
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE_STAIRS)
+                .add(ModSandstoneBlocks.CUT_SANDSTONE_STAIRS)
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_STAIRS)
+                .add(ModSandstoneBlocks.SANDSTONE_BRICK_STAIRS)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_STAIRS)
+                .add(ModSandstoneBlocks.SANDSTONE_PLATE_STAIRS)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_STAIRS)
+                .add(ModSandstoneBlocks.SANDSTONE_TILE_STAIRS)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_STAIRS)
+
+                // ============== RED SANDSTONE ==============
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_STAIRS)
+                .add(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS)
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_STAIRS)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_STAIRS)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_STAIRS)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS);
 
         valueLookupBuilder(BlockTags.SLABS)
                 // ============== STONE ==============
@@ -553,7 +672,31 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_PLATE_SLAB)
                 .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_PLATE_SLAB)
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_TILE_SLAB)
-                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_SLAB);
+                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_SLAB)
+
+                // ============== BRICKS ==============
+                .add(ModBricksBlocks.MOSSY_BRICK_SLAB)
+                .add(ModBricksBlocks.CRACKED_BRICK_SLAB)
+
+                // ============== SANDSTONE ==============
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE_SLAB)
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_SLAB)
+                .add(ModSandstoneBlocks.SANDSTONE_BRICK_SLAB)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_SLAB)
+                .add(ModSandstoneBlocks.SANDSTONE_PLATE_SLAB)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_SLAB)
+                .add(ModSandstoneBlocks.SANDSTONE_TILE_SLAB)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_SLAB)
+
+                // ============== RED SANDSTONE ==============
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_SLAB)
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_SLAB)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_SLAB)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_SLAB)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB);
 
         valueLookupBuilder(BlockTags.WALLS)
                 // ============== STONE ==============
@@ -623,18 +766,50 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_PLATE_WALL)
                 .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_PLATE_WALL)
                 .add(ModDeepslateBlocks.MOSSY_DEEPSLATE_TILE_WALL)
-                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_WALL);
+                .add(ModDeepslateBlocks.CRACKED_DEEPSLATE_TILE_WALL)
+
+                // ============== BRICKS ==============
+                .add(ModBricksBlocks.MOSSY_BRICK_WALL)
+                .add(ModBricksBlocks.CRACKED_BRICK_WALL)
+
+                // ============== SANDSTONE ==============
+                .add(ModSandstoneBlocks.COBBLED_SANDSTONE_WALL)
+                .add(ModSandstoneBlocks.SMOOTH_SANDSTONE_WALL)
+                .add(ModSandstoneBlocks.CUT_SANDSTONE_WALL)
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_WALL)
+                .add(ModSandstoneBlocks.SANDSTONE_BRICK_WALL)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_WALL)
+                .add(ModSandstoneBlocks.SANDSTONE_PLATE_WALL)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_WALL)
+                .add(ModSandstoneBlocks.SANDSTONE_TILE_WALL)
+                .add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_WALL)
+
+                // ============== RED SANDSTONE ==============
+                .add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_WALL)
+                .add(ModRedSandstoneBlocks.SMOOTH_RED_SANDSTONE_WALL)
+                .add(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL)
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_WALL)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_WALL)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_WALL)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL)
+                .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL)
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL);
 
         valueLookupBuilder(BlockTags.STONE_PRESSURE_PLATES)
                 .add(ModGraniteBlocks.POLISHED_GRANITE_PRESSURE_PLATE)
                 .add(ModDioriteBlocks.POLISHED_DIORITE_PRESSURE_PLATE)
                 .add(ModAndesiteBlocks.POLISHED_ANDESITE_PRESSURE_PLATE)
-                .add(ModDeepslateBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE);
+                .add(ModDeepslateBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE)
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_PRESSURE_PLATE)
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_PRESSURE_PLATE);
 
         valueLookupBuilder(BlockTags.STONE_BUTTONS)
                 .add(ModGraniteBlocks.POLISHED_GRANITE_BUTTON)
                 .add(ModDioriteBlocks.POLISHED_DIORITE_BUTTON)
                 .add(ModAndesiteBlocks.POLISHED_ANDESITE_BUTTON)
-                .add(ModDeepslateBlocks.POLISHED_DEEPSLATE_BUTTON);
+                .add(ModDeepslateBlocks.POLISHED_DEEPSLATE_BUTTON)
+                .add(ModSandstoneBlocks.POLISHED_SANDSTONE_BUTTON)
+                .add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_BUTTON);
     }
 }

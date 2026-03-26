@@ -102,6 +102,9 @@ public class ModBlocks {
         ModDioriteBlocks.init();
         ModAndesiteBlocks.init();
         ModDeepslateBlocks.init();
+        ModSandstoneBlocks.init();
+        ModRedSandstoneBlocks.init();
+        ModBricksBlocks.init();
 
         fixBlockHardnessAndBlastResistance(Blocks.SANDSTONE_SLAB, Blocks.SANDSTONE);
         fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_SANDSTONE, Blocks.SANDSTONE);
@@ -136,6 +139,9 @@ public class ModBlocks {
             ModDioriteBlocks.addCreativeEntries(entries);
             ModAndesiteBlocks.addCreativeEntries(entries);
             ModDeepslateBlocks.addCreativeEntries(entries);
+            ModSandstoneBlocks.addCreativeEntries(entries);
+            ModRedSandstoneBlocks.addCreativeEntries(entries);
+            ModBricksBlocks.addCreativeEntries(entries);
         });
     }
 }

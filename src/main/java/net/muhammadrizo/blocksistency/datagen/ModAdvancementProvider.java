@@ -478,6 +478,175 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 ModDeepslateBlocks.MOSSY_DEEPSLATE_PILLAR,
                 ModDeepslateBlocks.CRACKED_DEEPSLATE_PILLAR
         );
+
+        AdvancementEntry BRICKS = addAdvancement(
+                consumer,
+                STONE,
+                ModBricksBlocks.MOSSY_BRICKS,
+                "bricks",
+
+                Blocks.BRICKS,
+                Blocks.BRICK_STAIRS,
+                Blocks.BRICK_SLAB,
+                Blocks.BRICK_WALL,
+                ModBricksBlocks.CHISELED_BRICKS,
+
+                ModBricksBlocks.MOSSY_BRICKS,
+                ModBricksBlocks.MOSSY_BRICK_STAIRS,
+                ModBricksBlocks.MOSSY_BRICK_SLAB,
+                ModBricksBlocks.MOSSY_BRICK_WALL,
+                ModBricksBlocks.MOSSY_CHISELED_BRICKS,
+
+                ModBricksBlocks.CRACKED_BRICKS,
+                ModBricksBlocks.CRACKED_BRICK_STAIRS,
+                ModBricksBlocks.CRACKED_BRICK_SLAB,
+                ModBricksBlocks.CRACKED_BRICK_WALL,
+                ModBricksBlocks.CRACKED_CHISELED_BRICKS
+        );
+
+        AdvancementEntry SANDSTONE = addAdvancement(
+                consumer,
+                STONE,
+                Blocks.CHISELED_SANDSTONE,
+                "sandstone",
+
+                Blocks.SANDSTONE,
+                Blocks.SANDSTONE_STAIRS,
+                Blocks.SANDSTONE_SLAB,
+                Blocks.SANDSTONE_WALL,
+
+                Blocks.CHISELED_SANDSTONE,
+                ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE,
+
+                ModSandstoneBlocks.COBBLED_SANDSTONE,
+                ModSandstoneBlocks.COBBLED_SANDSTONE_STAIRS,
+                ModSandstoneBlocks.COBBLED_SANDSTONE_SLAB,
+                ModSandstoneBlocks.COBBLED_SANDSTONE_WALL,
+
+                Blocks.SMOOTH_SANDSTONE,
+                Blocks.SMOOTH_SANDSTONE_STAIRS,
+                Blocks.SMOOTH_SANDSTONE_SLAB,
+                ModSandstoneBlocks.SMOOTH_SANDSTONE_WALL,
+
+                Blocks.CUT_SANDSTONE,
+                ModSandstoneBlocks.CUT_SANDSTONE_STAIRS,
+                Blocks.CUT_SANDSTONE_SLAB,
+                ModSandstoneBlocks.CUT_SANDSTONE_WALL,
+
+                ModSandstoneBlocks.POLISHED_SANDSTONE,
+                ModSandstoneBlocks.POLISHED_SANDSTONE_STAIRS,
+                ModSandstoneBlocks.POLISHED_SANDSTONE_SLAB,
+                ModSandstoneBlocks.POLISHED_SANDSTONE_WALL,
+                ModSandstoneBlocks.POLISHED_SANDSTONE_PRESSURE_PLATE,
+                ModSandstoneBlocks.POLISHED_SANDSTONE_BUTTON,
+
+                ModSandstoneBlocks.SANDSTONE_BRICKS,
+                ModSandstoneBlocks.SANDSTONE_BRICK_STAIRS,
+                ModSandstoneBlocks.SANDSTONE_BRICK_SLAB,
+                ModSandstoneBlocks.SANDSTONE_BRICK_WALL,
+                ModSandstoneBlocks.CHISELED_SANDSTONE_BRICKS,
+
+                ModSandstoneBlocks.CRACKED_SANDSTONE_BRICKS,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_STAIRS,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_SLAB,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_WALL,
+                ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE_BRICKS,
+
+                ModSandstoneBlocks.SANDSTONE_PLATES,
+                ModSandstoneBlocks.SANDSTONE_PLATE_STAIRS,
+                ModSandstoneBlocks.SANDSTONE_PLATE_SLAB,
+                ModSandstoneBlocks.SANDSTONE_PLATE_WALL,
+
+                ModSandstoneBlocks.CRACKED_SANDSTONE_PLATES,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_STAIRS,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_SLAB,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_WALL,
+
+                ModSandstoneBlocks.SANDSTONE_TILES,
+                ModSandstoneBlocks.SANDSTONE_TILE_STAIRS,
+                ModSandstoneBlocks.SANDSTONE_TILE_SLAB,
+                ModSandstoneBlocks.SANDSTONE_TILE_WALL,
+
+                ModSandstoneBlocks.CRACKED_SANDSTONE_TILES,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_STAIRS,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_SLAB,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_WALL,
+
+                ModSandstoneBlocks.SANDSTONE_PILLAR,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_PILLAR
+        );
+
+        AdvancementEntry RED_SANDSTONE = addAdvancement(
+                consumer,
+                STONE,
+                Blocks.CHISELED_RED_SANDSTONE,
+                "red_sandstone",
+
+                Blocks.RED_SANDSTONE,
+                Blocks.RED_SANDSTONE_STAIRS,
+                Blocks.RED_SANDSTONE_SLAB,
+                Blocks.RED_SANDSTONE_WALL,
+
+                Blocks.CHISELED_RED_SANDSTONE,
+                ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE,
+
+                ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE,
+                ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_STAIRS,
+                ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_SLAB,
+                ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_WALL,
+
+                Blocks.SMOOTH_RED_SANDSTONE,
+                Blocks.SMOOTH_RED_SANDSTONE_STAIRS,
+                Blocks.SMOOTH_RED_SANDSTONE_SLAB,
+                ModRedSandstoneBlocks.SMOOTH_RED_SANDSTONE_WALL,
+
+                Blocks.CUT_RED_SANDSTONE,
+                ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS,
+                Blocks.CUT_RED_SANDSTONE_SLAB,
+                ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL,
+
+                ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE,
+                ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_STAIRS,
+                ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_SLAB,
+                ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_WALL,
+                ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_PRESSURE_PLATE,
+                ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_BUTTON,
+
+                ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS,
+                ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_STAIRS,
+                ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_SLAB,
+                ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_WALL,
+                ModRedSandstoneBlocks.CHISELED_RED_SANDSTONE_BRICKS,
+
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICKS,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_STAIRS,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_SLAB,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_WALL,
+                ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE_BRICKS,
+
+                ModRedSandstoneBlocks.RED_SANDSTONE_PLATES,
+                ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS,
+                ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB,
+                ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL,
+
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATES,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL,
+
+                ModRedSandstoneBlocks.RED_SANDSTONE_TILES,
+                ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS,
+                ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB,
+                ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL,
+
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILES,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL,
+
+                ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR
+        );
     }
 
     public AdvancementEntry addAdvancement(

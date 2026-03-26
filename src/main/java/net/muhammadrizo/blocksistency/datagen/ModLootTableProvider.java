@@ -367,6 +367,134 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModDeepslateBlocks.DEEPSLATE_PILLAR);
         addDrop(ModDeepslateBlocks.MOSSY_DEEPSLATE_PILLAR);
         addDrop(ModDeepslateBlocks.CRACKED_DEEPSLATE_PILLAR);
+
+        // ============== BRICKS ==============
+
+        addDrop(ModBricksBlocks.CHISELED_BRICKS);
+
+        addDrop(ModBricksBlocks.MOSSY_BRICKS);
+        addDrop(ModBricksBlocks.MOSSY_BRICK_STAIRS);
+        addSlabDrop(ModBricksBlocks.MOSSY_BRICK_SLAB);
+        addDrop(ModBricksBlocks.MOSSY_BRICK_WALL);
+        addDrop(ModBricksBlocks.MOSSY_CHISELED_BRICKS);
+
+        addDrop(ModBricksBlocks.CRACKED_BRICKS);
+        addDrop(ModBricksBlocks.CRACKED_BRICK_STAIRS);
+        addSlabDrop(ModBricksBlocks.CRACKED_BRICK_SLAB);
+        addDrop(ModBricksBlocks.CRACKED_BRICK_WALL);
+        addDrop(ModBricksBlocks.CRACKED_CHISELED_BRICKS);
+
+        // ============== SANDSTONE ==============
+
+        addDrop(ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE);
+
+        addDrop(ModSandstoneBlocks.COBBLED_SANDSTONE);
+        addDrop(ModSandstoneBlocks.COBBLED_SANDSTONE_STAIRS);
+        addSlabDrop(ModSandstoneBlocks.COBBLED_SANDSTONE_SLAB);
+        addDrop(ModSandstoneBlocks.COBBLED_SANDSTONE_WALL);
+
+        addDrop(ModSandstoneBlocks.SMOOTH_SANDSTONE_WALL);
+
+        addDrop(ModSandstoneBlocks.CUT_SANDSTONE_STAIRS);
+        addDrop(ModSandstoneBlocks.CUT_SANDSTONE_WALL);
+
+        addDrop(ModSandstoneBlocks.POLISHED_SANDSTONE);
+        addDrop(ModSandstoneBlocks.POLISHED_SANDSTONE_STAIRS);
+        addSlabDrop(ModSandstoneBlocks.POLISHED_SANDSTONE_SLAB);
+        addDrop(ModSandstoneBlocks.POLISHED_SANDSTONE_WALL);
+        addDrop(ModSandstoneBlocks.POLISHED_SANDSTONE_PRESSURE_PLATE);
+        addDrop(ModSandstoneBlocks.POLISHED_SANDSTONE_BUTTON);
+
+        addDrop(ModSandstoneBlocks.SANDSTONE_BRICKS);
+        addDrop(ModSandstoneBlocks.SANDSTONE_BRICK_STAIRS);
+        addSlabDrop(ModSandstoneBlocks.SANDSTONE_BRICK_SLAB);
+        addDrop(ModSandstoneBlocks.SANDSTONE_BRICK_WALL);
+        addDrop(ModSandstoneBlocks.CHISELED_SANDSTONE_BRICKS);
+
+        addDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICKS);
+        addDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_STAIRS);
+        addSlabDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_SLAB);
+        addDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_WALL);
+        addDrop(ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE_BRICKS);
+
+        addDrop(ModSandstoneBlocks.SANDSTONE_PLATES);
+        addDrop(ModSandstoneBlocks.SANDSTONE_PLATE_STAIRS);
+        addSlabDrop(ModSandstoneBlocks.SANDSTONE_PLATE_SLAB);
+        addDrop(ModSandstoneBlocks.SANDSTONE_PLATE_WALL);
+
+        addDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATES);
+        addDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_STAIRS);
+        addSlabDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_SLAB);
+        addDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_WALL);
+
+        addDrop(ModSandstoneBlocks.SANDSTONE_TILES);
+        addDrop(ModSandstoneBlocks.SANDSTONE_TILE_STAIRS);
+        addSlabDrop(ModSandstoneBlocks.SANDSTONE_TILE_SLAB);
+        addDrop(ModSandstoneBlocks.SANDSTONE_TILE_WALL);
+
+        addDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_TILES);
+        addDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_STAIRS);
+        addSlabDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_SLAB);
+        addDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_WALL);
+
+        addDrop(ModSandstoneBlocks.SANDSTONE_PILLAR);
+        addDrop(ModSandstoneBlocks.CRACKED_SANDSTONE_PILLAR);
+
+        // ============== RED SANDSTONE ==============
+
+        addDrop(ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE);
+
+        addDrop(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE);
+        addDrop(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_STAIRS);
+        addSlabDrop(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_SLAB);
+        addDrop(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_WALL);
+
+        addDrop(ModRedSandstoneBlocks.SMOOTH_RED_SANDSTONE_WALL);
+
+        addDrop(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS);
+        addDrop(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL);
+
+        addDrop(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE);
+        addDrop(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_STAIRS);
+        addSlabDrop(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_SLAB);
+        addDrop(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_WALL);
+        addDrop(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_PRESSURE_PLATE);
+        addDrop(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_BUTTON);
+
+        addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS);
+        addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_STAIRS);
+        addSlabDrop(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_SLAB);
+        addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_WALL);
+        addDrop(ModRedSandstoneBlocks.CHISELED_RED_SANDSTONE_BRICKS);
+
+        addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICKS);
+        addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_STAIRS);
+        addSlabDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_SLAB);
+        addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_WALL);
+        addDrop(ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE_BRICKS);
+
+        addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_PLATES);
+        addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS);
+        addSlabDrop(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB);
+        addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL);
+
+        addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATES);
+        addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS);
+        addSlabDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB);
+        addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL);
+
+        addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_TILES);
+        addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS);
+        addSlabDrop(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB);
+        addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL);
+
+        addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILES);
+        addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS);
+        addSlabDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB);
+        addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL);
+
+        addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR);
+        addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR);
     }
 
     public void addSlabDrop(Block block) {

@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.data.*;
 import net.minecraft.util.Identifier;
+import net.muhammadrizo.blocksistency.Blocksistency;
 import net.muhammadrizo.blocksistency.block.*;
 import net.muhammadrizo.blocksistency.block.model.ModModels;
 
@@ -31,11 +32,11 @@ public class ModModelProvider extends FabricModelProvider {
                 ModStoneBlocks.POLISHED_STONE,
                 ModStoneBlocks.POLISHED_STONE_STAIRS, ModStoneBlocks.POLISHED_STONE_SLAB, ModStoneBlocks.POLISHED_STONE_WALL);
 
-        simpleCubeModel(gen, ModStoneBlocks.MOSSY_CHISELED_STONE_BRICKS);
+        simpleCubeAllModel(gen, ModStoneBlocks.MOSSY_CHISELED_STONE_BRICKS);
 
         blockFormsModels(gen, ModStoneBlocks.CRACKED_STONE_BRICK_STAIRS, ModStoneBlocks.CRACKED_STONE_BRICK_SLAB, ModStoneBlocks.CRACKED_STONE_BRICK_WALL,
                 Blocks.CRACKED_STONE_BRICKS);
-        simpleCubeModel(gen, ModStoneBlocks.CRACKED_CHISELED_STONE_BRICKS);
+        simpleCubeAllModel(gen, ModStoneBlocks.CRACKED_CHISELED_STONE_BRICKS);
 
         blockAndFormsModels(gen,
                 ModStoneBlocks.STONE_PLATES,
@@ -90,17 +91,17 @@ public class ModModelProvider extends FabricModelProvider {
         blockAndFormsModels(gen,
                 ModGraniteBlocks.GRANITE_BRICKS,
                 ModGraniteBlocks.GRANITE_BRICK_STAIRS, ModGraniteBlocks.GRANITE_BRICK_SLAB, ModGraniteBlocks.GRANITE_BRICK_WALL);
-        simpleCubeModel(gen, ModGraniteBlocks.CHISELED_GRANITE_BRICKS);
+        simpleCubeAllModel(gen, ModGraniteBlocks.CHISELED_GRANITE_BRICKS);
 
         blockAndFormsModels(gen,
                 ModGraniteBlocks.MOSSY_GRANITE_BRICKS,
                 ModGraniteBlocks.MOSSY_GRANITE_BRICK_STAIRS, ModGraniteBlocks.MOSSY_GRANITE_BRICK_SLAB, ModGraniteBlocks.MOSSY_GRANITE_BRICK_WALL);
-        simpleCubeModel(gen, ModGraniteBlocks.MOSSY_CHISELED_GRANITE_BRICKS);
+        simpleCubeAllModel(gen, ModGraniteBlocks.MOSSY_CHISELED_GRANITE_BRICKS);
 
         blockAndFormsModels(gen,
                 ModGraniteBlocks.CRACKED_GRANITE_BRICKS,
                 ModGraniteBlocks.CRACKED_GRANITE_BRICK_STAIRS, ModGraniteBlocks.CRACKED_GRANITE_BRICK_SLAB, ModGraniteBlocks.CRACKED_GRANITE_BRICK_WALL);
-        simpleCubeModel(gen, ModGraniteBlocks.CRACKED_CHISELED_GRANITE_BRICKS);
+        simpleCubeAllModel(gen, ModGraniteBlocks.CRACKED_CHISELED_GRANITE_BRICKS);
 
         blockAndFormsModels(gen,
                 ModGraniteBlocks.GRANITE_PLATES,
@@ -155,17 +156,17 @@ public class ModModelProvider extends FabricModelProvider {
         blockAndFormsModels(gen,
                 ModDioriteBlocks.DIORITE_BRICKS,
                 ModDioriteBlocks.DIORITE_BRICK_STAIRS, ModDioriteBlocks.DIORITE_BRICK_SLAB, ModDioriteBlocks.DIORITE_BRICK_WALL);
-        simpleCubeModel(gen, ModDioriteBlocks.CHISELED_DIORITE_BRICKS);
+        simpleCubeAllModel(gen, ModDioriteBlocks.CHISELED_DIORITE_BRICKS);
 
         blockAndFormsModels(gen,
                 ModDioriteBlocks.MOSSY_DIORITE_BRICKS,
                 ModDioriteBlocks.MOSSY_DIORITE_BRICK_STAIRS, ModDioriteBlocks.MOSSY_DIORITE_BRICK_SLAB, ModDioriteBlocks.MOSSY_DIORITE_BRICK_WALL);
-        simpleCubeModel(gen, ModDioriteBlocks.MOSSY_CHISELED_DIORITE_BRICKS);
+        simpleCubeAllModel(gen, ModDioriteBlocks.MOSSY_CHISELED_DIORITE_BRICKS);
 
         blockAndFormsModels(gen,
                 ModDioriteBlocks.CRACKED_DIORITE_BRICKS,
                 ModDioriteBlocks.CRACKED_DIORITE_BRICK_STAIRS, ModDioriteBlocks.CRACKED_DIORITE_BRICK_SLAB, ModDioriteBlocks.CRACKED_DIORITE_BRICK_WALL);
-        simpleCubeModel(gen, ModDioriteBlocks.CRACKED_CHISELED_DIORITE_BRICKS);
+        simpleCubeAllModel(gen, ModDioriteBlocks.CRACKED_CHISELED_DIORITE_BRICKS);
 
         blockAndFormsModels(gen,
                 ModDioriteBlocks.DIORITE_PLATES,
@@ -220,17 +221,17 @@ public class ModModelProvider extends FabricModelProvider {
         blockAndFormsModels(gen,
                 ModAndesiteBlocks.ANDESITE_BRICKS,
                 ModAndesiteBlocks.ANDESITE_BRICK_STAIRS, ModAndesiteBlocks.ANDESITE_BRICK_SLAB, ModAndesiteBlocks.ANDESITE_BRICK_WALL);
-        simpleCubeModel(gen, ModAndesiteBlocks.CHISELED_ANDESITE_BRICKS);
+        simpleCubeAllModel(gen, ModAndesiteBlocks.CHISELED_ANDESITE_BRICKS);
 
         blockAndFormsModels(gen,
                 ModAndesiteBlocks.MOSSY_ANDESITE_BRICKS,
                 ModAndesiteBlocks.MOSSY_ANDESITE_BRICK_STAIRS, ModAndesiteBlocks.MOSSY_ANDESITE_BRICK_SLAB, ModAndesiteBlocks.MOSSY_ANDESITE_BRICK_WALL);
-        simpleCubeModel(gen, ModAndesiteBlocks.MOSSY_CHISELED_ANDESITE_BRICKS);
+        simpleCubeAllModel(gen, ModAndesiteBlocks.MOSSY_CHISELED_ANDESITE_BRICKS);
 
         blockAndFormsModels(gen,
                 ModAndesiteBlocks.CRACKED_ANDESITE_BRICKS,
                 ModAndesiteBlocks.CRACKED_ANDESITE_BRICK_STAIRS, ModAndesiteBlocks.CRACKED_ANDESITE_BRICK_SLAB, ModAndesiteBlocks.CRACKED_ANDESITE_BRICK_WALL);
-        simpleCubeModel(gen, ModAndesiteBlocks.CRACKED_CHISELED_ANDESITE_BRICKS);
+        simpleCubeAllModel(gen, ModAndesiteBlocks.CRACKED_CHISELED_ANDESITE_BRICKS);
 
         blockAndFormsModels(gen,
                 ModAndesiteBlocks.ANDESITE_PLATES,
@@ -266,8 +267,8 @@ public class ModModelProvider extends FabricModelProvider {
         bottomTopSlabModel(gen, ModDeepslateBlocks.DEEPSLATE_SLAB, Blocks.DEEPSLATE, false);
         bottomTopWallModel(gen, ModDeepslateBlocks.DEEPSLATE_WALL, Blocks.DEEPSLATE, false);
 
-        simpleCubeModel(gen, ModDeepslateBlocks.MOSSY_CHISELED_DEEPSLATE);
-        simpleCubeModel(gen, ModDeepslateBlocks.CRACKED_CHISELED_DEEPSLATE);
+        simpleCubeAllModel(gen, ModDeepslateBlocks.MOSSY_CHISELED_DEEPSLATE);
+        simpleCubeAllModel(gen, ModDeepslateBlocks.CRACKED_CHISELED_DEEPSLATE);
 
         blockAndFormsModels(gen,
                 ModDeepslateBlocks.MOSSY_COBBLED_DEEPSLATE,
@@ -315,10 +316,145 @@ public class ModModelProvider extends FabricModelProvider {
         pillarBlockModel(gen, ModDeepslateBlocks.DEEPSLATE_PILLAR);
         pillarBlockModel(gen, ModDeepslateBlocks.MOSSY_DEEPSLATE_PILLAR);
         pillarBlockModel(gen, ModDeepslateBlocks.CRACKED_DEEPSLATE_PILLAR);
+
+        // ============== BRICKS ==============
+
+        simpleCubeAllModel(gen, ModBricksBlocks.CHISELED_BRICKS);
+
+        blockAndFormsModels(gen, ModBricksBlocks.MOSSY_BRICKS,
+                ModBricksBlocks.MOSSY_BRICK_STAIRS, ModBricksBlocks.MOSSY_BRICK_SLAB, ModBricksBlocks.MOSSY_BRICK_WALL);
+        simpleCubeAllModel(gen, ModBricksBlocks.MOSSY_CHISELED_BRICKS);
+
+        blockAndFormsModels(gen, ModBricksBlocks.CRACKED_BRICKS,
+                ModBricksBlocks.CRACKED_BRICK_STAIRS, ModBricksBlocks.CRACKED_BRICK_SLAB, ModBricksBlocks.CRACKED_BRICK_WALL);
+        simpleCubeAllModel(gen, ModBricksBlocks.CRACKED_CHISELED_BRICKS);
+
+        // ============== SANDSTONE ==============
+
+        bottomTopWallModel(gen, Blocks.SANDSTONE_WALL, Blocks.SANDSTONE, true);
+
+        customTextureCubeColumnModel(gen, ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE,
+                Identifier.of(Blocksistency.MOD_ID, "block/cracked_chiseled_sandstone"),
+                Identifier.ofVanilla("block/sandstone_top"));
+
+        Identifier cobbledSandstoneTextureId = Identifier.ofVanilla("block/sandstone_bottom");
+        customTextureSimpleCubeAllModel(gen, ModSandstoneBlocks.COBBLED_SANDSTONE, cobbledSandstoneTextureId);
+        customTextureSimpleCubeAllStairsModel(gen, ModSandstoneBlocks.COBBLED_SANDSTONE_STAIRS, cobbledSandstoneTextureId);
+        customTextureSimpleCubeAllSlabModel(gen, ModSandstoneBlocks.COBBLED_SANDSTONE_SLAB, ModSandstoneBlocks.COBBLED_SANDSTONE, cobbledSandstoneTextureId);
+        customTextureSimpleCubeAllWallModel(gen, ModSandstoneBlocks.COBBLED_SANDSTONE_WALL, cobbledSandstoneTextureId);
+
+        customTextureSimpleCubeAllWallModel(gen, ModSandstoneBlocks.SMOOTH_SANDSTONE_WALL, Identifier.ofVanilla("block/sandstone_top"));
+
+        TextureMap cutSandstoneTexture = new TextureMap()
+                .put(TextureKey.TOP, Identifier.ofVanilla("block/sandstone_top"))
+                .put(TextureKey.SIDE, Identifier.ofVanilla("block/cut_sandstone"))
+                .put(TextureKey.BOTTOM, Identifier.ofVanilla("block/sandstone_top"));
+
+        TextureMap cutSandstoneWallTexture = cutSandstoneTexture
+                .put(TextureKey.WALL, Identifier.ofVanilla("block/cut_sandstone"));
+
+        customTextureBottomTopStairsModel(gen, ModSandstoneBlocks.CUT_SANDSTONE_STAIRS, cutSandstoneTexture);
+        customTextureBottomTopWallModel(gen, ModSandstoneBlocks.CUT_SANDSTONE_WALL, cutSandstoneWallTexture);
+
+        blockAndFormsModels(gen, ModSandstoneBlocks.POLISHED_SANDSTONE,
+                ModSandstoneBlocks.POLISHED_SANDSTONE_STAIRS, ModSandstoneBlocks.POLISHED_SANDSTONE_SLAB, ModSandstoneBlocks.POLISHED_SANDSTONE_WALL,
+                ModSandstoneBlocks.POLISHED_SANDSTONE_PRESSURE_PLATE, ModSandstoneBlocks.POLISHED_SANDSTONE_BUTTON);
+
+        blockAndFormsModels(gen, ModSandstoneBlocks.SANDSTONE_BRICKS,
+                ModSandstoneBlocks.SANDSTONE_BRICK_STAIRS, ModSandstoneBlocks.SANDSTONE_BRICK_SLAB, ModSandstoneBlocks.SANDSTONE_BRICK_WALL);
+        cubeColumnModel(gen, ModSandstoneBlocks.CHISELED_SANDSTONE_BRICKS);
+
+        blockAndFormsModels(gen, ModSandstoneBlocks.CRACKED_SANDSTONE_BRICKS,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_STAIRS, ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_SLAB, ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_WALL);
+        simpleCubeAllModel(gen, ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE_BRICKS);
+
+        blockAndFormsModels(gen, ModSandstoneBlocks.SANDSTONE_PLATES,
+                ModSandstoneBlocks.SANDSTONE_PLATE_STAIRS, ModSandstoneBlocks.SANDSTONE_PLATE_SLAB, ModSandstoneBlocks.SANDSTONE_PLATE_WALL);
+
+        blockAndFormsModels(gen, ModSandstoneBlocks.CRACKED_SANDSTONE_PLATES,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_STAIRS, ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_SLAB, ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_WALL);
+
+        blockAndFormsModels(gen, ModSandstoneBlocks.SANDSTONE_TILES,
+                ModSandstoneBlocks.SANDSTONE_TILE_STAIRS, ModSandstoneBlocks.SANDSTONE_TILE_SLAB, ModSandstoneBlocks.SANDSTONE_TILE_WALL);
+
+        blockAndFormsModels(gen, ModSandstoneBlocks.CRACKED_SANDSTONE_TILES,
+                ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_STAIRS, ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_SLAB, ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_WALL);
+
+        pillarBlockModel(gen, ModSandstoneBlocks.SANDSTONE_PILLAR);
+        pillarBlockModel(gen, ModSandstoneBlocks.CRACKED_SANDSTONE_PILLAR);
+
+        // ============== RED SANDSTONE ==============
+
+        bottomTopWallModel(gen, Blocks.RED_SANDSTONE_WALL, Blocks.RED_SANDSTONE, true);
+
+        customTextureCubeColumnModel(gen, ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE,
+                Identifier.of(Blocksistency.MOD_ID, "block/cracked_chiseled_red_sandstone"),
+                Identifier.ofVanilla("block/red_sandstone_top"));
+
+        Identifier cobbledRedSandstoneTextureId = Identifier.ofVanilla("block/red_sandstone_bottom");
+        customTextureSimpleCubeAllModel(gen, ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE, cobbledRedSandstoneTextureId);
+        customTextureSimpleCubeAllStairsModel(gen, ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_STAIRS, cobbledRedSandstoneTextureId);
+        customTextureSimpleCubeAllSlabModel(gen, ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_SLAB, ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE, cobbledRedSandstoneTextureId);
+        customTextureSimpleCubeAllWallModel(gen, ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_WALL, cobbledRedSandstoneTextureId);
+
+        customTextureSimpleCubeAllWallModel(gen, ModRedSandstoneBlocks.SMOOTH_RED_SANDSTONE_WALL, Identifier.ofVanilla("block/red_sandstone_top"));
+
+        TextureMap cutRedSandstoneTexture = new TextureMap()
+                .put(TextureKey.TOP, Identifier.ofVanilla("block/red_sandstone_top"))
+                .put(TextureKey.SIDE, Identifier.ofVanilla("block/cut_red_sandstone"))
+                .put(TextureKey.BOTTOM, Identifier.ofVanilla("block/red_sandstone_top"));
+
+        TextureMap cutRedSandstoneWallTexture = cutRedSandstoneTexture
+                .put(TextureKey.WALL, Identifier.ofVanilla("block/cut_red_sandstone"));
+
+        customTextureBottomTopStairsModel(gen, ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS, cutRedSandstoneTexture);
+        customTextureBottomTopWallModel(gen, ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL, cutRedSandstoneWallTexture);
+
+        blockAndFormsModels(gen, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE,
+                ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_STAIRS, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_SLAB, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_WALL,
+                ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_PRESSURE_PLATE, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_BUTTON);
+
+        blockAndFormsModels(gen, ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS,
+                ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_STAIRS, ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_SLAB, ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_WALL);
+        cubeColumnModel(gen, ModRedSandstoneBlocks.CHISELED_RED_SANDSTONE_BRICKS);
+
+        blockAndFormsModels(gen, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICKS,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_STAIRS, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_SLAB, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_WALL);
+        simpleCubeAllModel(gen, ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE_BRICKS);
+
+        blockAndFormsModels(gen, ModRedSandstoneBlocks.RED_SANDSTONE_PLATES,
+                ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS, ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB, ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL);
+
+        blockAndFormsModels(gen, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATES,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL);
+
+        blockAndFormsModels(gen, ModRedSandstoneBlocks.RED_SANDSTONE_TILES,
+                ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS, ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB, ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL);
+
+        blockAndFormsModels(gen, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILES,
+                ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL);
+
+        pillarBlockModel(gen, ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR);
+        pillarBlockModel(gen, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR);
+
+        // ============== OTHER ==============
+
+        bottomTopWallModel(gen, Blocks.BLACKSTONE_WALL, Blocks.BLACKSTONE, false);
     }
 
-    public void simpleCubeModel(BlockStateModelGenerator gen, Block block) {
+    public void simpleCubeAllModel(BlockStateModelGenerator gen, Block block) {
         gen.registerSimpleCubeAll(block);
+    }
+
+    public void customTextureSimpleCubeAllModel(BlockStateModelGenerator gen, Block block, Identifier textureId) {
+        TextureMap texture = TextureMap.all(textureId);
+        Identifier modelId = Models.CUBE_ALL.upload(block,
+                texture, gen.modelCollector);
+
+        gen.blockStateCollector.accept(
+                BlockStateModelGenerator.createSingletonBlockState(
+                        block,
+                        BlockStateModelGenerator.createWeightedVariant(modelId)));
     }
 
     public void pillarBlockModel(BlockStateModelGenerator gen, Block block) {
@@ -329,8 +465,31 @@ public class ModModelProvider extends FabricModelProvider {
         gen.registerSingleton(block, TexturedModel.CUBE_COLUMN);
     }
 
+    public void customTextureCubeColumnModel(BlockStateModelGenerator gen, Block block, Identifier sideId, Identifier endId) {
+        TextureMap texture = new TextureMap()
+                .put(TextureKey.SIDE, sideId)
+                .put(TextureKey.END, endId);
+        Identifier modelId = Models.CUBE_COLUMN.upload(
+                block, texture, gen.modelCollector);
+
+        gen.blockStateCollector.accept(
+                BlockStateModelGenerator.createSingletonBlockState(
+                        block,
+                        BlockStateModelGenerator.createWeightedVariant(modelId)
+                )
+        );
+
+        gen.registerParentedItemModel(block, modelId);
+    }
+
     public void stairsModel(BlockStateModelGenerator gen, Block block, Block baseBlock) {
         TextureMap texture = TextureMap.all(baseBlock);
+
+        customTextureStairsModel(gen, block, texture);
+    }
+
+    public void customTextureSimpleCubeAllStairsModel(BlockStateModelGenerator gen, Block block, Identifier textureId) {
+        TextureMap texture = TextureMap.all(textureId);
 
         customTextureStairsModel(gen, block, texture);
     }
@@ -407,6 +566,12 @@ public class ModModelProvider extends FabricModelProvider {
         customTextureSlabModel(gen, block, baseBlock, texture);
     }
 
+    public void customTextureSimpleCubeAllSlabModel(BlockStateModelGenerator gen, Block block, Block baseBlock, Identifier textureId) {
+        TextureMap texture = TextureMap.all(textureId);
+
+        customTextureSlabModel(gen, block, baseBlock, texture);
+    }
+
     public void customTextureSlabModel(BlockStateModelGenerator gen, Block block, Block baseBlock, TextureMap texture) {
         Identifier bottomSlabId = Models.SLAB.upload(
                 block, texture, gen.modelCollector);
@@ -453,6 +618,12 @@ public class ModModelProvider extends FabricModelProvider {
 
     public void wallModel(BlockStateModelGenerator gen, Block block, Block baseBlock) {
         TextureMap texture = TextureMap.all(baseBlock);
+
+        customTextureWallModel(gen, block, texture);
+    }
+
+    public void customTextureSimpleCubeAllWallModel(BlockStateModelGenerator gen, Block block, Identifier textureId) {
+        TextureMap texture = TextureMap.all(textureId);
 
         customTextureWallModel(gen, block, texture);
     }
@@ -567,10 +738,10 @@ public class ModModelProvider extends FabricModelProvider {
                 )
         );
 
-        Identifier inventroyId = Models.BUTTON_INVENTORY.upload(
+        Identifier inventoryId = Models.BUTTON_INVENTORY.upload(
                 block, texture, gen.modelCollector);
 
-        gen.registerParentedItemModel(block, inventroyId);
+        gen.registerParentedItemModel(block, inventoryId);
     }
 
     public void blockFormsModels(BlockStateModelGenerator gen, Block stairs, Block slab, Block wall, Block baseBlock) {

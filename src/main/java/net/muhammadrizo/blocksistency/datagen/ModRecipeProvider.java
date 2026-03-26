@@ -3,6 +3,7 @@ package net.muhammadrizo.blocksistency.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.Item;
@@ -69,7 +70,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecuttingRecipe(Blocks.STONE_BRICK_STAIRS, ModStoneBlocks.POLISHED_STONE);
                 stonecuttingRecipe(Blocks.STONE_BRICK_SLAB, ModStoneBlocks.POLISHED_STONE);
                 stonecuttingRecipe(Blocks.STONE_BRICK_WALL, ModStoneBlocks.POLISHED_STONE);
-                stonecuttingRecipe(Blocks.CHISELED_STONE_BRICKS,  ModStoneBlocks.POLISHED_STONE);
+                stonecuttingRecipe(Blocks.CHISELED_STONE_BRICKS, ModStoneBlocks.POLISHED_STONE);
 
                 // Mossy Chiseled Stone Bricks
                 mossyBlockRecipe(ModStoneBlocks.MOSSY_CHISELED_STONE_BRICKS, Blocks.CHISELED_STONE_BRICKS);
@@ -116,6 +117,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 crackedBlockRecipe(ModStoneBlocks.CRACKED_STONE_PILLAR, ModStoneBlocks.STONE_PILLAR);
 
                 // ============== GRANITE ==============
+
+                smeltIntoBaseRecipe(Blocks.GRANITE, ModGraniteBlocks.COBBLED_GRANITE);
 
                 // Cobbled Granite + forms — stonecutting from Granite
                 stonecuttingRecipe(ModGraniteBlocks.COBBLED_GRANITE, Blocks.GRANITE);
@@ -205,6 +208,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 // ============== DIORITE ==============
 
+                smeltIntoBaseRecipe(Blocks.DIORITE, ModDioriteBlocks.COBBLED_DIORITE);
+
                 // Cobbled Diorite + forms — stonecutting from Diorite
                 stonecuttingRecipe(ModDioriteBlocks.COBBLED_DIORITE, Blocks.DIORITE);
                 stonecuttingRecipe(ModDioriteBlocks.COBBLED_DIORITE_STAIRS, Blocks.DIORITE);
@@ -292,6 +297,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 crackedBlockRecipe(ModDioriteBlocks.CRACKED_DIORITE_PILLAR,  ModDioriteBlocks.DIORITE_PILLAR);
 
                 // ============== ANDESITE ==============
+
+                smeltIntoBaseRecipe(Blocks.ANDESITE, ModAndesiteBlocks.COBBLED_ANDESITE);
 
                 // Cobbled Andesite + forms — stonecutting from Andesite
                 stonecuttingRecipe(ModAndesiteBlocks.COBBLED_ANDESITE, Blocks.ANDESITE);
@@ -382,10 +389,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 // ============== DEEPSLATE ==============
 
                 // Cobbled Deepslate + forms — stonecutting from Deepslate
-                stonecuttingRecipe(Blocks.COBBLED_DEEPSLATE,  Blocks.DEEPSLATE);
-                stonecuttingRecipe(Blocks.COBBLED_DEEPSLATE_STAIRS,  Blocks.DEEPSLATE);
-                stonecuttingSlabRecipe(Blocks.COBBLED_DEEPSLATE_SLAB,  Blocks.DEEPSLATE);
-                stonecuttingRecipe(Blocks.COBBLED_DEEPSLATE_WALL,  Blocks.DEEPSLATE);
+                stonecuttingRecipe(Blocks.COBBLED_DEEPSLATE, Blocks.DEEPSLATE);
+                stonecuttingRecipe(Blocks.COBBLED_DEEPSLATE_STAIRS, Blocks.DEEPSLATE);
+                stonecuttingSlabRecipe(Blocks.COBBLED_DEEPSLATE_SLAB, Blocks.DEEPSLATE);
+                stonecuttingRecipe(Blocks.COBBLED_DEEPSLATE_WALL, Blocks.DEEPSLATE);
 
                 // Deepslate forms
                 craftBlockForms(
@@ -475,6 +482,152 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 pillarRecipe(ModDeepslateBlocks.DEEPSLATE_PILLAR, Blocks.DEEPSLATE);
                 mossyBlockRecipe(ModDeepslateBlocks.MOSSY_DEEPSLATE_PILLAR, ModDeepslateBlocks.DEEPSLATE_PILLAR);
                 crackedBlockRecipe(ModDeepslateBlocks.CRACKED_DEEPSLATE_PILLAR, ModDeepslateBlocks.DEEPSLATE_PILLAR);
+
+                // ============== BRICKS ==============
+
+                chiseledBlockRecipe(ModBricksBlocks.CHISELED_BRICKS, Blocks.BRICK_SLAB, Blocks.BRICKS);
+
+                mossyBlockRecipe(ModBricksBlocks.MOSSY_BRICKS, Blocks.BRICKS);
+                craftBlockForms(
+                        ModBricksBlocks.MOSSY_BRICK_STAIRS, ModBricksBlocks.MOSSY_BRICK_SLAB, ModBricksBlocks.MOSSY_BRICK_WALL,
+                        ModBricksBlocks.MOSSY_BRICKS);
+                mossyBlockRecipe(ModBricksBlocks.MOSSY_CHISELED_BRICKS, ModBricksBlocks.CHISELED_BRICKS);
+
+                crackedBlockRecipe(ModBricksBlocks.CRACKED_BRICKS, Blocks.BRICKS);
+                craftBlockForms(
+                        ModBricksBlocks.CRACKED_BRICK_STAIRS, ModBricksBlocks.CRACKED_BRICK_SLAB, ModBricksBlocks.CRACKED_BRICK_WALL,
+                        ModBricksBlocks.CRACKED_BRICKS);
+                crackedBlockRecipe(ModBricksBlocks.CRACKED_CHISELED_BRICKS, ModBricksBlocks.CHISELED_BRICKS);
+
+                // ============== SANDSTONE ==============
+
+                smeltIntoBaseRecipe(Blocks.SANDSTONE, ModSandstoneBlocks.COBBLED_SANDSTONE);
+
+                crackedBlockRecipe(ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE, Blocks.CHISELED_SANDSTONE);
+
+                // Cobbled Sandstone + forms — stonecutting from Sandstone
+                stonecuttingRecipe(ModSandstoneBlocks.COBBLED_SANDSTONE, Blocks.SANDSTONE);
+                stonecuttingRecipe(ModSandstoneBlocks.COBBLED_SANDSTONE_STAIRS, Blocks.SANDSTONE);
+                stonecuttingSlabRecipe(ModSandstoneBlocks.COBBLED_SANDSTONE_SLAB, Blocks.SANDSTONE);
+                stonecuttingRecipe(ModSandstoneBlocks.COBBLED_SANDSTONE_WALL, Blocks.SANDSTONE);
+
+                // Cobbled Sandstone forms
+                craftBlockForms(
+                        ModSandstoneBlocks.COBBLED_SANDSTONE_STAIRS, ModSandstoneBlocks.COBBLED_SANDSTONE_SLAB, ModSandstoneBlocks.COBBLED_SANDSTONE_WALL,
+                        ModSandstoneBlocks.COBBLED_SANDSTONE);
+
+                wallRecipe(ModSandstoneBlocks.SMOOTH_SANDSTONE_WALL, Blocks.SMOOTH_SANDSTONE);
+
+                // Cut Sandstone stairs, wall  — stonecutting from Sandstone
+                stonecuttingRecipe(ModSandstoneBlocks.CUT_SANDSTONE_STAIRS, Blocks.SANDSTONE);
+                stonecuttingRecipe(ModSandstoneBlocks.CUT_SANDSTONE_WALL, Blocks.SANDSTONE);
+
+                stairsRecipe(ModSandstoneBlocks.CUT_SANDSTONE_STAIRS, Blocks.CUT_SANDSTONE);
+                wallRecipe(ModSandstoneBlocks.CUT_SANDSTONE_WALL, Blocks.CUT_SANDSTONE);
+
+                craftPolishedBlocks(ModSandstoneBlocks.POLISHED_SANDSTONE,
+                        ModSandstoneBlocks.POLISHED_SANDSTONE_STAIRS, ModSandstoneBlocks.POLISHED_SANDSTONE_SLAB, ModSandstoneBlocks.POLISHED_SANDSTONE_WALL,
+                        Blocks.CUT_SANDSTONE, Blocks.SANDSTONE);
+                pressurePlateRecipe(ModSandstoneBlocks.POLISHED_SANDSTONE_PRESSURE_PLATE, ModSandstoneBlocks.POLISHED_SANDSTONE);
+                buttonRecipe(ModSandstoneBlocks.POLISHED_SANDSTONE_BUTTON, ModSandstoneBlocks.POLISHED_SANDSTONE);
+
+                craftBricksBlocks(ModSandstoneBlocks.SANDSTONE_BRICKS,
+                        ModSandstoneBlocks.SANDSTONE_BRICK_STAIRS, ModSandstoneBlocks.SANDSTONE_BRICK_SLAB, ModSandstoneBlocks.SANDSTONE_BRICK_WALL,
+                        ModSandstoneBlocks.POLISHED_SANDSTONE, Blocks.CUT_SANDSTONE, Blocks.SANDSTONE);
+                chiseledBricksBlockRecipe(ModSandstoneBlocks.CHISELED_SANDSTONE_BRICKS, ModSandstoneBlocks.SANDSTONE_BRICK_SLAB,
+                        ModSandstoneBlocks.SANDSTONE_BRICKS, ModSandstoneBlocks.POLISHED_SANDSTONE, Blocks.CUT_SANDSTONE, Blocks.SANDSTONE);
+
+                crackedBlockRecipe(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICKS, ModSandstoneBlocks.SANDSTONE_BRICKS);
+                craftBlockForms(
+                        ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_STAIRS, ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_SLAB, ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_WALL,
+                        ModSandstoneBlocks.CRACKED_SANDSTONE_BRICKS);
+                crackedBlockRecipe(ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE_BRICKS, ModSandstoneBlocks.CHISELED_SANDSTONE_BRICKS);
+
+                craftPlatesBlocks(ModSandstoneBlocks.SANDSTONE_PLATES,
+                        ModSandstoneBlocks.SANDSTONE_PLATE_STAIRS, ModSandstoneBlocks.SANDSTONE_PLATE_SLAB, ModSandstoneBlocks.SANDSTONE_PLATE_WALL,
+                        ModSandstoneBlocks.SANDSTONE_BRICKS, ModSandstoneBlocks.POLISHED_SANDSTONE, Blocks.CUT_SANDSTONE, Blocks.SANDSTONE);
+
+                crackedBlockRecipe(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATES, ModSandstoneBlocks.SANDSTONE_PLATES);
+                craftBlockForms(
+                        ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_STAIRS, ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_SLAB, ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_WALL,
+                        ModSandstoneBlocks.CRACKED_SANDSTONE_PLATES);
+
+                craftTilesBlocks(ModSandstoneBlocks.SANDSTONE_TILES,
+                        ModSandstoneBlocks.SANDSTONE_TILE_STAIRS, ModSandstoneBlocks.SANDSTONE_TILE_SLAB, ModSandstoneBlocks.SANDSTONE_TILE_WALL,
+                        ModSandstoneBlocks.SANDSTONE_PLATES, ModSandstoneBlocks.SANDSTONE_BRICKS, ModSandstoneBlocks.POLISHED_SANDSTONE, Blocks.CUT_SANDSTONE, Blocks.SANDSTONE);
+
+                crackedBlockRecipe(ModSandstoneBlocks.CRACKED_SANDSTONE_TILES, ModSandstoneBlocks.SANDSTONE_TILES);
+                craftBlockForms(
+                        ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_STAIRS, ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_SLAB, ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_WALL,
+                        ModSandstoneBlocks.CRACKED_SANDSTONE_TILES);
+
+                pillarRecipe(ModSandstoneBlocks.SANDSTONE_PILLAR, Blocks.SANDSTONE);
+                crackedBlockRecipe(ModSandstoneBlocks.CRACKED_SANDSTONE_PILLAR, ModSandstoneBlocks.SANDSTONE_PILLAR);
+
+                // ============== RED SANDSTONE ==============
+
+                smeltIntoBaseRecipe(Blocks.RED_SANDSTONE, ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE);
+
+                crackedBlockRecipe(ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE, Blocks.CHISELED_RED_SANDSTONE);
+
+                // Cobbled Red Sandstone + forms — stonecutting from Red Sandstone
+                stonecuttingRecipe(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE, Blocks.RED_SANDSTONE);
+                stonecuttingRecipe(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_STAIRS, Blocks.RED_SANDSTONE);
+                stonecuttingSlabRecipe(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_SLAB, Blocks.RED_SANDSTONE);
+                stonecuttingRecipe(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_WALL, Blocks.RED_SANDSTONE);
+
+                // Cobbled Red Sandstone forms
+                craftBlockForms(
+                        ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_STAIRS, ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_SLAB, ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_WALL,
+                        ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE);
+
+                wallRecipe(ModRedSandstoneBlocks.SMOOTH_RED_SANDSTONE_WALL, Blocks.SMOOTH_RED_SANDSTONE);
+
+                // Cut Red Sandstone stairs, wall  — stonecutting from Red Sandstone
+                stonecuttingRecipe(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS, Blocks.RED_SANDSTONE);
+                stonecuttingRecipe(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL, Blocks.RED_SANDSTONE);
+
+                stairsRecipe(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS, Blocks.CUT_RED_SANDSTONE);
+                wallRecipe(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL, Blocks.CUT_RED_SANDSTONE);
+
+                craftPolishedBlocks(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE,
+                        ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_STAIRS, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_SLAB, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_WALL,
+                        Blocks.CUT_RED_SANDSTONE, Blocks.RED_SANDSTONE);
+                pressurePlateRecipe(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_PRESSURE_PLATE, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE);
+                buttonRecipe(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_BUTTON, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE);
+
+                craftBricksBlocks(ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS,
+                        ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_STAIRS, ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_SLAB, ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_WALL,
+                        ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE, Blocks.CUT_RED_SANDSTONE, Blocks.RED_SANDSTONE);
+                chiseledBricksBlockRecipe(ModRedSandstoneBlocks.CHISELED_RED_SANDSTONE_BRICKS, ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_SLAB,
+                        ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE, Blocks.CUT_RED_SANDSTONE, Blocks.RED_SANDSTONE);
+
+                crackedBlockRecipe(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICKS, ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS);
+                craftBlockForms(
+                        ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_STAIRS, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_SLAB, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_WALL,
+                        ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICKS);
+                crackedBlockRecipe(ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE_BRICKS, ModRedSandstoneBlocks.CHISELED_RED_SANDSTONE_BRICKS);
+
+                craftPlatesBlocks(ModRedSandstoneBlocks.RED_SANDSTONE_PLATES,
+                        ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS, ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB, ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL,
+                        ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE, Blocks.CUT_RED_SANDSTONE, Blocks.RED_SANDSTONE);
+
+                crackedBlockRecipe(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATES, ModRedSandstoneBlocks.RED_SANDSTONE_PLATES);
+                craftBlockForms(
+                        ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL,
+                        ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATES);
+
+                craftTilesBlocks(ModRedSandstoneBlocks.RED_SANDSTONE_TILES,
+                        ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS, ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB, ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL,
+                        ModRedSandstoneBlocks.RED_SANDSTONE_PLATES, ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE, Blocks.CUT_RED_SANDSTONE, Blocks.RED_SANDSTONE);
+
+                crackedBlockRecipe(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILES, ModRedSandstoneBlocks.RED_SANDSTONE_TILES);
+                craftBlockForms(
+                        ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL,
+                        ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILES);
+
+                pillarRecipe(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR, Blocks.RED_SANDSTONE);
+                crackedBlockRecipe(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR, ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR);
             }
 
             public void craftBlockForms(ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible input) {
@@ -496,6 +649,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecuttingRecipe(output, input);
             }
 
+            public void polishedBlockRecipe(ItemConvertible output, ItemConvertible input, ItemConvertible baseBlock) {
+                createShaped(RC, output, 4)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', input)
+                        .criterion(hasItem(input), conditionsFromItem(input))
+                        .offerTo(exporter);
+
+                stonecuttingRecipe(output, input);
+                stonecuttingRecipe(output, baseBlock);
+            }
+
             public void craftPolishedBlocks(ItemConvertible block, ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible baseBlock) {
                 polishedBlockRecipe(block, baseBlock);
 
@@ -509,6 +674,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecuttingRecipe(wall, baseBlock);
             }
 
+            public void craftPolishedBlocks(ItemConvertible block, ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible cutBlock, ItemConvertible baseBlock) {
+                polishedBlockRecipe(block, cutBlock, baseBlock);
+
+                stairsRecipe(stairs, block);
+                stonecuttingRecipe(stairs, cutBlock);
+                stonecuttingRecipe(stairs, baseBlock);
+
+                slabRecipe(slab, block);
+                stonecuttingSlabRecipe(slab, cutBlock);
+                stonecuttingSlabRecipe(slab, baseBlock);
+
+                wallRecipe(wall, block);
+                stonecuttingRecipe(wall, cutBlock);
+                stonecuttingRecipe(wall, baseBlock);
+            }
+
             public void bricksBlockRecipe(ItemConvertible output, ItemConvertible input, ItemConvertible baseBlock) {
                 createShaped(RC, output, 4)
                         .pattern("##")
@@ -518,6 +699,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
 
                 stonecuttingRecipe(output, input);
+                stonecuttingRecipe(output, baseBlock);
+            }
+
+            public void bricksBlockRecipe(ItemConvertible output, ItemConvertible input, ItemConvertible cutBlock, ItemConvertible baseBlock) {
+                createShaped(RC, output, 4)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', input)
+                        .criterion(hasItem(input), conditionsFromItem(input))
+                        .offerTo(exporter);
+
+                stonecuttingRecipe(output, input);
+                stonecuttingRecipe(output, cutBlock);
                 stonecuttingRecipe(output, baseBlock);
             }
 
@@ -537,6 +731,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecuttingRecipe(wall, baseBlock);
             }
 
+            public void craftBricksBlocks(ItemConvertible block, ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible polishedBlock, ItemConvertible cutBlock, ItemConvertible baseBlock) {
+                bricksBlockRecipe(block, polishedBlock, cutBlock, baseBlock);
+
+                stairsRecipe(stairs, block);
+                stonecuttingRecipe(stairs, polishedBlock);
+                stonecuttingRecipe(stairs, cutBlock);
+                stonecuttingRecipe(stairs, baseBlock);
+
+                slabRecipe(slab, block);
+                stonecuttingSlabRecipe(slab, polishedBlock);
+                stonecuttingSlabRecipe(slab, cutBlock);
+                stonecuttingSlabRecipe(slab, baseBlock);
+
+                wallRecipe(wall, block);
+                stonecuttingRecipe(wall, polishedBlock);
+                stonecuttingRecipe(wall, cutBlock);
+                stonecuttingRecipe(wall, baseBlock);
+            }
+
             public void platesBlockRecipe(ItemConvertible output, ItemConvertible input, ItemConvertible polishedBlock, ItemConvertible baseBlock) {
                 createShaped(RC, output, 4)
                         .pattern("##")
@@ -547,6 +760,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 stonecuttingRecipe(output, input);
                 stonecuttingRecipe(output, polishedBlock);
+                stonecuttingRecipe(output, baseBlock);
+            }
+
+            public void platesBlockRecipe(ItemConvertible output, ItemConvertible input, ItemConvertible polishedBlock, ItemConvertible cutBlock, ItemConvertible baseBlock) {
+                createShaped(RC, output, 4)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', input)
+                        .criterion(hasItem(input), conditionsFromItem(input))
+                        .offerTo(exporter);
+
+                stonecuttingRecipe(output, input);
+                stonecuttingRecipe(output, polishedBlock);
+                stonecuttingRecipe(output, cutBlock);
                 stonecuttingRecipe(output, baseBlock);
             }
 
@@ -569,6 +796,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecuttingRecipe(wall, baseBlock);
             }
 
+            public void craftPlatesBlocks(ItemConvertible block, ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible bricksBlock, ItemConvertible polishedBlock, ItemConvertible cutBlock, ItemConvertible baseBlock) {
+                platesBlockRecipe(block, bricksBlock, polishedBlock, cutBlock, baseBlock);
+
+                stairsRecipe(stairs, block);
+                stonecuttingRecipe(stairs, bricksBlock);
+                stonecuttingRecipe(stairs, polishedBlock);
+                stonecuttingRecipe(stairs, cutBlock);
+                stonecuttingRecipe(stairs, baseBlock);
+
+                slabRecipe(slab, block);
+                stonecuttingSlabRecipe(slab, bricksBlock);
+                stonecuttingSlabRecipe(slab, polishedBlock);
+                stonecuttingSlabRecipe(slab, cutBlock);
+                stonecuttingSlabRecipe(slab, baseBlock);
+
+                wallRecipe(wall, block);
+                stonecuttingRecipe(wall, bricksBlock);
+                stonecuttingRecipe(wall, polishedBlock);
+                stonecuttingRecipe(wall, cutBlock);
+                stonecuttingRecipe(wall, baseBlock);
+            }
+
             public void tilesBlockRecipe(ItemConvertible output, ItemConvertible input, ItemConvertible bricksBlock, ItemConvertible polishedBlock, ItemConvertible baseBlock) {
                 createShaped(RC, output, 4)
                         .pattern("##")
@@ -580,6 +829,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecuttingRecipe(output, input);
                 stonecuttingRecipe(output, bricksBlock);
                 stonecuttingRecipe(output, polishedBlock);
+                stonecuttingRecipe(output, baseBlock);
+            }
+
+            public void tilesBlockRecipe(ItemConvertible output, ItemConvertible input, ItemConvertible bricksBlock, ItemConvertible polishedBlock, ItemConvertible cutBlock, ItemConvertible baseBlock) {
+                createShaped(RC, output, 4)
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', input)
+                        .criterion(hasItem(input), conditionsFromItem(input))
+                        .offerTo(exporter);
+
+                stonecuttingRecipe(output, input);
+                stonecuttingRecipe(output, bricksBlock);
+                stonecuttingRecipe(output, polishedBlock);
+                stonecuttingRecipe(output, cutBlock);
                 stonecuttingRecipe(output, baseBlock);
             }
 
@@ -602,6 +866,31 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecuttingRecipe(wall, platesBlock);
                 stonecuttingRecipe(wall, bricksBlock);
                 stonecuttingRecipe(wall, polishedBlock);
+                stonecuttingRecipe(wall, baseBlock);
+            }
+
+            public void craftTilesBlocks(ItemConvertible block, ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible platesBlock, ItemConvertible bricksBlock, ItemConvertible polishedBlock, ItemConvertible cutBlock, ItemConvertible baseBlock) {
+                tilesBlockRecipe(block, platesBlock, bricksBlock, polishedBlock, cutBlock, baseBlock);
+
+                stairsRecipe(stairs, block);
+                stonecuttingRecipe(stairs, platesBlock);
+                stonecuttingRecipe(stairs, bricksBlock);
+                stonecuttingRecipe(stairs, polishedBlock);
+                stonecuttingRecipe(stairs, cutBlock);
+                stonecuttingRecipe(stairs, baseBlock);
+
+                slabRecipe(slab, block);
+                stonecuttingSlabRecipe(slab, platesBlock);
+                stonecuttingSlabRecipe(slab, bricksBlock);
+                stonecuttingSlabRecipe(slab, polishedBlock);
+                stonecuttingSlabRecipe(slab, cutBlock);
+                stonecuttingSlabRecipe(slab, baseBlock);
+
+                wallRecipe(wall, block);
+                stonecuttingRecipe(wall, platesBlock);
+                stonecuttingRecipe(wall, bricksBlock);
+                stonecuttingRecipe(wall, polishedBlock);
+                stonecuttingRecipe(wall, cutBlock);
                 stonecuttingRecipe(wall, baseBlock);
             }
 
@@ -646,6 +935,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerCrackingRecipe(output, input);
             }
 
+            public void smeltIntoBaseRecipe(ItemConvertible output, ItemConvertible input) {
+                CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItem(input), RC, output, 0.1F, 200)
+                        .criterion(hasItem(input), conditionsFromItem(input))
+                        .offerTo(exporter);
+            }
+
             public void chiseledBlockRecipe(ItemConvertible output, ItemConvertible inputSlab, ItemConvertible inputBlock) {
                 offerChiseledBlockRecipe(RC, output, inputSlab);
                 stonecuttingRecipe(output, inputBlock);
@@ -655,6 +950,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerChiseledBlockRecipe(RC, output, inputSlab);
                 stonecuttingRecipe(output, inputBlock);
                 stonecuttingRecipe(output, polishedBlock);
+                stonecuttingRecipe(output, baseBlock);
+            }
+
+            public void chiseledBricksBlockRecipe(ItemConvertible output, ItemConvertible inputSlab, ItemConvertible inputBlock, ItemConvertible polishedBlock, ItemConvertible cutBlock, ItemConvertible baseBlock) {
+                offerChiseledBlockRecipe(RC, output, inputSlab);
+                stonecuttingRecipe(output, inputBlock);
+                stonecuttingRecipe(output, polishedBlock);
+                stonecuttingRecipe(output, cutBlock);
                 stonecuttingRecipe(output, baseBlock);
             }
 

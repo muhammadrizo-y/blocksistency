@@ -365,6 +365,136 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModDeepslateBlocks.MOSSY_DEEPSLATE_PILLAR, "Mossy Deepslate Pillar");
         translationBuilder.add(ModDeepslateBlocks.CRACKED_DEEPSLATE_PILLAR, "Cracked Deepslate Pillar");
 
+        // ============== BRICKS ==============
+
+        translationBuilder.add(ModBricksBlocks.CHISELED_BRICKS, "Chiseled Bricks");
+
+        translationBuilder.add(ModBricksBlocks.MOSSY_BRICKS, "Mossy Bricks");
+        translationBuilder.add(ModBricksBlocks.MOSSY_BRICK_STAIRS, "Mossy Brick Stairs");
+        translationBuilder.add(ModBricksBlocks.MOSSY_BRICK_SLAB, "Mossy Brick Slab");
+        translationBuilder.add(ModBricksBlocks.MOSSY_BRICK_WALL, "Mossy Brick Wall");
+        translationBuilder.add(ModBricksBlocks.MOSSY_CHISELED_BRICKS, "Mossy Chiseled Bricks");
+
+        translationBuilder.add(ModBricksBlocks.CRACKED_BRICKS, "Cracked Bricks");
+        translationBuilder.add(ModBricksBlocks.CRACKED_BRICK_STAIRS, "Cracked Brick Stairs");
+        translationBuilder.add(ModBricksBlocks.CRACKED_BRICK_SLAB, "Cracked Brick Slab");
+        translationBuilder.add(ModBricksBlocks.CRACKED_BRICK_WALL, "Cracked Brick Wall");
+        translationBuilder.add(ModBricksBlocks.CRACKED_CHISELED_BRICKS, "Cracked Chiseled Bricks");
+
+        // ============== SANDSTONE ==============
+
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE, "Cracked Chiseled Sandstone");
+
+        translationBuilder.add(ModSandstoneBlocks.COBBLED_SANDSTONE, "Cobbled Sandstone");
+        translationBuilder.add(ModSandstoneBlocks.COBBLED_SANDSTONE_STAIRS, "Cobbled Sandstone Stairs");
+        translationBuilder.add(ModSandstoneBlocks.COBBLED_SANDSTONE_SLAB, "Cobbled Sandstone Slab");
+        translationBuilder.add(ModSandstoneBlocks.COBBLED_SANDSTONE_WALL, "Cobbled Sandstone Wall");
+
+        translationBuilder.add(ModSandstoneBlocks.SMOOTH_SANDSTONE_WALL, "Smooth Sandstone Wall");
+
+        translationBuilder.add(ModSandstoneBlocks.CUT_SANDSTONE_STAIRS, "Cut Sandstone Stairs");
+        translationBuilder.add(ModSandstoneBlocks.CUT_SANDSTONE_WALL, "Cut Sandstone Wall");
+
+        translationBuilder.add(ModSandstoneBlocks.POLISHED_SANDSTONE, "Polished Sandstone");
+        translationBuilder.add(ModSandstoneBlocks.POLISHED_SANDSTONE_STAIRS, "Polished Sandstone Stairs");
+        translationBuilder.add(ModSandstoneBlocks.POLISHED_SANDSTONE_SLAB, "Polished Sandstone Slab");
+        translationBuilder.add(ModSandstoneBlocks.POLISHED_SANDSTONE_WALL, "Polished Sandstone Wall");
+        translationBuilder.add(ModSandstoneBlocks.POLISHED_SANDSTONE_PRESSURE_PLATE, "Polished Sandstone Pressure Plate");
+        translationBuilder.add(ModSandstoneBlocks.POLISHED_SANDSTONE_BUTTON, "Polished Sandstone Button");
+
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_BRICKS, "Sandstone Bricks");
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_BRICK_STAIRS, "Sandstone Brick Stairs");
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_BRICK_SLAB, "Sandstone Brick Slab");
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_BRICK_WALL, "Sandstone Brick Wall");
+        translationBuilder.add(ModSandstoneBlocks.CHISELED_SANDSTONE_BRICKS, "Chiseled Sandstone Bricks");
+
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICKS, "Cracked Sandstone Bricks");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_STAIRS, "Cracked Sandstone Brick Stairs");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_SLAB, "Cracked Sandstone Brick Slab");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_WALL, "Cracked Sandstone Brick Wall");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE_BRICKS, "Cracked Chiseled Sandstone Bricks");
+
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_PLATES, "Sandstone Plates");
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_PLATE_STAIRS, "Sandstone Plate Stairs");
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_PLATE_SLAB, "Sandstone Plate Slab");
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_PLATE_WALL, "Sandstone Plate Wall");
+
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATES, "Cracked Sandstone Plates");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_STAIRS, "Cracked Sandstone Plate Stairs");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_SLAB, "Cracked Sandstone Plate Slab");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_WALL, "Cracked Sandstone Plate Wall");
+
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_TILES, "Sandstone Tiles");
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_TILE_STAIRS, "Sandstone Tile Stairs");
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_TILE_SLAB, "Sandstone Tile Slab");
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_TILE_WALL, "Sandstone Tile Wall");
+
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILES, "Cracked Sandstone Tiles");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_STAIRS, "Cracked Sandstone Tile Stairs");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_SLAB, "Cracked Sandstone Tile Slab");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_WALL, "Cracked Sandstone Tile Wall");
+
+        translationBuilder.add(ModSandstoneBlocks.SANDSTONE_PILLAR, "Sandstone Pillar");
+        translationBuilder.add(ModSandstoneBlocks.CRACKED_SANDSTONE_PILLAR, "Cracked Sandstone Pillar");
+
+        // ============== RED SANDSTONE ==============
+
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE, "Cracked Chiseled Red Sandstone");
+
+        translationBuilder.add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE, "Cobbled Red Sandstone");
+        translationBuilder.add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_STAIRS, "Cobbled Red Sandstone Stairs");
+        translationBuilder.add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_SLAB, "Cobbled Red Sandstone Slab");
+        translationBuilder.add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_WALL, "Cobbled Red Sandstone Wall");
+
+        translationBuilder.add(ModRedSandstoneBlocks.SMOOTH_RED_SANDSTONE_WALL, "Smooth Red Sandstone Wall");
+
+        translationBuilder.add(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS, "Cut Red Sandstone Stairs");
+        translationBuilder.add(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL, "Cut Red Sandstone Wall");
+
+        translationBuilder.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE, "Polished Red Sandstone");
+        translationBuilder.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_STAIRS, "Polished Red Sandstone Stairs");
+        translationBuilder.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_SLAB, "Polished Red Sandstone Slab");
+        translationBuilder.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_WALL, "Polished Red Sandstone Wall");
+        translationBuilder.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_PRESSURE_PLATE, "Polished Red Sandstone Pressure Plate");
+        translationBuilder.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_BUTTON, "Polished Red Sandstone Button");
+
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS, "Red Sandstone Bricks");
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_STAIRS, "Red Sandstone Brick Stairs");
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_SLAB, "Red Sandstone Brick Slab");
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_WALL, "Red Sandstone Brick Wall");
+        translationBuilder.add(ModRedSandstoneBlocks.CHISELED_RED_SANDSTONE_BRICKS, "Chiseled Red Sandstone Bricks");
+
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICKS, "Cracked Red Sandstone Bricks");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_STAIRS, "Cracked Red Sandstone Brick Stairs");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_SLAB, "Cracked Red Sandstone Brick Slab");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_WALL, "Cracked Red Sandstone Brick Wall");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE_BRICKS, "Cracked Chiseled Red Sandstone Bricks");
+
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATES, "Red Sandstone Plates");
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS, "Red Sandstone Plate Stairs");
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB, "Red Sandstone Plate Slab");
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL, "Red Sandstone Plate Wall");
+
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATES, "Cracked Red Sandstone Plates");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS, "Cracked Red Sandstone Plate Stairs");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB, "Cracked Red Sandstone Plate Slab");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL, "Cracked Red Sandstone Plate Wall");
+
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_TILES, "Red Sandstone Tiles");
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS, "Red Sandstone Tile Stairs");
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB, "Red Sandstone Tile Slab");
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL, "Red Sandstone Tile Wall");
+
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILES, "Cracked Red Sandstone Tiles");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS, "Cracked Red Sandstone Tile Stairs");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB, "Cracked Red Sandstone Tile Slab");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL, "Cracked Red Sandstone Tile Wall");
+
+        translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR, "Red Sandstone Pillar");
+        translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR, "Cracked Red Sandstone Pillar");
+
+        // ============== OTHER ==============
+
         // Renaming Blackstone blocks is done at resources/assets/minecraft/lang, in "en_us.json"
 
         // ============== ADVANCEMENTS ==============
@@ -383,6 +513,19 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add("advancement.blocksistency.get_all_deepslate_blocks.title", "Grimstone Glory");
         translationBuilder.add("advancement.blocksistency.get_all_deepslate_blocks.description", "Obtain all Deepslate blocks");
+
+        translationBuilder.add("advancement.blocksistency.get_all_bricks_blocks.title", "Brick by Brick");
+        translationBuilder.add("advancement.blocksistency.get_all_bricks_blocks.description", "Obtain all Bricks blocks");
+
+        translationBuilder.add("advancement.blocksistency.get_all_sandstone_blocks.title", "Sandstone Title");
+        translationBuilder.add("advancement.blocksistency.get_all_sandstone_blocks.description", "Sandstone Description");
+
+        translationBuilder.add("advancement.blocksistency.get_all_red_sandstone_blocks.title", "Red Sandstone Title");
+        translationBuilder.add("advancement.blocksistency.get_all_red_sandstone_blocks.description", "Red Sandstone Description");
+
+        // Built-in Datapacks
+        translationBuilder.add("datapack.blocksistency.better_recipes.name", "Better Recipes");
+        translationBuilder.add("datapack.blocksistency.cobbled_drops.name", "Cobbled Drops");
 
         // Creative Tab
         translationBuilder.add("itemgroup.blocksistency.blocksistency", "Blocksistency");

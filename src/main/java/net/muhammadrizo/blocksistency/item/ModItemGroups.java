@@ -441,6 +441,160 @@ public class ModItemGroups {
                         entries.add(ModDeepslateBlocks.DEEPSLATE_PILLAR);
                         entries.add(ModDeepslateBlocks.MOSSY_DEEPSLATE_PILLAR);
                         entries.add(ModDeepslateBlocks.CRACKED_DEEPSLATE_PILLAR);
+
+                        // ============== BRICKS ==============
+
+                        entries.add(Blocks.BRICKS);
+                        entries.add(Blocks.BRICK_STAIRS);
+                        entries.add(Blocks.BRICK_SLAB);
+                        entries.add(Blocks.BRICK_WALL);
+                        entries.add(ModBricksBlocks.CHISELED_BRICKS);
+
+                        entries.add(ModBricksBlocks.MOSSY_BRICKS);
+                        entries.add(ModBricksBlocks.MOSSY_BRICK_STAIRS);
+                        entries.add(ModBricksBlocks.MOSSY_BRICK_SLAB);
+                        entries.add(ModBricksBlocks.MOSSY_BRICK_WALL);
+                        entries.add(ModBricksBlocks.MOSSY_CHISELED_BRICKS);
+
+                        entries.add(ModBricksBlocks.CRACKED_BRICKS);
+                        entries.add(ModBricksBlocks.CRACKED_BRICK_STAIRS);
+                        entries.add(ModBricksBlocks.CRACKED_BRICK_SLAB);
+                        entries.add(ModBricksBlocks.CRACKED_BRICK_WALL);
+                        entries.add(ModBricksBlocks.CRACKED_CHISELED_BRICKS);
+
+                        // ============== SANDSTONE ==============
+
+                        entries.add(Blocks.SANDSTONE);
+                        entries.add(Blocks.SANDSTONE_STAIRS);
+                        entries.add(Blocks.SANDSTONE_SLAB);
+                        entries.add(Blocks.SANDSTONE_WALL);
+
+                        entries.add(Blocks.CHISELED_SANDSTONE);
+                        entries.add(ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE);
+
+                        entries.add(ModSandstoneBlocks.COBBLED_SANDSTONE);
+                        entries.add(ModSandstoneBlocks.COBBLED_SANDSTONE_STAIRS);
+                        entries.add(ModSandstoneBlocks.COBBLED_SANDSTONE_SLAB);
+                        entries.add(ModSandstoneBlocks.COBBLED_SANDSTONE_WALL);
+
+                        entries.add(Blocks.SMOOTH_SANDSTONE);
+                        entries.add(Blocks.SMOOTH_SANDSTONE_STAIRS);
+                        entries.add(Blocks.SMOOTH_SANDSTONE_SLAB);
+                        entries.add(ModSandstoneBlocks.SMOOTH_SANDSTONE_WALL);
+
+                        entries.add(Blocks.CUT_SANDSTONE);
+                        entries.add(ModSandstoneBlocks.CUT_SANDSTONE_STAIRS);
+                        entries.add(Blocks.CUT_SANDSTONE_SLAB);
+                        entries.add(ModSandstoneBlocks.CUT_SANDSTONE_WALL);
+
+                        entries.add(ModSandstoneBlocks.POLISHED_SANDSTONE);
+                        entries.add(ModSandstoneBlocks.POLISHED_SANDSTONE_STAIRS);
+                        entries.add(ModSandstoneBlocks.POLISHED_SANDSTONE_SLAB);
+                        entries.add(ModSandstoneBlocks.POLISHED_SANDSTONE_WALL);
+                        entries.add(ModSandstoneBlocks.POLISHED_SANDSTONE_PRESSURE_PLATE);
+                        entries.add(ModSandstoneBlocks.POLISHED_SANDSTONE_BUTTON);
+
+                        entries.add(ModSandstoneBlocks.SANDSTONE_BRICKS);
+                        entries.add(ModSandstoneBlocks.SANDSTONE_BRICK_STAIRS);
+                        entries.add(ModSandstoneBlocks.SANDSTONE_BRICK_SLAB);
+                        entries.add(ModSandstoneBlocks.SANDSTONE_BRICK_WALL);
+                        entries.add(ModSandstoneBlocks.CHISELED_SANDSTONE_BRICKS);
+
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICKS);
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_STAIRS);
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_SLAB);
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_WALL);
+                        entries.add(ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE_BRICKS);
+
+                        entries.add(ModSandstoneBlocks.SANDSTONE_PLATES);
+                        entries.add(ModSandstoneBlocks.SANDSTONE_PLATE_STAIRS);
+                        entries.add(ModSandstoneBlocks.SANDSTONE_PLATE_SLAB);
+                        entries.add(ModSandstoneBlocks.SANDSTONE_PLATE_WALL);
+
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATES);
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_STAIRS);
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_SLAB);
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_PLATE_WALL);
+
+                        entries.add(ModSandstoneBlocks.SANDSTONE_TILES);
+                        entries.add(ModSandstoneBlocks.SANDSTONE_TILE_STAIRS);
+                        entries.add(ModSandstoneBlocks.SANDSTONE_TILE_SLAB);
+                        entries.add(ModSandstoneBlocks.SANDSTONE_TILE_WALL);
+
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILES);
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_STAIRS);
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_SLAB);
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_WALL);
+
+                        entries.add(ModSandstoneBlocks.SANDSTONE_PILLAR);
+                        entries.add(ModSandstoneBlocks.CRACKED_SANDSTONE_PILLAR);
+
+                        // ============== RED SANDSTONE ==============
+
+                        entries.add(Blocks.RED_SANDSTONE);
+                        entries.add(Blocks.RED_SANDSTONE_STAIRS);
+                        entries.add(Blocks.RED_SANDSTONE_SLAB);
+                        entries.add(Blocks.RED_SANDSTONE_WALL);
+
+                        entries.add(Blocks.CHISELED_RED_SANDSTONE);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE);
+
+                        entries.add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE);
+                        entries.add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_STAIRS);
+                        entries.add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_SLAB);
+                        entries.add(ModRedSandstoneBlocks.COBBLED_RED_SANDSTONE_WALL);
+
+                        entries.add(Blocks.SMOOTH_RED_SANDSTONE);
+                        entries.add(Blocks.SMOOTH_RED_SANDSTONE_STAIRS);
+                        entries.add(Blocks.SMOOTH_RED_SANDSTONE_SLAB);
+                        entries.add(ModRedSandstoneBlocks.SMOOTH_RED_SANDSTONE_WALL);
+
+                        entries.add(Blocks.CUT_RED_SANDSTONE);
+                        entries.add(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS);
+                        entries.add(Blocks.CUT_RED_SANDSTONE_SLAB);
+                        entries.add(ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL);
+
+                        entries.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE);
+                        entries.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_STAIRS);
+                        entries.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_SLAB);
+                        entries.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_WALL);
+                        entries.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_PRESSURE_PLATE);
+                        entries.add(ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_BUTTON);
+
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICKS);
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_STAIRS);
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_SLAB);
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_BRICK_WALL);
+                        entries.add(ModRedSandstoneBlocks.CHISELED_RED_SANDSTONE_BRICKS);
+
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICKS);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_STAIRS);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_SLAB);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_WALL);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE_BRICKS);
+
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATES);
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS);
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB);
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL);
+
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATES);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL);
+
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_TILES);
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS);
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB);
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL);
+
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILES);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL);
+
+                        entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR);
+                        entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR);
                     }).build());
 
     public static void init() {

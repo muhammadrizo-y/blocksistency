@@ -2,6 +2,8 @@ package net.muhammadrizo.blocksistency.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.minecraft.block.*;
+import net.minecraft.sound.BlockSoundGroup;
+import net.muhammadrizo.blocksistency.block.types.ModBlockSetTypes;
 
 import static net.muhammadrizo.blocksistency.block.ModBlocks.*;
 
@@ -208,7 +210,8 @@ public class ModDeepslateBlocks {
 
     public static final Block DEEPSLATE_PILLAR = register(
             "deepslate_pillar", PillarBlock::new,
-            copySettings(Blocks.DEEPSLATE));
+            copySettings(Blocks.DEEPSLATE)
+                    .sounds(BlockSoundGroup.POLISHED_DEEPSLATE));
 
     public static final Block MOSSY_DEEPSLATE_PILLAR = register(
             "mossy_deepslate_pillar", PillarBlock::new,

@@ -24,6 +24,9 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modImplementation fileTree("libs/warped_wart-1.0.1.jar")
+	include files("libs/warped_wart-1.0.1.jar")
 }
 
 processResources {

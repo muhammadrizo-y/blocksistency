@@ -1,4 +1,4 @@
-package net.muhammadrizo.blocksistency.block;
+package net.muhammadrizo.blocksistency.block.types;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.minecraft.block.BlockSetType;
@@ -36,6 +36,12 @@ public class ModBlockSetTypes {
             .copyOf(BlockSetType.STONE)
             .soundGroup(BlockSoundGroup.STONE)
             .register(Identifier.of(Blocksistency.MOD_ID, "polished_red_sandstone"));
+
+    public static final BlockSetType NETHER_BRICK_BLOCK_SET_TYPE = BlockSetTypeBuilder
+            .copyOf(BlockSetType.STONE)
+            .soundGroup(BlockSoundGroup.NETHER_BRICKS)
+            .openableByHand(true)
+            .register(Identifier.of(Blocksistency.MOD_ID, "nether_brick"));
 
     public static void init() {
         Blocksistency.LOGGER.info("Registering block set types for " + Blocksistency.MOD_ID);

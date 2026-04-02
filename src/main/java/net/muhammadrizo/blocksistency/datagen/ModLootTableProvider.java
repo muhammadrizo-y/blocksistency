@@ -495,6 +495,58 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR);
         addDrop(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR);
+
+        // ============== NETHER BRICKS ==============
+
+        addDrop(ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE);
+
+        addDrop(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_STAIRS);
+        addSlabDrop(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_SLAB);
+        addDrop(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_WALL);
+        addDrop(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE);
+        addDrop(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE_GATE);
+        addDrop(ModNetherBricksBlocks.CRACKED_CHISELED_NETHER_BRICKS);
+
+        addDrop(ModNetherBricksBlocks.NETHER_BRICK_PILLAR);
+        addDrop(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_PILLAR);
+
+        // ============== RED NETHER BRICKS ==============
+
+        addDrop(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE);
+        addDrop(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE);
+        addDrop(ModRedNetherBricksBlocks.CHISELED_RED_NETHER_BRICKS);
+
+        addDrop(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICKS);
+        addDrop(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_STAIRS);
+        addSlabDrop(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_SLAB);
+        addDrop(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_WALL);
+        addDrop(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE);
+        addDrop(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE_GATE);
+        addDrop(ModRedNetherBricksBlocks.CRACKED_CHISELED_RED_NETHER_BRICKS);
+
+        addDrop(ModRedNetherBricksBlocks.RED_NETHER_BRICK_PILLAR);
+        addDrop(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_PILLAR);
+
+        // ============== WARPED NETHER BRICKS ==============
+
+        addDrop(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS);
+        addDrop(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_STAIRS);
+        addSlabDrop(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_SLAB);
+        addDrop(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_WALL);
+        addDrop(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE);
+        addDrop(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE);
+        addDrop(ModWarpedNetherBricksBlocks.CHISELED_WARPED_NETHER_BRICKS);
+
+        addDrop(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICKS);
+        addDrop(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_STAIRS);
+        addSlabDrop(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_SLAB);
+        addDrop(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_WALL);
+        addDrop(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE);
+        addDrop(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE_GATE);
+        addDrop(ModWarpedNetherBricksBlocks.CRACKED_CHISELED_WARPED_NETHER_BRICKS);
+
+        addDrop(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_PILLAR);
+        addDrop(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_PILLAR);
     }
 
     public void addSlabDrop(Block block) {

@@ -6,5 +6,10 @@
   "block.minecraft.polished_blackstone_brick_slab": "Blackstone Brick Slab",
   "block.minecraft.polished_blackstone_brick_wall": "Blackstone Brick Wall",
 
-  "block.minecraft.cracked_polished_blackstone_bricks": "Cracked Blackstone Bricks"
+  "block.minecraft.cracked_polished_blackstone_bricks": "Cracked Blackstone Bricks",
+
+  "block.minecraft.red_nether_bricks": "Crimson Nether Bricks",
+  "block.minecraft.red_nether_brick_stairs": "Crimson Nether Brick Stairs",
+  "block.minecraft.red_nether_brick_slab": "Crimson Nether Brick Slab",
+  "block.minecraft.red_nether_brick_wall": "Crimson Nether Brick Wall"
 }

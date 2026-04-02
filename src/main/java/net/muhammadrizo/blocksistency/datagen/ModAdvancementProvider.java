@@ -647,6 +647,84 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR,
                 ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR
         );
+
+        AdvancementEntry NETHER_BRICKS = addAdvancement(
+                consumer,
+                STONE,
+                Blocks.CHISELED_NETHER_BRICKS,
+                "nether_bricks",
+
+                Blocks.NETHER_BRICKS,
+                Blocks.NETHER_BRICK_STAIRS,
+                Blocks.NETHER_BRICK_SLAB,
+                Blocks.NETHER_BRICK_WALL,
+                Blocks.NETHER_BRICK_FENCE,
+                ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE,
+                Blocks.CHISELED_NETHER_BRICKS,
+
+                Blocks.CRACKED_NETHER_BRICKS,
+                ModNetherBricksBlocks.CRACKED_NETHER_BRICK_STAIRS,
+                ModNetherBricksBlocks.CRACKED_NETHER_BRICK_SLAB,
+                ModNetherBricksBlocks.CRACKED_NETHER_BRICK_WALL,
+                ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE,
+                ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE_GATE,
+                ModNetherBricksBlocks.CRACKED_CHISELED_NETHER_BRICKS,
+
+                ModNetherBricksBlocks.NETHER_BRICK_PILLAR,
+                ModNetherBricksBlocks.CRACKED_NETHER_BRICK_PILLAR
+        );
+
+        AdvancementEntry RED_NETHER_BRICKS = addAdvancement(
+                consumer,
+                STONE,
+                Blocks.RED_NETHER_BRICKS,
+                "red_nether_bricks",
+
+                Blocks.RED_NETHER_BRICKS,
+                Blocks.RED_NETHER_BRICK_STAIRS,
+                Blocks.RED_NETHER_BRICK_SLAB,
+                Blocks.RED_NETHER_BRICK_WALL,
+                ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE,
+                ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE,
+                ModRedNetherBricksBlocks.CHISELED_RED_NETHER_BRICKS,
+
+                ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICKS,
+                ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_STAIRS,
+                ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_SLAB,
+                ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_WALL,
+                ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE,
+                ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE_GATE,
+                ModRedNetherBricksBlocks.CRACKED_CHISELED_RED_NETHER_BRICKS,
+
+                ModRedNetherBricksBlocks.RED_NETHER_BRICK_PILLAR,
+                ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_PILLAR
+        );
+
+        AdvancementEntry WARPED_NETHER_BRICKS = addAdvancement(
+                consumer,
+                STONE,
+                ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS,
+                "warped_nether_bricks",
+
+                ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS,
+                ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_STAIRS,
+                ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_SLAB,
+                ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_WALL,
+                ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE,
+                ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE,
+                ModWarpedNetherBricksBlocks.CHISELED_WARPED_NETHER_BRICKS,
+
+                ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICKS,
+                ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_STAIRS,
+                ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_SLAB,
+                ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_WALL,
+                ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE,
+                ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE_GATE,
+                ModWarpedNetherBricksBlocks.CRACKED_CHISELED_WARPED_NETHER_BRICKS,
+
+                ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_PILLAR,
+                ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_PILLAR
+        );
     }
 
     public AdvancementEntry addAdvancement(

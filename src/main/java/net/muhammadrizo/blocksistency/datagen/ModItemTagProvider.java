@@ -140,7 +140,17 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS.asItem())
                 .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS.asItem())
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS.asItem())
-                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS.asItem());
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS.asItem())
+
+                // ============== NETHER BRICKS ==============
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_STAIRS.asItem())
+
+                // ============== RED NETHER BRICKS ==============
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_STAIRS.asItem())
+
+                // ============== WARPED NETHER BRICKS ==============
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_STAIRS.asItem())
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_STAIRS.asItem());
 
         valueLookupBuilder(ItemTags.SLABS)
                 // ============== STONE ==============
@@ -229,7 +239,17 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB.asItem())
                 .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB.asItem())
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB.asItem())
-                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB.asItem());
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB.asItem())
+
+                // ============== NETHER BRICKS ==============
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_SLAB.asItem())
+
+                // ============== RED NETHER BRICKS ==============
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_SLAB.asItem())
+
+                // ============== WARPED NETHER BRICKS ==============
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_SLAB.asItem())
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_SLAB.asItem());
 
         valueLookupBuilder(ItemTags.WALLS)
                 // ============== STONE ==============
@@ -327,7 +347,42 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL.asItem())
                 .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL.asItem())
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL.asItem())
-                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL.asItem());
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL.asItem())
+
+                // ============== NETHER BRICKS ==============
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_WALL.asItem())
+
+                // ============== RED NETHER BRICKS ==============
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_WALL.asItem())
+
+                // ============== WARPED NETHER BRICKS ==============
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_WALL.asItem())
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_WALL.asItem());
+
+        valueLookupBuilder(ItemTags.FENCES)
+                // ============== NETHER BRICKS ==============
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE.asItem())
+
+                // ============== RED NETHER BRICKS ==============
+                .add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE.asItem())
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE.asItem())
+
+                // ============== WARPED NETHER BRICKS ==============
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE.asItem())
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE.asItem());
+
+        valueLookupBuilder(ItemTags.FENCE_GATES)
+                // ============== NETHER BRICKS ==============
+                .add(ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE.asItem())
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE_GATE.asItem())
+
+                // ============== NETHER BRICKS ==============
+                .add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE.asItem())
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE_GATE.asItem())
+
+                // ============== WARPED NETHER BRICKS ==============
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE.asItem())
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE_GATE.asItem());
 
         valueLookupBuilder(ItemTags.STONE_BUTTONS)
                 .add(ModGraniteBlocks.POLISHED_GRANITE_BUTTON.asItem())

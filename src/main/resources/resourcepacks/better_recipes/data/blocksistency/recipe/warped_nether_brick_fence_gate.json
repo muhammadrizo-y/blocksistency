@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "B": "blocksistency:warped_nether_bricks",
+    "I": "blocksistency:warped_nether_brick"
+  },
+  "pattern": [
+    "IBI",
+    "IBI"
+  ],
+  "result": {
+    "count": 2,
+    "id": "blocksistency:warped_nether_brick_fence_gate"
+  }
+}

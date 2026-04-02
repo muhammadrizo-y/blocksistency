@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": "blocksistency:warped_nether_brick_fence_gate",
+  "result": {
+    "id": "blocksistency:cracked_warped_nether_brick_fence_gate"
+  }
+}

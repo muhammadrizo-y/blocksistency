@@ -2,6 +2,7 @@ package net.muhammadrizo.blocksistency.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.minecraft.block.*;
+import net.muhammadrizo.blocksistency.block.types.ModBlockSetTypes;
 
 import static net.muhammadrizo.blocksistency.block.ModBlocks.*;
 
@@ -187,7 +188,13 @@ public class ModSandstoneBlocks {
             "cracked_sandstone_pillar", PillarBlock::new,
             copySettings(SANDSTONE_PILLAR));
 
-    public static void init() {}
+    public static void init() {
+        fixBlockHardnessAndBlastResistance(Blocks.SANDSTONE_SLAB, Blocks.SANDSTONE);
+        fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_SANDSTONE, Blocks.SANDSTONE);
+        fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_SANDSTONE_STAIRS, Blocks.SMOOTH_SANDSTONE);
+        fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_SANDSTONE_SLAB, Blocks.SMOOTH_SANDSTONE);
+        fixBlockHardnessAndBlastResistance(Blocks.CUT_SANDSTONE_SLAB, Blocks.CUT_SANDSTONE);
+    }
 
     public static void addCreativeEntries(FabricItemGroupEntries entries) {
         entries.getDisplayStacks().removeIf(stack ->

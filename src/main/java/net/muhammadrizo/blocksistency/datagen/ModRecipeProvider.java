@@ -15,6 +15,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.muhammadrizo.blocksistency.block.*;
+import net.muhammadrizo.blocksistency.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -112,7 +113,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModStoneBlocks.CRACKED_STONE_TILES);
 
                 // Stone Pillar + variants
-                pillarRecipe(ModStoneBlocks.STONE_PILLAR, Blocks.STONE);
+                pillarBlockRecipe(ModStoneBlocks.STONE_PILLAR, Blocks.STONE);
                 mossyBlockRecipe(ModStoneBlocks.MOSSY_STONE_PILLAR, ModStoneBlocks.STONE_PILLAR);
                 crackedBlockRecipe(ModStoneBlocks.CRACKED_STONE_PILLAR, ModStoneBlocks.STONE_PILLAR);
 
@@ -202,7 +203,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModGraniteBlocks.CRACKED_GRANITE_TILES);
 
                 // Granite Pillar + variants
-                pillarRecipe(ModGraniteBlocks.GRANITE_PILLAR, Blocks.GRANITE);
+                pillarBlockRecipe(ModGraniteBlocks.GRANITE_PILLAR, Blocks.GRANITE);
                 mossyBlockRecipe(ModGraniteBlocks.MOSSY_GRANITE_PILLAR, ModGraniteBlocks.GRANITE_PILLAR);
                 crackedBlockRecipe(ModGraniteBlocks.CRACKED_GRANITE_PILLAR,  ModGraniteBlocks.GRANITE_PILLAR);
 
@@ -292,7 +293,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModDioriteBlocks.CRACKED_DIORITE_TILES);
 
                 // Diorite Pillar + variants
-                pillarRecipe(ModDioriteBlocks.DIORITE_PILLAR, Blocks.DIORITE);
+                pillarBlockRecipe(ModDioriteBlocks.DIORITE_PILLAR, Blocks.DIORITE);
                 mossyBlockRecipe(ModDioriteBlocks.MOSSY_DIORITE_PILLAR, ModDioriteBlocks.DIORITE_PILLAR);
                 crackedBlockRecipe(ModDioriteBlocks.CRACKED_DIORITE_PILLAR,  ModDioriteBlocks.DIORITE_PILLAR);
 
@@ -382,7 +383,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModAndesiteBlocks.CRACKED_ANDESITE_TILES);
 
                 // Andesite Pillar + variants
-                pillarRecipe(ModAndesiteBlocks.ANDESITE_PILLAR, Blocks.ANDESITE);
+                pillarBlockRecipe(ModAndesiteBlocks.ANDESITE_PILLAR, Blocks.ANDESITE);
                 mossyBlockRecipe(ModAndesiteBlocks.MOSSY_ANDESITE_PILLAR, ModAndesiteBlocks.ANDESITE_PILLAR);
                 crackedBlockRecipe(ModAndesiteBlocks.CRACKED_ANDESITE_PILLAR,  ModAndesiteBlocks.ANDESITE_PILLAR);
 
@@ -479,7 +480,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         Blocks.CRACKED_DEEPSLATE_TILES);
 
                 // Deepslate Pillar + variants
-                pillarRecipe(ModDeepslateBlocks.DEEPSLATE_PILLAR, Blocks.DEEPSLATE);
+                pillarBlockRecipe(ModDeepslateBlocks.DEEPSLATE_PILLAR, Blocks.DEEPSLATE);
                 mossyBlockRecipe(ModDeepslateBlocks.MOSSY_DEEPSLATE_PILLAR, ModDeepslateBlocks.DEEPSLATE_PILLAR);
                 crackedBlockRecipe(ModDeepslateBlocks.CRACKED_DEEPSLATE_PILLAR, ModDeepslateBlocks.DEEPSLATE_PILLAR);
 
@@ -561,7 +562,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_STAIRS, ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_SLAB, ModSandstoneBlocks.CRACKED_SANDSTONE_TILE_WALL,
                         ModSandstoneBlocks.CRACKED_SANDSTONE_TILES);
 
-                pillarRecipe(ModSandstoneBlocks.SANDSTONE_PILLAR, Blocks.SANDSTONE);
+                pillarBlockRecipe(ModSandstoneBlocks.SANDSTONE_PILLAR, Blocks.SANDSTONE);
                 crackedBlockRecipe(ModSandstoneBlocks.CRACKED_SANDSTONE_PILLAR, ModSandstoneBlocks.SANDSTONE_PILLAR);
 
                 // ============== RED SANDSTONE ==============
@@ -626,8 +627,86 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL,
                         ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILES);
 
-                pillarRecipe(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR, Blocks.RED_SANDSTONE);
+                pillarBlockRecipe(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR, Blocks.RED_SANDSTONE);
                 crackedBlockRecipe(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR, ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR);
+
+                // ============== NETHER BRICKS ==============
+
+                fenceGateRecipe(ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE, Blocks.NETHER_BRICKS, Items.NETHER_BRICK);
+
+                stonecuttingRecipe(Blocks.NETHER_BRICK_FENCE, Blocks.NETHER_BRICKS);
+                stonecuttingRecipe(ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE, Blocks.NETHER_BRICKS);
+
+                craftBlockForms(
+                        ModNetherBricksBlocks.CRACKED_NETHER_BRICK_STAIRS, ModNetherBricksBlocks.CRACKED_NETHER_BRICK_SLAB, ModNetherBricksBlocks.CRACKED_NETHER_BRICK_WALL,
+                        Blocks.CRACKED_NETHER_BRICKS);
+                crackedBlockRecipe(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE, Blocks.NETHER_BRICK_FENCE);
+                crackedBlockRecipe(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE_GATE, ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE);
+                crackedBlockRecipe(ModNetherBricksBlocks.CRACKED_CHISELED_NETHER_BRICKS, Blocks.CHISELED_NETHER_BRICKS);
+
+                pillarBlockRecipe(ModNetherBricksBlocks.NETHER_BRICK_PILLAR, Blocks.NETHER_BRICKS);
+                crackedBlockRecipe(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_PILLAR, ModNetherBricksBlocks.NETHER_BRICK_PILLAR);
+
+                // ============== RED NETHER BRICKS ==============
+
+                createShaped(RecipeCategory.MISC, ModItems.RED_NETHER_BRICK, 8)
+                        .input('#', Items.NETHER_BRICK)
+                        .input('N', Items.NETHER_WART)
+                        .pattern("###")
+                        .pattern("#N#")
+                        .pattern("###")
+                        .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
+                        .offerTo(exporter);
+
+                fenceRecipe(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE, Blocks.RED_NETHER_BRICKS, ModItems.RED_NETHER_BRICK);
+                fenceGateRecipe(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE, Blocks.RED_NETHER_BRICKS, ModItems.RED_NETHER_BRICK);
+                stonecuttingRecipe(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE, Blocks.RED_NETHER_BRICKS);
+                stonecuttingRecipe(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE, Blocks.RED_NETHER_BRICKS);
+                chiseledBlockRecipe(ModRedNetherBricksBlocks.CHISELED_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICK_SLAB, Blocks.RED_NETHER_BRICKS);
+
+                crackedBlockRecipe(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICKS, Blocks.RED_NETHER_BRICKS);
+                craftBlockForms(
+                        ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_STAIRS, ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_SLAB, ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_WALL,
+                        ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICKS);
+                crackedBlockRecipe(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE, ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE);
+                crackedBlockRecipe(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE_GATE, ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE);
+                crackedBlockRecipe(ModRedNetherBricksBlocks.CRACKED_CHISELED_RED_NETHER_BRICKS, ModRedNetherBricksBlocks.CHISELED_RED_NETHER_BRICKS);
+
+                pillarBlockRecipe(ModRedNetherBricksBlocks.RED_NETHER_BRICK_PILLAR, Blocks.RED_NETHER_BRICKS);
+                crackedBlockRecipe(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_PILLAR, ModRedNetherBricksBlocks.RED_NETHER_BRICK_PILLAR);
+
+                // ============== WARPED NETHER BRICKS ==============
+
+                createShaped(RecipeCategory.MISC, ModItems.WARPED_NETHER_BRICK, 8)
+                        .input('#', Items.NETHER_BRICK)
+                        .input('N', net.muhammadrizo.warped_wart.item.ModItems.WARPED_WART)
+                        .pattern("###")
+                        .pattern("#N#")
+                        .pattern("###")
+                        .criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK))
+                        .offerTo(exporter);
+
+                offer2x2CompactingRecipe(RC, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS, ModItems.WARPED_NETHER_BRICK);
+
+                craftBlockForms(
+                        ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_STAIRS, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_SLAB, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_WALL,
+                        ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS);
+                fenceRecipe(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS, ModItems.WARPED_NETHER_BRICK);
+                fenceGateRecipe(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS, ModItems.WARPED_NETHER_BRICK);
+                stonecuttingRecipe(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS);
+                stonecuttingRecipe(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS);
+                chiseledBlockRecipe(ModWarpedNetherBricksBlocks.CHISELED_WARPED_NETHER_BRICKS, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_SLAB, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS);
+
+                crackedBlockRecipe(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICKS, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS);
+                craftBlockForms(
+                        ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_STAIRS, ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_SLAB, ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_WALL,
+                        ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICKS);
+                crackedBlockRecipe(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE);
+                crackedBlockRecipe(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE_GATE, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE);
+                crackedBlockRecipe(ModWarpedNetherBricksBlocks.CRACKED_CHISELED_WARPED_NETHER_BRICKS, ModWarpedNetherBricksBlocks.CHISELED_WARPED_NETHER_BRICKS);
+
+                pillarBlockRecipe(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_PILLAR, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS);
+                crackedBlockRecipe(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_PILLAR, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_PILLAR);
             }
 
             public void craftBlockForms(ItemConvertible stairs, ItemConvertible slab, ItemConvertible wall, ItemConvertible input) {
@@ -961,7 +1040,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecuttingRecipe(output, baseBlock);
             }
 
-            public void pillarRecipe(ItemConvertible output, ItemConvertible input) {
+            public void pillarBlockRecipe(ItemConvertible output, ItemConvertible input) {
                 createShaped(RC, output, 2)
                         .pattern("#")
                         .pattern("#")
@@ -1001,6 +1080,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
 
                 stonecuttingRecipe(output, input);
+            }
+
+            public void fenceRecipe(ItemConvertible output, ItemConvertible inputBlock, ItemConvertible inputItem) {
+                createShaped(RecipeCategory.MISC, output, 3)
+                        .input('I', inputItem)
+                        .input('B', inputBlock)
+                        .pattern("BIB")
+                        .pattern("BIB")
+                        .criterion(hasItem(inputBlock), conditionsFromItem(inputBlock))
+                        .offerTo(exporter);
+            }
+
+            public void fenceGateRecipe(ItemConvertible output, ItemConvertible inputBlock, ItemConvertible inputItem) {
+                createShaped(RecipeCategory.REDSTONE, output)
+                        .input('I', inputItem)
+                        .input('B', inputBlock)
+                        .pattern("IBI")
+                        .pattern("IBI")
+                        .criterion(hasItem(inputBlock), conditionsFromItem(inputBlock))
+                        .offerTo(exporter);
             }
 
             public void pressurePlateRecipe(ItemConvertible output, ItemConvertible input) {

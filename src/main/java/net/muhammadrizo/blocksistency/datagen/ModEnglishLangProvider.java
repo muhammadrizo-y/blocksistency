@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.muhammadrizo.blocksistency.block.*;
+import net.muhammadrizo.blocksistency.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -493,6 +494,62 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR, "Red Sandstone Pillar");
         translationBuilder.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR, "Cracked Red Sandstone Pillar");
 
+        // ============== NETHER BRICKS ==============
+
+        translationBuilder.add(ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE, "Nether Brick Fence Gate");
+
+        translationBuilder.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_STAIRS, "Cracked Nether Brick Stairs");
+        translationBuilder.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_SLAB, "Cracked Nether Brick Slab");
+        translationBuilder.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_WALL, "Cracked Nether Brick Wall");
+        translationBuilder.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE, "Cracked Nether Brick Fence");
+        translationBuilder.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE_GATE, "Cracked Nether Brick Fence Gate");
+        translationBuilder.add(ModNetherBricksBlocks.CRACKED_CHISELED_NETHER_BRICKS, "Cracked Chiseled Nether Bricks");
+
+        translationBuilder.add(ModNetherBricksBlocks.NETHER_BRICK_PILLAR, "Nether Brick Pillar");
+        translationBuilder.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_PILLAR, "Cracked Nether Brick Pillar");
+
+        // ============== RED NETHER BRICKS ==============
+
+        translationBuilder.add(ModItems.RED_NETHER_BRICK, "Crimson Nether Brick");
+
+        translationBuilder.add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE, "Crimson Nether Brick Fence");
+        translationBuilder.add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE, "Crimson Nether Brick Fence Gate");
+        translationBuilder.add(ModRedNetherBricksBlocks.CHISELED_RED_NETHER_BRICKS, "Chiseled Crimson Nether Bricks");
+
+        translationBuilder.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICKS, "Cracked Crimson Nether Bricks");
+        translationBuilder.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_STAIRS, "Cracked Crimson Nether Brick Stairs");
+        translationBuilder.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_SLAB, "Cracked Crimson Nether Brick Slab");
+        translationBuilder.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_WALL, "Cracked Crimson Nether Brick Wall");
+        translationBuilder.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE, "Cracked Crimson Nether Brick Fence");
+        translationBuilder.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE_GATE, "Cracked Crimson Nether Brick Fence Gate");
+        translationBuilder.add(ModRedNetherBricksBlocks.CRACKED_CHISELED_RED_NETHER_BRICKS, "Cracked Chiseled Crimson Nether Bricks");
+
+        translationBuilder.add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_PILLAR, "Crimson Nether Brick Pillar");
+        translationBuilder.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_PILLAR, "Cracked Crimson Nether Brick Pillar");
+
+        // ============== WARPED NETHER BRICKS ==============
+
+        translationBuilder.add(ModItems.WARPED_NETHER_BRICK, "Warped Nether Brick");
+
+        translationBuilder.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS, "Warped Nether Bricks");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_STAIRS, "Warped Nether Brick Stairs");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_SLAB, "Warped Nether Brick Slab");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_WALL, "Warped Nether Brick Wall");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE, "Warped Nether Brick Fence");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE, "Warped Nether Brick Fence Gate");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.CHISELED_WARPED_NETHER_BRICKS, "Chiseled Warped Nether Bricks");
+
+        translationBuilder.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICKS, "Cracked Warped Nether Bricks");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_STAIRS, "Cracked Warped Nether Brick Stairs");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_SLAB, "Cracked Warped Nether Brick Slab");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_WALL, "Cracked Warped Nether Brick Wall");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE, "Cracked Warped Nether Brick Fence");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE_GATE, "Cracked Warped Nether Brick Fence Gate");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.CRACKED_CHISELED_WARPED_NETHER_BRICKS, "Cracked Chiseled Warped Nether Bricks");
+
+        translationBuilder.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_PILLAR, "Warped Nether Brick Pillar");
+        translationBuilder.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_PILLAR, "Cracked Warped Nether Brick Pillar");
+
         // ============== OTHER ==============
 
         // Renaming Blackstone blocks is done at resources/assets/minecraft/lang, in "en_us.json"
@@ -522,6 +579,15 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add("advancement.blocksistency.get_all_red_sandstone_blocks.title", "Crimson Collection");
         translationBuilder.add("advancement.blocksistency.get_all_red_sandstone_blocks.description", "Obtain all Red Sandstone blocks");
+
+        translationBuilder.add("advancement.blocksistency.get_all_nether_bricks_blocks.title", "Fortress Foundations");
+        translationBuilder.add("advancement.blocksistency.get_all_nether_bricks_blocks.description", "Obtain all Nether Brick blocks");
+
+        translationBuilder.add("advancement.blocksistency.get_all_red_nether_bricks_blocks.title", "Sanguine Structures");
+        translationBuilder.add("advancement.blocksistency.get_all_red_nether_bricks_blocks.description", "Obtain all Crimson Nether Brick blocks");
+
+        translationBuilder.add("advancement.blocksistency.get_all_warped_nether_bricks_blocks.title", "Warped Nether Bricks Title");
+        translationBuilder.add("advancement.blocksistency.get_all_warped_nether_bricks_blocks.description", "Obtain all Warped Nether Brick blocks");
 
         // Built-in Datapacks
         translationBuilder.add("datapack.blocksistency.better_recipes.name", "Better Recipes");

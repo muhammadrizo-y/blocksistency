@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 import net.muhammadrizo.blocksistency.Blocksistency;
 import net.muhammadrizo.blocksistency.block.*;
 import net.muhammadrizo.blocksistency.block.model.ModModels;
+import net.muhammadrizo.blocksistency.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -356,7 +357,7 @@ public class ModModelProvider extends FabricModelProvider {
         customTextureBottomTopStairsModel(gen, ModSandstoneBlocks.CUT_SANDSTONE_STAIRS, cutSandstoneTexture);
         customTextureBottomTopWallModel(gen, ModSandstoneBlocks.CUT_SANDSTONE_WALL, cutSandstoneWallTexture);
 
-        blockAndFormsModels(gen, ModSandstoneBlocks.POLISHED_SANDSTONE,
+        blockAndFormsAndPBModels(gen, ModSandstoneBlocks.POLISHED_SANDSTONE,
                 ModSandstoneBlocks.POLISHED_SANDSTONE_STAIRS, ModSandstoneBlocks.POLISHED_SANDSTONE_SLAB, ModSandstoneBlocks.POLISHED_SANDSTONE_WALL,
                 ModSandstoneBlocks.POLISHED_SANDSTONE_PRESSURE_PLATE, ModSandstoneBlocks.POLISHED_SANDSTONE_BUTTON);
 
@@ -366,7 +367,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockAndFormsModels(gen, ModSandstoneBlocks.CRACKED_SANDSTONE_BRICKS,
                 ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_STAIRS, ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_SLAB, ModSandstoneBlocks.CRACKED_SANDSTONE_BRICK_WALL);
-        simpleCubeAllModel(gen, ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE_BRICKS);
+        cubeColumnModel(gen, ModSandstoneBlocks.CRACKED_CHISELED_SANDSTONE_BRICKS);
 
         blockAndFormsModels(gen, ModSandstoneBlocks.SANDSTONE_PLATES,
                 ModSandstoneBlocks.SANDSTONE_PLATE_STAIRS, ModSandstoneBlocks.SANDSTONE_PLATE_SLAB, ModSandstoneBlocks.SANDSTONE_PLATE_WALL);
@@ -410,7 +411,7 @@ public class ModModelProvider extends FabricModelProvider {
         customTextureBottomTopStairsModel(gen, ModRedSandstoneBlocks.CUT_RED_SANDSTONE_STAIRS, cutRedSandstoneTexture);
         customTextureBottomTopWallModel(gen, ModRedSandstoneBlocks.CUT_RED_SANDSTONE_WALL, cutRedSandstoneWallTexture);
 
-        blockAndFormsModels(gen, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE,
+        blockAndFormsAndPBModels(gen, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE,
                 ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_STAIRS, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_SLAB, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_WALL,
                 ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_PRESSURE_PLATE, ModRedSandstoneBlocks.POLISHED_RED_SANDSTONE_BUTTON);
 
@@ -420,7 +421,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockAndFormsModels(gen, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICKS,
                 ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_STAIRS, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_SLAB, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_BRICK_WALL);
-        simpleCubeAllModel(gen, ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE_BRICKS);
+        cubeColumnModel(gen, ModRedSandstoneBlocks.CRACKED_CHISELED_RED_SANDSTONE_BRICKS);
 
         blockAndFormsModels(gen, ModRedSandstoneBlocks.RED_SANDSTONE_PLATES,
                 ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS, ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB, ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL);
@@ -437,9 +438,58 @@ public class ModModelProvider extends FabricModelProvider {
         pillarBlockModel(gen, ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR);
         pillarBlockModel(gen, ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR);
 
+        // ============== NETHER BRICKS ==============
+
+        fenceGateModel(gen, ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE, Blocks.NETHER_BRICKS);
+
+        blockFormsModels(gen,
+                ModNetherBricksBlocks.CRACKED_NETHER_BRICK_STAIRS, ModNetherBricksBlocks.CRACKED_NETHER_BRICK_SLAB, ModNetherBricksBlocks.CRACKED_NETHER_BRICK_WALL,
+                Blocks.CRACKED_NETHER_BRICKS);
+        fenceModel(gen, ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE, Blocks.CRACKED_NETHER_BRICKS);
+        fenceGateModel(gen, ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE_GATE, Blocks.CRACKED_NETHER_BRICKS);
+        simpleCubeAllModel(gen, ModNetherBricksBlocks.CRACKED_CHISELED_NETHER_BRICKS);
+
+        pillarBlockModel(gen, ModNetherBricksBlocks.NETHER_BRICK_PILLAR);
+        pillarBlockModel(gen, ModNetherBricksBlocks.CRACKED_NETHER_BRICK_PILLAR);
+
+        // ============== RED NETHER BRICKS ==============
+
+        fenceModel(gen, ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE, Blocks.RED_NETHER_BRICKS);
+        fenceGateModel(gen, ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE, Blocks.RED_NETHER_BRICKS);
+        simpleCubeAllModel(gen, ModRedNetherBricksBlocks.CHISELED_RED_NETHER_BRICKS);
+
+        blockAndFormsModels(gen, ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICKS,
+                ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_STAIRS, ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_SLAB, ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_WALL,
+                ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE, ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE_GATE);
+        simpleCubeAllModel(gen, ModRedNetherBricksBlocks.CRACKED_CHISELED_RED_NETHER_BRICKS);
+
+        pillarBlockModel(gen, ModRedNetherBricksBlocks.RED_NETHER_BRICK_PILLAR);
+        pillarBlockModel(gen, ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_PILLAR);
+
+        // ============== WARPED NETHER BRICKS ==============
+
+        blockAndFormsModels(gen, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS,
+                ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_STAIRS, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_SLAB, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_WALL,
+                ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE);
+        simpleCubeAllModel(gen, ModWarpedNetherBricksBlocks.CHISELED_WARPED_NETHER_BRICKS);
+
+        blockAndFormsModels(gen, ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICKS,
+                ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_STAIRS, ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_SLAB, ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_WALL,
+                ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE, ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE_GATE);
+        simpleCubeAllModel(gen, ModWarpedNetherBricksBlocks.CRACKED_CHISELED_WARPED_NETHER_BRICKS);
+
+        pillarBlockModel(gen, ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_PILLAR);
+        pillarBlockModel(gen, ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_PILLAR);
+
         // ============== OTHER ==============
 
         bottomTopWallModel(gen, Blocks.BLACKSTONE_WALL, Blocks.BLACKSTONE, false);
+    }
+
+    @Override
+    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModItems.RED_NETHER_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.WARPED_NETHER_BRICK, Models.GENERATED);
     }
 
     public void simpleCubeAllModel(BlockStateModelGenerator gen, Block block) {
@@ -701,6 +751,59 @@ public class ModModelProvider extends FabricModelProvider {
         gen.registerParentedItemModel(block, inventoryId);
     }
 
+    public void fenceModel(BlockStateModelGenerator gen, Block block, Block baseBlock) {
+        TextureMap texture = TextureMap.all(baseBlock);
+
+        Identifier postId = Models.FENCE_POST.upload(
+                block, texture, gen.modelCollector);
+
+        Identifier sideId = Models.FENCE_SIDE.upload(
+                block, texture, gen.modelCollector);
+
+        gen.blockStateCollector.accept(
+                BlockStateModelGenerator.createFenceBlockState(
+                        block,
+                        BlockStateModelGenerator.createWeightedVariant(postId),
+                        BlockStateModelGenerator.createWeightedVariant(sideId)
+                )
+        );
+
+        Identifier inventoryId = Models.FENCE_INVENTORY.upload(
+                block, texture, gen.modelCollector);
+
+        gen.registerParentedItemModel(block, inventoryId);
+    }
+
+    public void fenceGateModel(BlockStateModelGenerator gen, Block block, Block baseBlock) {
+        TextureMap texture = TextureMap.all(baseBlock);
+
+        Identifier openId = Models.TEMPLATE_FENCE_GATE_OPEN.upload(
+                block, texture, gen.modelCollector);
+
+        Identifier closedId = Models.TEMPLATE_FENCE_GATE.upload(
+                block, texture, gen.modelCollector);
+
+        Identifier openWallId = Models.TEMPLATE_FENCE_GATE_WALL_OPEN.upload(
+                block, texture, gen.modelCollector);
+
+        Identifier closedWallId = Models.TEMPLATE_FENCE_GATE_WALL.upload(
+                block, texture, gen.modelCollector);
+
+        gen.blockStateCollector.accept(
+                BlockStateModelGenerator.createFenceGateBlockState(
+                        block,
+                        BlockStateModelGenerator.createWeightedVariant(openId),
+                        BlockStateModelGenerator.createWeightedVariant(closedId),
+                        BlockStateModelGenerator.createWeightedVariant(openWallId),
+                        BlockStateModelGenerator.createWeightedVariant(closedWallId),
+                        true
+                )
+        );
+
+
+        gen.registerParentedItemModel(block, closedId);
+    }
+
     public void pressurePlateModel(BlockStateModelGenerator gen, Block block, Block baseBlock) {
         TextureMap texture = TextureMap.all(baseBlock);
 
@@ -744,6 +847,7 @@ public class ModModelProvider extends FabricModelProvider {
         gen.registerParentedItemModel(block, inventoryId);
     }
 
+
     public void blockFormsModels(BlockStateModelGenerator gen, Block stairs, Block slab, Block wall, Block baseBlock) {
         stairsModel(gen, stairs, baseBlock);
         slabModel(gen, slab, baseBlock);
@@ -757,17 +861,21 @@ public class ModModelProvider extends FabricModelProvider {
                 .wall(wall);
     }
 
-    public void blockAndFormsModels(BlockStateModelGenerator gen, Block block, Block stairs, Block slab, Block wall, Block pressurePlate, Block button) {
+    public void blockAndFormsModels(BlockStateModelGenerator gen, Block block, Block stairs, Block slab, Block wall, Block fence, Block fenceGate) {
+        gen.registerCubeAllModelTexturePool(block)
+                .stairs(stairs)
+                .slab(slab)
+                .wall(wall)
+                .fence(fence)
+                .fenceGate(fenceGate);
+    }
+
+    public void blockAndFormsAndPBModels(BlockStateModelGenerator gen, Block block, Block stairs, Block slab, Block wall, Block pressurePlate, Block button) {
         gen.registerCubeAllModelTexturePool(block)
                 .stairs(stairs)
                 .slab(slab)
                 .wall(wall)
                 .pressurePlate(pressurePlate)
                 .button(button);
-    }
-
-    @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-
     }
 }

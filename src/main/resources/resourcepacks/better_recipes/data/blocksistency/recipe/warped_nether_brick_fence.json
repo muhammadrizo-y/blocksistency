@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "blocksistency:warped_nether_bricks",
+    "I": "blocksistency:warped_nether_brick"
+  },
+  "pattern": [
+    "BIB",
+    "BIB"
+  ],
+  "result": {
+    "count": 4,
+    "id": "blocksistency:warped_nether_brick_fence"
+  }
+}

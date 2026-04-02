@@ -493,8 +493,59 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL)
 
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR)
-                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR);
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR)
 
+                // ============== NETHER BRICKS ==============
+
+                .add(ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE)
+
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_STAIRS)
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_SLAB)
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_WALL)
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE)
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE_GATE)
+                .add(ModNetherBricksBlocks.CRACKED_CHISELED_NETHER_BRICKS)
+
+                .add(ModNetherBricksBlocks.NETHER_BRICK_PILLAR)
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_PILLAR)
+
+                // ============== RED NETHER BRICKS ==============
+
+                .add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE)
+                .add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE)
+                .add(ModRedNetherBricksBlocks.CHISELED_RED_NETHER_BRICKS)
+
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICKS)
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_STAIRS)
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_SLAB)
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_WALL)
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE)
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE_GATE)
+                .add(ModRedNetherBricksBlocks.CRACKED_CHISELED_RED_NETHER_BRICKS)
+
+                .add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_PILLAR)
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_PILLAR)
+
+                // ============== WARPED NETHER BRICKS ==============
+
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS)
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_STAIRS)
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_SLAB)
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_WALL)
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE)
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE)
+                .add(ModWarpedNetherBricksBlocks.CHISELED_WARPED_NETHER_BRICKS)
+
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICKS)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_STAIRS)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_SLAB)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_WALL)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE_GATE)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_CHISELED_WARPED_NETHER_BRICKS)
+
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_PILLAR)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_PILLAR);
 
         TagKey<Block> COBBLESTONES_NORMAL = TagKey.of(
                 RegistryKeys.BLOCK,
@@ -607,7 +658,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_STAIRS)
                 .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_STAIRS)
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_STAIRS)
-                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS);
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_STAIRS)
+
+                // ============== NETHER BRICKS ==============
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_STAIRS)
+
+                // ============== RED NETHER BRICKS ==============
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_STAIRS)
+
+                // ============== WARPED NETHER BRICKS ==============
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_STAIRS)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_STAIRS);
 
         valueLookupBuilder(BlockTags.SLABS)
                 // ============== STONE ==============
@@ -696,7 +757,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_SLAB)
                 .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_SLAB)
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_SLAB)
-                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB);
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_SLAB)
+
+                // ============== NETHER BRICKS ==============
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_SLAB)
+
+                // ============== RED NETHER BRICKS ==============
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_SLAB)
+
+                // ============== WARPED NETHER BRICKS ==============
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_SLAB)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_SLAB);
 
         valueLookupBuilder(BlockTags.WALLS)
                 // ============== STONE ==============
@@ -794,7 +865,42 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_PLATE_WALL)
                 .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PLATE_WALL)
                 .add(ModRedSandstoneBlocks.RED_SANDSTONE_TILE_WALL)
-                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL);
+                .add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_TILE_WALL)
+
+                // ============== NETHER BRICKS ==============
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_WALL)
+
+                // ============== RED NETHER BRICKS ==============
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_WALL)
+
+                // ============== WARPED NETHER BRICKS ==============
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_WALL)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_WALL);
+
+        valueLookupBuilder(BlockTags.FENCES)
+                // ============== NETHER BRICKS ==============
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE)
+
+                // ============== RED NETHER BRICKS ==============
+                .add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE)
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE)
+
+                // ============== WARPED NETHER BRICKS ==============
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE);
+
+        valueLookupBuilder(BlockTags.FENCE_GATES)
+                // ============== NETHER BRICKS ==============
+                .add(ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE)
+                .add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE_GATE)
+
+                // ============== RED NETHER BRICKS ==============
+                .add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE)
+                .add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE_GATE)
+
+                // ============== WARPED NETHER BRICKS ==============
+                .add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE)
+                .add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE_GATE);
 
         valueLookupBuilder(BlockTags.STONE_PRESSURE_PLATES)
                 .add(ModGraniteBlocks.POLISHED_GRANITE_PRESSURE_PLATE)

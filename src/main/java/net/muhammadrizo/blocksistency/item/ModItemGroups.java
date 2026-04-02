@@ -595,6 +595,68 @@ public class ModItemGroups {
 
                         entries.add(ModRedSandstoneBlocks.RED_SANDSTONE_PILLAR);
                         entries.add(ModRedSandstoneBlocks.CRACKED_RED_SANDSTONE_PILLAR);
+
+                        // ============== NETHER BRICKS ==============
+
+                        entries.add(Blocks.NETHER_BRICKS);
+                        entries.add(Blocks.NETHER_BRICK_STAIRS);
+                        entries.add(Blocks.NETHER_BRICK_SLAB);
+                        entries.add(Blocks.NETHER_BRICK_WALL);
+                        entries.add(Blocks.NETHER_BRICK_FENCE);
+                        entries.add(ModNetherBricksBlocks.NETHER_BRICK_FENCE_GATE);
+                        entries.add(Blocks.CHISELED_NETHER_BRICKS);
+
+                        entries.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_STAIRS);
+                        entries.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_SLAB);
+                        entries.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_WALL);
+                        entries.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE);
+                        entries.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_FENCE_GATE);
+                        entries.add(ModNetherBricksBlocks.CRACKED_CHISELED_NETHER_BRICKS);
+
+                        entries.add(ModNetherBricksBlocks.NETHER_BRICK_PILLAR);
+                        entries.add(ModNetherBricksBlocks.CRACKED_NETHER_BRICK_PILLAR);
+
+                        // ============== RED NETHER BRICKS ==============
+
+                        entries.add(Blocks.RED_NETHER_BRICKS);
+                        entries.add(Blocks.RED_NETHER_BRICK_STAIRS);
+                        entries.add(Blocks.RED_NETHER_BRICK_SLAB);
+                        entries.add(Blocks.RED_NETHER_BRICK_WALL);
+                        entries.add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE);
+                        entries.add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_FENCE_GATE);
+                        entries.add(ModRedNetherBricksBlocks.CHISELED_RED_NETHER_BRICKS);
+
+                        entries.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICKS);
+                        entries.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_STAIRS);
+                        entries.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_SLAB);
+                        entries.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_WALL);
+                        entries.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE);
+                        entries.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_FENCE_GATE);
+                        entries.add(ModRedNetherBricksBlocks.CRACKED_CHISELED_RED_NETHER_BRICKS);
+
+                        entries.add(ModRedNetherBricksBlocks.RED_NETHER_BRICK_PILLAR);
+                        entries.add(ModRedNetherBricksBlocks.CRACKED_RED_NETHER_BRICK_PILLAR);
+
+                        // ============== WARPED NETHER BRICKS ==============
+
+                        entries.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICKS);
+                        entries.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_STAIRS);
+                        entries.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_SLAB);
+                        entries.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_WALL);
+                        entries.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE);
+                        entries.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_FENCE_GATE);
+                        entries.add(ModWarpedNetherBricksBlocks.CHISELED_WARPED_NETHER_BRICKS);
+
+                        entries.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICKS);
+                        entries.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_STAIRS);
+                        entries.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_SLAB);
+                        entries.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_WALL);
+                        entries.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE);
+                        entries.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_FENCE_GATE);
+                        entries.add(ModWarpedNetherBricksBlocks.CRACKED_CHISELED_WARPED_NETHER_BRICKS);
+
+                        entries.add(ModWarpedNetherBricksBlocks.WARPED_NETHER_BRICK_PILLAR);
+                        entries.add(ModWarpedNetherBricksBlocks.CRACKED_WARPED_NETHER_BRICK_PILLAR);
                     }).build());
 
     public static void init() {

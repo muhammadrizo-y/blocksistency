@@ -6,9 +6,11 @@ import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.muhammadrizo.blocksistency.block.ModBlockSetTypes;
+import net.muhammadrizo.blocksistency.block.types.ModBlockSetTypes;
 import net.muhammadrizo.blocksistency.block.ModBlocks;
+import net.muhammadrizo.blocksistency.block.types.ModWoodTypes;
 import net.muhammadrizo.blocksistency.item.ModItemGroups;
+import net.muhammadrizo.blocksistency.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,7 +23,9 @@ public class Blocksistency implements ModInitializer {
 		ModItemGroups.init();
 
 		ModBlockSetTypes.init();
+		ModWoodTypes.init();
 
+		ModItems.init();
 		ModBlocks.init();
 
 		ResourceManagerHelper.registerBuiltinResourcePack(

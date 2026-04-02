@@ -107,21 +107,12 @@ public class ModBlocks {
         ModDioriteBlocks.init();
         ModAndesiteBlocks.init();
         ModDeepslateBlocks.init();
+        ModBricksBlocks.init();
         ModSandstoneBlocks.init();
         ModRedSandstoneBlocks.init();
-        ModBricksBlocks.init();
-
-        fixBlockHardnessAndBlastResistance(Blocks.SANDSTONE_SLAB, Blocks.SANDSTONE);
-        fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_SANDSTONE, Blocks.SANDSTONE);
-        fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_SANDSTONE_STAIRS, Blocks.SMOOTH_SANDSTONE);
-        fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_SANDSTONE_SLAB, Blocks.SMOOTH_SANDSTONE);
-        fixBlockHardnessAndBlastResistance(Blocks.CUT_SANDSTONE_SLAB, Blocks.CUT_SANDSTONE);
-
-        fixBlockHardnessAndBlastResistance(Blocks.RED_SANDSTONE_SLAB, Blocks.RED_SANDSTONE);
-        fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_RED_SANDSTONE, Blocks.RED_SANDSTONE);
-        fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_RED_SANDSTONE_STAIRS, Blocks.SMOOTH_RED_SANDSTONE);
-        fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_RED_SANDSTONE_SLAB, Blocks.SMOOTH_RED_SANDSTONE);
-        fixBlockHardnessAndBlastResistance(Blocks.CUT_RED_SANDSTONE_SLAB, Blocks.CUT_RED_SANDSTONE);
+        ModNetherBricksBlocks.init();
+        ModRedNetherBricksBlocks.init();
+        ModWarpedNetherBricksBlocks.init();
 
         fixBlockHardnessAndBlastResistance(Blocks.QUARTZ_SLAB, Blocks.QUARTZ_BLOCK);
         fixBlockHardnessAndBlastResistance(Blocks.SMOOTH_QUARTZ, Blocks.QUARTZ_BLOCK);
@@ -144,9 +135,12 @@ public class ModBlocks {
             ModDioriteBlocks.addCreativeEntries(entries);
             ModAndesiteBlocks.addCreativeEntries(entries);
             ModDeepslateBlocks.addCreativeEntries(entries);
+            ModBricksBlocks.addCreativeEntries(entries);
             ModSandstoneBlocks.addCreativeEntries(entries);
             ModRedSandstoneBlocks.addCreativeEntries(entries);
-            ModBricksBlocks.addCreativeEntries(entries);
+            ModNetherBricksBlocks.addCreativeEntries(entries);
+            ModRedNetherBricksBlocks.addCreativeEntries(entries);
+            ModWarpedNetherBricksBlocks.addCreativeEntries(entries);
         });
     }
 }

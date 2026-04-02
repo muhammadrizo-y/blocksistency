@@ -2,6 +2,7 @@ package net.muhammadrizo.blocksistency.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.minecraft.block.*;
+import net.muhammadrizo.blocksistency.block.types.ModBlockSetTypes;
 
 import static net.muhammadrizo.blocksistency.block.ModBlocks.*;
 

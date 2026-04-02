@@ -586,7 +586,7 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("advancement.blocksistency.get_all_red_nether_bricks_blocks.title", "Sanguine Structures");
         translationBuilder.add("advancement.blocksistency.get_all_red_nether_bricks_blocks.description", "Obtain all Crimson Nether Brick blocks");
 
-        translationBuilder.add("advancement.blocksistency.get_all_warped_nether_bricks_blocks.title", "Warped Nether Bricks Title");
+        translationBuilder.add("advancement.blocksistency.get_all_warped_nether_bricks_blocks.title", "Twisted Towers");
         translationBuilder.add("advancement.blocksistency.get_all_warped_nether_bricks_blocks.description", "Obtain all Warped Nether Brick blocks");
 
         // Built-in Datapacks
